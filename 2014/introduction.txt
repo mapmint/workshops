@@ -1,0 +1,292 @@
+.. _userguidegeneral:
+
+Introduction
+============
+
+A brief overview
+***********************
+
+General presentation
+---------------------
+
+MapMint is a Geographic Information System (GIS) software running on a
+web server made to facilitate the adminstration of a **Spatial Data
+Infrastructure** (SDI), publishing cartographic portals and dynamic
+applications.
+
+The MapMint platform is a GIS Software accessible thourgh a simple web
+browser but also a modular and extensible WEB-GIS application
+generator. It provides numerous GIS capability and let the user do
+the following:
+
+
+ * **Import and store GIS data** (both vector and raster data)
+ * **Query Relational Database System** and external WMS/WFS servers 
+ * **Publish GIS data** by using OGC Web Services: WMS, WFS et WMTS
+ * **Treate, edit and style** data sources
+ * Compose and save maps to create application projects (using mapfile)
+ * Configure and generate Web GIS applications
+ * **Configure** and use GIS portals
+ * **Access** and share maps
+
+Basic concepts: using the OGC standards
+---------------------------------------
+
+The main idea behind the MapMint solution is the massive usage of OGC
+Web Services and making all processing in the solution available as
+WPS services using the ZOO-Project OpenSource software.
+
+========== ===================================================         
+|mmarch|   |archi|                
+========== ===================================================	
+      
+.. |mmarch| image:: ../../_static/images/mmarch.png
+   :height: 236
+   :width: 380
+   :alt: ZOO logo
+
+.. |archi| image:: ../../_static/images/mm-architecture-scheme.png
+   :height: 236
+   :width: 380
+   :alt: MapMint architecture preview image
+   
+
+
+Main software components
+-------------------------------
+
+MapMint is using numerous OSGeo softwares and bring them all together
+in a complete Web-GIS platform by using the WPS to make them
+understandable and usable to and from each other.
+
+
+============   =====
+**Software**   **Usage**
+------------   -----
+|zoo|               All the processing in the MapMint solution iso based on the ZOO-Project so on the OGC WPS standard, even to produce dynamic web pages.
+|ms|                MapMint use the MapServer cartographic engine to publish your date through OGC Web Services (WMS,WFS and WCS) in an efficient way.
+|gd|                 The abstraction library used to access and interract with datasources transparently is the GDAL/OGR library.
+|ol|                  MapMint User Interfaces (UI) are using OpenLayers.
+============   =====
+
+
+
+.. |zoo| image:: ../../_static/images/zoo-logo-green.png
+   :height: 64
+   :width: 64
+   :alt: ZOO logo
+   :target: http://zoo-project.org
+
+.. |ms| image:: ../../_static/images/ms-logo-green.png
+   :height: 64
+   :width: 64
+   :alt: MapServer logo
+   :target: http://mapserver.org
+
+   
+.. |gd| image:: ../../_static/images/gdal-logo-green.png
+   :height: 64
+   :width: 64
+   :alt: GDAL logo
+   :target: http://gdal.org
+   
+   
+.. |ol| image:: ../../_static/images/ol-logo-green.png
+   :height: 64
+   :width: 64
+   :alt: OpenLayers logo
+   :target: http://openlayers.org
+
+
+The workshop content
+***********************
+    
+In this sections you will find general information about what will be done
+during this workshop and what are the main objetives, the geographic
+data used are also introduced.
+
+Workshop schedule
+---------------------------------
+
+You are invited to use the computer available in the room and keep
+plugged the MapMint USB Stick provided.
+
+The workshop is organized in 4 sections:
+
+* a presentation of MapMint and how it works
+* use case example of the module to administrate your GIS data by using an available dataset
+* an example of map production and spreading of the data as WMS and WFS
+* a presentation on how to publish an application using map created previously
+
+.. note::
+
+	Please, do not hesitate, at any time, to ask the presenters any question you may have during the workshop.
+
+Using the MapMint USB Stick
+-------------------------------------
+
+============================== ============================================
+|usb|                          
+                               The MapMint solution is available on an
+			       iso image made available on the USB
+			       stick provided. This iso image is a
+			       simple adaptation of the official `OSGeoLive 7.9
+			       <http://live.osgeo.org>`__
+============================== ============================================
+
+.. |usb| image:: ../../_static/images/mmusb3.png
+   :height: 100
+   :width: 175
+   :alt: MMlive usbstick
+
+.. note::
+
+	The USB 3.0 Stick is provided for use during the workshop and
+	should be given back at the end. You can buy one USB Stick
+	including the SDI for only **12€** (the usb stick price + some
+	taxes...).
+	
+To use the USB stick, please first plug it to your computer and start
+the VirtualBox program if it is not already running.
+
+Create a new virtual machine **without any disk**, choose "Linux" and
+"Ubuntu" as operating system.
+
+Now, access configuration  of your virtual machine to define the iso
+image available on the USB stick as CD drive.
+
+Close the configuration pannel then boot your brand new virtual
+machine. You should see grub prompt, you are invited to press
+``Enter`` to make your VM boot, then, after few seconds, you should
+have access to the desktop environment as presented in the following.
+
+**Welcome in MapMint Live !**
+
+============================== ============================================
+|grub|                         |mml|                               
+============================== ============================================
+
+.. |grub| image:: ../../_static/images/grub.png
+   :height: 253
+   :width: 380
+   :alt: Grub prompt screen
+   
+.. |mml| image:: ../../_static/images/mml.png
+   :height: 253
+   :width: 380
+   :alt: MM Live desktop
+   
+Geographic dataset
+-------------------------------------
+
+During this workshop, the geographic dataset used is coming from `Edu Data Package North
+Carolina <http://www.grassbook.org/data_menu3rd.php>`__, provided by
+contributors of the `GRASS GIS <http://grass.osgeo.org/>`__ project
+and available per default in OSGeoLive.
+
+Data are subject to `Creative Commons Attribution-ShareAlike
+(CC-BY-SA) <http://creativecommons.org/licenses/by-sa/3.0/>`__. More
+information on this dataset are available on this `page
+<http://wiki.osgeo.org/wiki/Edu_Data_Package_North_Carolina>`__ .
+
+
+|ncd|
+
+.. |ncd| image:: ../../_static/images/nc-data.png
+   :height: 455
+   :width: 780
+   :alt: North Carolina dataset snapshot
+	
+
+ 
+
+
+Using MapMint
+****************
+    
+MaMint is made of an **administration interface** (*MapMint Admin*)
+composed of various modules and a **public interface** (*MapMint
+Client*) containing published maps.
+
+You can access directly to both interfaces by using corresponding
+links on your desktop.
+
+============================================ ============================================
+*MapMint Admin*                              *MapMint Client*   
+-------------------------------------------- --------------------------------------------
+|mma|           	  	                     |mmc|   
+============================================ ============================================
+
+.. |mma| image:: ../../_static/images/dashboard.png
+   :height: 250
+   :width: 380
+   :alt: MM admin
+   
+
+.. |mmc| image:: ../../_static/images/mmc.png
+   :height: 250
+   :width: 380
+   :alt: MM client
+
+.. note::
+
+	During this workshop, you are invited to open MapMint Admin
+	and MapClient in two different tab in yoru browser for being
+	able to quickly switch from one to the other.
+	
+MapMint Admin
+---------------------------------
+
+For accessing the administration interface, first click on the desktop
+link named **MapMint Admin** then fill the **login** and **password**
+provided in the following, then press the login button.
+
+.. note::
+
+	* login: **test**
+	* password: **demo02**
+
+.. |login| image:: ../../_static/images/login-screen.png
+   :width: 780
+   :alt: MapMint login screen
+   
+|login|
+
+.. note::
+	You can also simply press *Enter* rather than using the Login button.
+	
+A success message should be displayed on top of your interface then
+the Dashboard module should load. In case you have a red banner on top
+rather than the expected green one, then please verify informations
+you filled.
+
+Despite more modules are vailable in MapMint and can be activated by
+using specific parameter, for this workshop, the following modules are available in the
+administration interface. You can access them by using links on top of
+the interface, once logued in MapMint Admin.
+ 
+==========   ===
+**Module**          **URL**
+----------   ---
+Dashboard           http://localhost/mapmint/ui/Dashboard
+Distiller           http://localhost/mapmint/ui/Distiller
+Themes           http://localhost/mapmint/ui/Themes
+Manager           http://localhost/mapmint/ui/Manager
+Publisher           http://localhost/mapmint/ui/Publisher
+==========   ===
+
+Accessing the public interface
+-------------------------------------
+
+The MapMint public interface can be accessed by using the following link
+http:localhost/mapmint/ui/public/. Each published map is accessible
+from the maps listing page or can be directly accessed by using a
+specific URL (such as http://localhost/mapmint/ui/public/your-map-name).
+
+==============================   ============================================
+**Module**                       **URL**       
+------------------------------   --------------------------------------------
+Public Interface                  http://localhost/mapmint/ui/public/
+Published Map                    http://localhost/mapmint/ui/public/your-map-name
+==============================   ============================================
+
