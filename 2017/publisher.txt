@@ -3,9 +3,8 @@
 The Publisher Module
 ====================================
 
-The Publisher is a module made to publish your web application. It is
-composed of two pannels: on the left the maps list and on the right the
-configurations tabs.
+The Publisher is a module made to publish your web application. It comprises of two panels: on the left, the maps list and, on the right, the
+configuration tabs.
 
 |publisher|
 
@@ -17,18 +16,18 @@ Maps List
 **********
 
 If you click on a map name from the list, the Publisher module will
-reload using the map you choosen and giving the capability to change
+reload using the map you have choosen and giving the capability to change
 the configuration and publish again.
 	
 Configuration tabs
 ************************
 
-Options you are able to set in the Publisher interface are grouped by
-tabs, you should click on one of the following icons, to acces the
+The Options which you can set in the Publisher interface are grouped by
+tabs, you should click on one of the following icons, to access the
 parameters.
 
 .. warning::
-	Every modification made to the any tabs require that you press
+	Every modification made to the any tabs requires to press
 	the *Publish* button to save your modifications.
    
 .. |general| image:: ../../_static/images/general.png
@@ -55,25 +54,25 @@ parameters.
 **Icon**     **Tab**          **Action**                  
 ------------ ---------------- ------------- 
 |general|    General    	  General configuration
-|layerss|    Layers		  Layers configuration
-|mapssss|    Map			  Map Configuration
-|ctrlsss|    Control		  Tools Configuration
+|layerss|    Layers		     Layers configuration
+|mapssss|    Map			     Map Configuration
+|ctrlsss|    Control		     Tools Configuration
 ============ ================ =============						
 
 
 General configuration
 ---------------------
     
-Per default, it the activated tab, the settings you can made are
+As Per default, in the activated tab, the settings you can made are
 listed below.
 
 ============================ ===================================================
 **Parameter**                **Definition**                  
 ---------------------------- --------------------------------------------------- 
 Project name                 The Project name (cannot be modified informative)
-Project Title                        The title displayed in the published application
-Access privileges               Define access privileges
-Classify in theme					    You can group your layers per themes
+Project Title                The title displayed in the published application
+Access privileges            Define access privileges
+Classify in theme				  You can group your layers per themes
 Project URL                  Display l'URL of the published application
 Langue                       Set the language of the published application
 Key-Words                    Metadata information for the published project
@@ -109,17 +108,17 @@ Layers configuration
 Base layers
 .................................
 
-The base layers are optional, you can display only one prorietary base
+The base layers are optional, you can display only one proprietary base
 layer per project. Once you select one proprietary option (*Google*,
 *Bing* or *IGN*) you have access to the list of available base layers.
 
 By using the Default option, you can choose amongst the activated base
-layers the one to use per default.
+layers the one to use as per default.
 
 Note that you can use your own published project as base
 layers. Indeed once a MapMint project is published, the setup of
 mapcache was automatically made with all the layers defined as
-activated per dafult in the project.
+activated by dafault in the project.
 
 .. |confbl| image:: ../../_static/images/configure-blayers.png
    :height: 269
@@ -149,16 +148,16 @@ Window                       Activate the popup to be displayed when a user clic
 Vector                       Display the layer as vector (WFS)	           
 Raster                       Display the layer as raster (WMS)			 
 Activated                    Define if the layer is activated per default
-Min Zoom                      Define the minimum scale from which the layer should be displayed (same for labels)
-Max Zoom                      Define the maximum scale until which the layer should be displayed (same for labels) 
-Acess   					 Définit les groupes d'utilisateurs autorisés à consulter la couche 
+Min Zoom                     Define the minimum scale from which the layer should be displayed (same for labels)
+Max Zoom                     Define the maximum scale until which the layer should be displayed (same for labels) 
+Acess   					        Defines which User groups are allowed to view the layer
 ============================ ===================================================
 
 Map Configuration
 --------------------------------------
 
-In the Map Configuration pannel, selecting a layer in the list on the
-right of the table, automatically update the extent on the
+In the Map Configuration panel, selecting a layer in the list on the
+right of the table, automatically updates the extent on the
 corresponding row.
 
 
@@ -166,12 +165,12 @@ corresponding row.
 **Parameter**                **Definition**                  
 ---------------------------- --------------------------------------------------- 
 Display Project Système      Define the SRS used to display mouse position
-Render Method		     Define the OpenLayer renderer (*SVG* or *Canvas*)
-Unit of Measure		     Define the unit of measure used to display measure tools informations
-Default extent			Define the extent used per default when loading the application
-Minimum extent			Define the minimum extent for the application 
-Maximum extent			Define the maximum extent for the application 
-Restricted extent		You can check this option to strictly restrict the extent to the one defined as maximum extent 
+Render Method		           Define the OpenLayer renderer (*SVG* or *Canvas*)
+Unit of Measure		        Define the unit of measure used to display measure tools informations
+Default extent			        Define the extent used per default when loading the application
+Minimum extent			        Define the minimum extent for the application 
+Maximum extent			        Define the maximum extent for the application 
+Restricted extent		        You can check this option to strictly restrict the extent to the one defined as maximum extent 
 ============================ ===================================================
 
 .. |edmap| image:: ../../_static/images/edit-map.png
@@ -185,7 +184,7 @@ Restricted extent		You can check this option to strictly restrict the extent to 
 Tools Configuration
 --------------------------
 
-In this section you can activate tools which will be available from
+In this section you can activate tools which will be available in
 the published application.
 
 .. |edctrl| image:: ../../_static/images/edit-controls.png
@@ -205,7 +204,7 @@ You are invited to select the following options:
  * **Mouse position**
  * **Search Box**
  
-Sélectionnez la valeur *None* pour les outils d'analyse spatiale.
+Select *None* for Spatial Analysis Tools.
 
 .. note::
 	Use *Ctrl* + Click to add multiple tools at the same time. 
@@ -282,10 +281,10 @@ Navigation toolbar
 |twit|                       Twitter sharing					      Share the permalink through Twitter
 |face|                       Facebook sharing					      Share the permalink through Facebook
 none                         Scroll   						      Zoom in/out by using mouse scroll
-|pann|                       Pan      						      Move the map by draging
+|pann|                       Pan      						      Move the map by dragging
 |mpos|                       My position                                              Access the browser localisation information and center the map on its location
 |spos|                       Track my position					      Track the browser location
-|zrec|                       Zoom Box 						      Zoom by extent defined by drawing a rectangle
+|zrec|                       Zoom Box 						      Zoom to extent defined by drawing a rectangle
 |zmax|                       Zoom to max extent					      Zoom to the maximum extent
 |elev|                       Profile tool					      Activate the profile tool 
 |inte|                       Identify						      Activate the simple selection tool (by rectangle)
@@ -333,7 +332,7 @@ Publish and preview
 
 Once you have made all the settings required, you can publish
 application by clicking on the *Publish* button on top of the right
-pannel. Then, you can preview your project by clicking on the
+panel. Then, you can preview your project by clicking on the
 *Preview* button. 
 
 
@@ -341,7 +340,7 @@ Access the map publicly
 ----------------------------
 
 To access the map publicly, use the link *MapMint Client* on your
-Desktop or direclty use the following link:
+Desktop or directly use the following link:
 http:localhost/mapmint/ui/public/Sample1.
 
 
@@ -355,22 +354,22 @@ http:localhost/mapmint/ui/public/Sample1.
    :width: 780
    :alt: App map
    
-If you move mouse on top of a green points, you should see the popup
-window you created in the previoues section.
+If you hover mouse on top of a green points, you should see the popup
+window you created in the previous section.
 
 |fmap0|
 
 To use the Profile tool, first click on the *Profile* button, then
-draw a line on the map, once your line is finished double click on the
+draw a line on the map, once your line is finished, double click on the
 end position and you will see the elevation profile displayed.
 
 |fmap1|
 
-To use the search engine, type few letter in the text field and wait
+To use the search engine, type few letters in the text field and wait
 for the list of available featured displayed, then click on one in the
 list to zoom on it.
 
-In case you are not able to have the profile service working properly,
+In case you are not able to see the profile service working properly,
 please use the following command to fix the issue.
 
 .. code-block:: guess
