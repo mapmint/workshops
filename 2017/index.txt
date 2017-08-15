@@ -1,6 +1,6 @@
 .. _home:
 
-Building Standards Compliant Geospatial Web Application – The Quick and Easy MapMint Way.
+Building Standards Compliant Geospatial Web Applications – The Quick and Easy MapMint Way.
 =========================================================================================
 
 Welcome in the workshop introducing the `MapMint <http://mapmint.com>`__ solution.

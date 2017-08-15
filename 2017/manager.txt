@@ -3,8 +3,8 @@
 The Manager Module
 =============================
 
-The Manager module is presented in this section and look like the
-following, the first time you open it following the `instructions <./distiller.html#open-a-data-source-in-the-manager>`__.
+The Manager module is presented in this section and it looks like the
+following, when opened for the first time after following the `instructions <./distiller.html#open-a-data-source-in-the-manager>`__.
 
 |manager|
 
@@ -12,10 +12,10 @@ following, the first time you open it following the `instructions <./distiller.h
    :width: 100%
    :alt: Manager UI
 
-The *Data Layers* pannel
+The *Data Layers* panel
 ************************
 
-The *Data Layers* pannel is the left side pannel and contains two elements:
+The *Data Layers* panel is the left-side panel and contains two elements:
  * A map gesture toolbar
  * A tree presenting your layers list
  
@@ -63,11 +63,10 @@ You can use the text field to save your map using a different name.
 |savema|
 
 .. warning::
-   The map name should not contain any space, accent or any special character
+   The map name should not contain any space, accent or any special character.
 
 You are now invited to name your map *Sample1*, then save it. Your
-Manager mondule will be reloaded and display the map name you just
-set.
+Manager module will be reloaded and it will display the map name as set by you.
 
 
 
@@ -82,7 +81,7 @@ Layers tree
 -----------
 
 Just on top of your layers tree, you have access to the specific
-layers toolbar which give you access to the following options.
+layers toolbar which gives you access to the following options.
 
 .. |addlay| image:: ../../_static/images/add-layer-m.png
    :width: 24
@@ -90,7 +89,7 @@ layers toolbar which give you access to the following options.
 
 .. |setlay| image:: ../../_static/images/move.png
    :width: 24
-   :alt: Set layers order icon
+   :alt: Set layer order icon
 
 .. |addgri| image:: ../../_static/images/toggle_grid.png
    :width: 24
@@ -104,7 +103,7 @@ layers toolbar which give you access to the following options.
 |setlay|     Set layer order
 ==========   ===================================================	
 
-If you right click on a layer, you wil then get access to the
+If you right click on a layer, then you will get access to the
 following tools:
 
 .. |zoomt| image:: ../../_static/images/zoomtolayer.png
@@ -136,8 +135,7 @@ following tools:
 Map viewer
 **********
 
-The Map viewer is the right pannel where the map and potentially your
-layer, if any is activated. You can choose which base layers you want
+The Map viewer is the right panel where the map and potential layer (if any is activated) is displayed. You can choose which base layers you want
 to use by using the toolbar on the right side on top of the map.
 
 .. |colbl| image:: ../../_static/images/color-bl.png
@@ -161,9 +159,9 @@ to use by using the toolbar on the right side on top of the map.
 **Icon**   **Action**                  
 ---------- --------------------------------------------------- 
 |colbl|     Use a unique color as base layer
-|mapq|     Use MapQuest Street as base layer (no more available)
-|maps|     Use MapQuest Satellite as base layer (no more available)
-|osm|      Use OpenStreetMap as base layer
+|mapq|      Use MapQuest Street as base layer (no more available)
+|maps|      Use MapQuest Satellite as base layer (no more available)
+|osm|       Use OpenStreetMap as base layer
 ========== ===================================================	
 
 .. |oim| image:: ../../_static/images/addlayer-window.png
@@ -176,8 +174,8 @@ Add Layers
 **********
 
 By pressing the button *Add Layer*, you have then a window like the
-one presented below which let you choose first the data store, then
-the list of layers available in it and to finish the place in the tree
+one presented below which lets you choose the data store first, then
+the list of layers available in it and finally, the place in the tree
 where you want your layer to be added.
 
 |oim|
@@ -185,11 +183,11 @@ where you want your layer to be added.
 .. note::
    If a layer is added directly at the root level, so as a child of
    the root node (*Layers*), then it won't be available in the layer
-   switcher available in the correcponding published web application.
+   switcher in the corresponding published web application.
 	
 Your objective is to add the *elevation* data source you used to
-create *elevation_shaded*. So you will first select the *NC_Raster*,
-then the data sources liste will be refreshed and then you can select
+create *elevation_shaded*. So, you will first select the *NC_Raster*,
+then the data sources listed will be refreshed and then you can select
 the *elevation* data source to add it as a new layer to your current
 map.
 
@@ -202,17 +200,17 @@ layers from the *NC_Shapes* data store:
 
 .. note::
 	You can use *Ctrl* + click to select multiple data sources to
-	add them as individual layers to yoru current map.
+	add them as individual layers to your current map.
 
 .. warning::
    If you keep the default value for the Group where your layer will
-   be located, it will lead that this layer won't be available in the
-   layer switcher from the published application.
+   be located, it will signify that this layer won't be available in the
+   layer switcher in the published application.
 
 Defining Layer Styles
 *********************
 
-In this section you will learn how to define the style used to display
+In this section, you will learn how to define the style used to display
 your data in the final application. 
 
 .. note::
@@ -224,14 +222,13 @@ your data in the final application.
 Basic raster style
 ------------------
 
-You are invited to right click on the *elevation_hillshade* layer then
-click on the *Style* item to have a window giving you access to the
+You are invited to right click on the *elevation_hillshade* layer and after that on the *Style* item to have a window giving you access to the
 basic settings for raster data:
  * *Resampling method*
  * *Opacity*
  * *Legend Type*
 
-You will set resampling method to *AVERAGE*, opacity to 75% and keep
+You should set resampling method to *AVERAGE*, opacity to 75% and keep
 the default value for *Legend Type* (*GreyScale*), then press the
 *Apply* button at the bottom of the form.
 
@@ -272,9 +269,8 @@ similar result as the one above.
 Basic vector style
 ------------------
 
-You will start by editing the style of the *lakes*  layer, you will
-first check the *Pattern* pannel and set its value to *4.0 3.0*, then
-press the *Apply* button. Now, check also the *Hatch fill* pannel and
+You will start by editing the style of the *lakes* layer. First of all, you should check the *Pattern* panel and set its value to *4.0 3.0*, then
+press the *Apply* button. Now, check also the *Hatch fill* panel and
 set the following values:
  * *Angle*: 45.0
  * *Size*: 6.0
@@ -297,7 +293,7 @@ definition.
 Set the *Legend Type* to *Graduated Symbol*, choose min and max
 colors, choose the *elev_m* field to classify your data, set number of
 generated classes to 30 and set the discretisation method to
-*quantile*, then press the *Classify* button to have similar restul as
+*quantile*, then press the *Classify* button to have similar result as
 presented below.
 
 |emap1|
@@ -332,8 +328,8 @@ Layers properties
 Metadata
 ---------------------------------
 
-For each layer in your map, you are invited to define metadata, by
-now you will concentrate on giving a *title* to your layer, then press
+For each layer in your map, you are invited to define metadata, for
+now, you will concentrate on giving a *title* to your layer, then press
 the *Save* button.
 
 .. warning::
@@ -342,7 +338,7 @@ the *Save* button.
 	application only.
 	
 You can also define basic OWS Metadata informations for your layers,
-such as *asbtract*, *keywords* and *fees*. other options will be
+such as *abstract*, *keywords* and *fees*. other options will be
 presented in the next sections.
 
 The metadata can be accessed through a simple WMS *GetCapabilities*
@@ -350,10 +346,10 @@ request sent to the MapServer engine, like the following:
 
 ``http://localhost/cgi-bin/mapserv.cgi?map=/var/data/maps/Project_Sample1.map&service=WMS&version=1.0.0&request=GetCapabilities`` 
 	
-Quaryable layers
+Queryable layers
 ---------------------------------
 
-You would like to make the final application users able to display
+You would like to make the final application available to user with an ability to display
 information in a popup when they move their mouse on top of a feature.
 To achieve this goal, you first have to declare in the layer'
 properties window that you want your *poi_names_wake* queryable by
@@ -361,10 +357,10 @@ checking the *Query* option. Then you should also create a template to
 display attributes in the popup, as explained in the next step.
 
 You are also invited to check the *Search* option and select the
-*featurenam* field as field to run the research. This way you can
+*featurename* field as field to run the research. This way you can
 activate more tools at the next step.
 
-Every time you made a modification to the *Layer Properties* window
+Every time you make a modification to the *Layer Properties* window
 you should press the *Save* button for your modification to take effect.
 
 You are also willing to publish a web application with a tool to draw
