@@ -1,0 +1,365 @@
+.. _userguidegeneral:
+
+Introduction
+============
+
+A brief overview
+***********************
+
+General presentation
+---------------------
+
+MapMint is a Geographic Information System (GIS) software running on a
+web server. It is made to facilitate the administration of a **Spatial Data
+Infrastructure** (SDI), publishing cartographic portals and dynamic
+applications.
+
+The MapMint platform is not only a GIS Software accessible through a simple web
+browser but also a modular and extensible WEB-GIS application
+generator. It provides numerous GIS capabilities and lets the user accomplish
+the following tasks:
+
+
+ * **Import and store GIS data** (both vector and raster data)
+ * **Query Relational Database System** and external WMS/WFS servers 
+ * **Publish GIS data** by using OGC Web Services: WMS, WFS et WMTS
+ * **Create, edit and style** data sources
+ * Compose and save maps to create application projects (using mapfile)
+ * Configure and generate Web GIS applications
+ * **Configure** and use GIS portals
+ * **Access** and share maps
+
+Basic concepts: using the OGC standards
+---------------------------------------
+
+The main idea behind the MapMint solution is the massive usage of OGC
+Web Services and making all processing in the solution available as
+WPS services, using the ZOO-Project OpenSource software.
+
+========== ===================================================         
+|mmarch|   |archi|                
+========== ===================================================	
+      
+.. |mmarch| image:: ../../_static/images/mmarch.png
+   :height: 236
+   :width: 380
+   :alt: ZOO logo
+
+.. |archi| image:: ../../_static/images/mm-architecture-scheme.png
+   :width: 100%
+   :alt: MapMint architecture preview image
+   
+
+
+Main software components
+-------------------------------
+
+MapMint is using numerous OSGeo software and brings them all together
+in a complete and integrated Web-GIS platform by using the WPS to make them
+understandable and usable from each other.
+
+
+============   =====
+**Software**   **Usage**
+------------   -----
+|zoo|               All the processing in the MapMint solution is based on the ZOO-Project and on the OGC WPS standard, even to produce dynamic web pages.
+|ms|                MapMint use the MapServer cartographic engine to publish the data through OGC Web Services (WMS,WFS and WCS) in an efficient way.
+|gd|                 The abstraction library used to access and interact with datasources transparently is the GDAL/OGR library.
+|ol|                  MapMint User Interfaces (UI) are using OpenLayers.
+============   =====
+
+
+
+.. |zoo| image:: ../../_static/images/zoo-logo-green.png
+   :height: 64
+   :width: 64
+   :alt: ZOO logo
+   :target: http://zoo-project.org
+
+.. |ms| image:: ../../_static/images/ms-logo-green.png
+   :height: 64
+   :width: 64
+   :alt: MapServer logo
+   :target: http://mapserver.org
+
+   
+.. |gd| image:: ../../_static/images/gdal-logo-green.png
+   :height: 64
+   :width: 64
+   :alt: GDAL logo
+   :target: http://gdal.org
+   
+   
+.. |ol| image:: ../../_static/images/ol-logo-green.png
+   :height: 64
+   :width: 64
+   :alt: OpenLayers logo
+   :target: http://openlayers.org
+
+
+The workshop content
+***********************
+    
+In the upcoming sections, you will find general information about what will be done
+during this workshop and what are the main objectives. The geographic
+data used is also introduced briefly.
+
+Workshop schedule
+---------------------------------
+
+You are invited to use the computer available in the room and to start
+the OSGeoLive 12.0 virtual machine from virtual box.
+
+The workshop is organized in 5 sections:
+
+* A presentation on how to install MapMint on your VM
+* A presentation of MapMint and how it works
+* Use case example of the module to administrate your GIS data by using an available dataset
+* An example of map production and spreading of the data as WMS and WFS
+* A presentation on how to publish an application using map created previously
+
+.. note::
+
+	Please, at any time, do not hesitate to ask the presenters any question you have during the workshop.
+
+
+Geographic dataset
+-------------------------------------
+
+During this workshop, the geographic dataset used is coming from `Edu Data Package North
+Carolina <http://www.grassbook.org/data_menu3rd.php>`__, provided by
+contributors of the `GRASS GIS <http://grass.osgeo.org/>`__ project
+and available by default in OSGeoLive.
+
+Data are subject to `Creative Commons Attribution-ShareAlike
+(CC-BY-SA) <http://creativecommons.org/licenses/by-sa/3.0/>`__. More
+information on this dataset are available on this `page
+<http://wiki.osgeo.org/wiki/Edu_Data_Package_North_Carolina>`__ .
+
+
+|ncd|
+
+.. |ncd| image:: ../../_static/images/nc-data.png
+   :height: 455
+   :width: 780
+   :alt: North Carolina dataset snapshot
+	
+
+
+Installing MapMint on the OSGeoLive 12.0 VM
+********************************************
+
+The MapMint application can be installed very simply using `Ansible
+scripts <http://ansible.com>`__. It is thus possible to deploy several
+instances of MapMint through the use of the ``ansible-playbook``.
+In this section, you will learn how to setup only a single instance
+which is your local OSGeoLive 12.0 VM.
+
+Before you can install MapMint using Ansible scripts, it is necessary
+to ensure the presence of some packages and specific Python modules.
+
+.. code-block:: guess
+
+    sudo apt-get install ansible git python-setuptools openssh-server python-pip
+
+
+It is necessary to download Ansible and specific MapMint installation
+scripts. To do this, use the following commands. 
+
+.. code-block:: guess
+
+    cd
+    mkdir mm-install
+    cd mm-install
+    git clone git://github.com/mapmint/ansible-roles mapmint-setup
+
+For making your user able connect to the server on which to install
+MapMint, you must create a key to enable an automatic
+authentication. To do this use the following commands.
+
+.. code-block:: guess
+
+    mkdir ~/.ssh
+    ssh-keygen -t rsa
+
+When you will be prompted, you are required to confirm every question
+by pressing "Enter".
+
+.. code-block:: guess
+
+    sudo mkdir /root/.ssh
+    sudo cp ~/.ssh/id_rsa.pub /root/.ssh/authorized_keys
+
+
+Installing MapMint is fully automated via the previously
+downloaded Ansible scripts, so only remaining task is to launch it. Before that, it
+will be necessary to set Ansible and specific scripts installation for
+MapMint to define the name of the machine that will be used to access
+the instance. 
+
+.. code-block:: guess
+
+    echo "localhost" > ~/ansible_hosts
+    sed "s:myhost.net:localhost:g" -i \
+       ~/mm-install/mapmint-setup/osgeolive/dependencies/vars/main.yml
+    export ANSIBLE_INVENTORY=~/ansible_hosts
+
+You are almost ready to start installing MapMint on OSGeoLive
+12.0. You only need to make sure that the settings in the installer
+are correct and the packages required are well available on your local
+VM. To do this, simply run the following commands.
+
+.. code-block:: guess
+
+    ~/mm-install/mapmint-setup/scripts/loVersion.sh
+    apt-cache search postgis
+
+Once run, the first script will inform you in case you need to edit
+any file to fix the correct version of the LibreOffice software to
+install. The second command, will give you the version number of the
+PostgreSQL server and PostGIS available for your distribution. 
+
+So the first file to edit is
+``osgeolive/dependencies/vars/main.yml``. Here, you should make sure
+the correct PostgreSQL, PostGIS and LibreOffice versions are correctl
+set:
+  * pgvers=10,
+  * pgisvers=2.4
+  * lo_version=6.0.7
+
+To proceed with the installation, please use the following commands. 
+
+.. code-block:: guess
+
+    cd ~/mm-install/mapmint-setup/osgeolive
+    ansible-playbook -b server.yml -u root
+
+In case you face any issue (like connexion timeout) running the last
+command above, please run the following commands.
+
+
+.. code-block:: guess
+
+    sudo rm -rf /home/src/mapserver-7.2.1/build /var/www/html/tmp
+    sudo ln -s /tmp /var/www/html/tmp
+    sudo -u postgres dropdb mmdb
+
+Then run the following command to try installing again.
+
+.. code-block:: guess
+
+    ansible-playbook -b server.yml -u root
+    sudo /etc/init.d/apache2 restart
+
+Once the last command is finished, you are almost ready to start using
+your MapMint instance that you have just setup. Fist you should ensure
+that the settings defined in your main.cfg file is correct and
+correspond to your setup. To make sure that the main.cfg file is
+correct, please edit the file ``/ur/lib/cgi-bin/mm/main.cfg`` which
+contains the main settings for your MapMint instance. You will need to
+replace every occurence of ``myhost.net`` by ``localhost``. The
+easiest way to achieve this is to use the following command.
+
+.. code-block:: guess
+
+    sudo sed -i "s:myhost.net:localhost:g" /usr/lib/cgi-bin/mm/main.cfg
+
+Before being able to access your MapMint instance, the last step is to
+edit the following files: ``/home/src/mapmint/public_map/assets/js/cfg.js`` and
+``/home/src/mapmint/mapmint-ui/templates/preview/.htaccess`` to replace the following
+value: ``/~djay/progede2/public_map/assets``  by this one:
+``/pm/assets``.
+
+During this workshop, you will use two datastores already available
+on OSGeoLive 12.0, by the names: `NC_Raster` and `NC_Shapes`. To make them available
+through the Distiller, you have to create a symlink to these
+directories and allow the apache user to make any modification
+required to store files in these directories. To do this, use the
+following commands.
+
+.. code-block:: guess
+
+    sudo ln -s /usr/local/share/data/north_carolina /var/data/ftp/
+    sudo chown -R www-data:www-data /var/data/ftp/*/
+
+Now, you are ready to use your MapMint instance.
+
+**Welcome to MapMint!**
+
+Using MapMint
+****************
+    
+MaMint is made of an **administration interface** (*MapMint Admin*)
+composed of various modules and a **public interface** (*MapMint
+Client*) containing published maps.
+
+============================================ ============================================
+*MapMint Admin*                              *MapMint Client*   
+-------------------------------------------- --------------------------------------------
+|mma|           	  	                     |mmc|   
+============================================ ============================================
+
+.. |mma| image:: ../../_static/images/dashboard.png
+   :width: 100%
+   :alt: MM admin
+   
+
+.. |mmc| image:: ../../_static/images/mmc.png
+   :width: 100%
+   :alt: MM client
+	
+MapMint Admin
+---------------------------------
+
+For accessing the administration interface, first use this link
+`MapMint Admin <http://localhost/ui/Dashboard_bs>`__ then fill the
+**login** and **password** provided below and press the
+login button. 
+
+.. note::
+
+	* login: **test**
+	* password: **demo02**
+
+.. |login| image:: ../../_static/images/login-screen.png
+   :width: 100%
+   :alt: MapMint login screen
+   
+|login|
+
+.. note::
+	You can also simply press *Enter* rather than using the Login button.
+	
+A success message should be displayed on top of your interface and the Dashboard module will load. In case you see a red banner on top
+rather than the expected green one, then please re-check the credentials and information entered by you.
+
+Despite more modules are available in MapMint and can be activated by
+using specific parameter, for this workshop, the following modules are available in the
+administration interface. You can access them by using links on top of
+the interface, once logged in MapMint Admin.
+ 
+==========   ===
+**Module**          **URL**
+----------   ---
+Dashboard           http://localhost/ui/Dashboard_bs
+Distiller           http://localhost/ui/Distiller_bs
+Themes              http://localhost/ui/Themes_bs
+Manager             http://localhost/ui/Manager_bs
+Publisher           http://localhost/ui/Publisher_bs
+==========   ===
+
+Accessing the public interface
+-------------------------------------
+
+The MapMint public interface can be accessed by using the following link
+http:localhost/ui/public/. Each published map is accessible
+from the maps listing page or can be directly accessed by using a
+specific URL (such as http://localhost/ui/public/your-map-name).
+
+==============================   ============================================
+**Module**                       **URL**       
+------------------------------   --------------------------------------------
+Public Interface                  http://localhost/ui/public/
+Published Map                     http://localhost/ui/public/your-map-name
+==============================   ============================================
+
