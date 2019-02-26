@@ -1,0 +1,25 @@
+.. _home:
+
+MapMint data collection - MapMint4ME
+=========================================================================================
+
+Welcome in the workshop introducing the `MapMint4ME <http://mapmint.com>`__ solution.
+
+.. image:: http://zoo-project.org/img/nu_logo.png
+   :width: 250px
+   :alt: Naresuan University
+   :target: https://www.nu.ac.th/
+   :align: center
+
+
+
+Workshop table of content
+===========================
+
+.. toctree::
+   :maxdepth: 3
+   
+   introduction
+   tables
+   mm4me   
+   dmap
