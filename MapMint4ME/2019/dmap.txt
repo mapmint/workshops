@@ -12,23 +12,23 @@ properly.
 
 From the Distiller module, click on the *Open in manager* button to
 create a new project using the table used to store the data recorded
-on the field. In case it does not appear directly in the Distiller,
-please use the refresh button to get up-to-date informations about
-every geographic tables within the database.
+in the field. In case it does not appear directly in the Distiller,
+please use the refresh button to get up-to-date information about
+every geographic table within the database.
 
 .. image:: _static/images/mmtmc0.png
    :width: 100%
    :alt: MapMint4ME Home
    :align: center
 
-From the Manager, save you project under a name respecting the
-following syntaxe: ``<schema>___<table>``, where ``<schema>`` should be
+From the Manager, save your project under a name respecting the
+following syntax: ``<schema>___<table>``, where ``<schema>`` should be
 replaced by the schema name (in your case ``sample`` ) and
 ``table`` should be replace by your table name (in your case,
 ``wsxpoints``). Then, define the parameters to make your layer
 appearing the way want with the activated capabilities you need. After
 the settings for your project is over, publish it as any other project
-by allowing, at least, the user groups allowed to edit the table.
+by allowing, at least, giving the user groups permision to edit the table.
 
 .. image:: _static/images/mmtmc1.png
    :width: 100%
@@ -36,7 +36,7 @@ by allowing, at least, the user groups allowed to edit the table.
    :align: center
 
 Now, if you access again the MapMint table client module, you should
-now get an associated map which zoom on the element you have
+get an associated map which zoom on the element you have
 selected. 
 
 .. image:: _static/images/mmtmc2.png
@@ -48,19 +48,19 @@ Create report for your data
 ***************************
 
 Depending on the type of your data you may want to produce a
-report. MapMint rely on LibreOffice server which is responsible for
+report. MapMint relies on LibreOffice server which is responsible for
 generating the reports in various formats. MapMint uses its own
 templating system fully compatible with Open Document Text (odt)
 format. For producing reports for a table or an elemnt, MapMint will
 use an odt template file, which is a very basic odt file, and will
-replace every field found in the template by the expected value(s).
+replace every field found in the template with the expected value(s).
 
-Let suppose that we want to get a table showing the last 10 item
+Let us suppose that we want to get a table showing the last 10 items
 recorded and a diagram showing the repartition of record amongst the
 catogories.
 
 First of all, you have to create an odt file using your local
-LibreOffice installation. Then create add a table to the document with
+LibreOffice installation. Then add a table to the document with
 2 rows and 2 columns. Then set *Title* and *Description* in the first
 row of the table. Right-click on the table, in the contextual menu,
 click on the *Table properties*. Here, set the table name as
@@ -84,8 +84,8 @@ right-click on the diagram in your document. Here, choose the name
    :width: 100%
    :alt: MapMint4ME Home
 
-Finaly, you will need to link your report with your table then to
-configure the way you want the table and diagram to be filled with.
+Finally, you will need to link your report with your table  to
+configure the way you want the table and diagram to be completed.
 
 To do so, go to the MapMint table administration interface,
 select your table configuration from the list then click on the
@@ -107,7 +107,7 @@ Here, you can set the following parameters:
 ==================  ==============================================================
 
 Once you have uploaded your document model, by selecting your local
-odt file then pressing the *Import* button, you shall see every fields
+odt file then pressing the *Import* button, you shall see every field
 you have defined in your template. So, in your case the ``diag1`` and 
 ``listing1``.
 
@@ -145,7 +145,7 @@ value to the following SQL query:
 You should press the *Save* button for your report settings to be
 saved. Then, as presented in the screen shot below, you should see a
 new tab, named as you have entitled your report, appearing from the
-MapMint table client module. If you access it, you can then press *Run*
+MapMint table client module. If you access to it, you can then press *Run*
 to ask the server to generate the report. At the end of its
 processing, it will return a link to the pdf, odt, doc, and html
 version of the produced report.
@@ -169,11 +169,11 @@ In this final section, you have leanrt how to add a map to your
 MapMint table client module and to produce reports out of the
 recorded data.
 
-You should be now able to setup the MapMint table module from any
+You should now be able to set-up the MapMint table module from any
 MapMint instance. Then, create tables, when required, and configure
 edition forms for theses tables. You know that it is easy and reliable
-to use MapMint4ME for data collection in relationship with a MapMint
+to use MapMint4ME for data collection in conjunction with a MapMint
 server. The final touch was the map view from table client module and
-the reporting abuot the data collected.
+the reporting about the data collected.
 
 Hoping you had great time reading this material.
