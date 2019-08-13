@@ -225,7 +225,7 @@ the correct PostgreSQL, PostGIS and LibreOffice versions are correctl
 set:
   * pgvers=10,
   * pgisvers=2.4
-  * lo_version=6.0.7
+  * lo_version=6.1.6
 
 To proceed with the installation, please use the following commands. 
 
@@ -263,12 +263,6 @@ easiest way to achieve this is to use the following command.
 .. code-block:: guess
 
     sudo sed -i "s:myhost.net:localhost:g" /usr/lib/cgi-bin/mm/main.cfg
-
-Before being able to access your MapMint instance, the last step is to
-edit the following files: ``/home/src/mapmint/public_map/assets/js/cfg.js`` and
-``/home/src/mapmint/mapmint-ui/templates/preview/.htaccess`` to replace the following
-value: ``/~djay/progede2/public_map/assets``  by this one:
-``/pm/assets``.
 
 During this workshop, you will use two datastores already available
 on OSGeoLive 12.0, by the names: `NC_Raster` and `NC_Shapes`. To make them available
