@@ -220,7 +220,7 @@ install. The second command, will give you the version number of the
 PostgreSQL server and PostGIS available for your distribution. 
 
 So the first file to edit is
-``osgeolive/dependencies/vars/main.yml``. Here, you should make sure
+``mapmint-setup/osgeolive/dependencies/vars/main.yml``. Here, you should make sure
 the correct PostgreSQL, PostGIS and LibreOffice versions are correctl
 set:
   * pgvers=10,
