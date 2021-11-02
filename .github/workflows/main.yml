@@ -32,20 +32,15 @@ jobs:
           for i in $(ls MapMint) ; do 
             docker run --rm -v $(pwd)/MapMint/$i:/docs sphinxdoc/sphinx make html ; 
             sudo mv MapMint/$i/_build/html docs/MapMint/$i ;
-            sudo touch docs/MapMint/$i/.nojekyll ;
-            sudo cp _config.yml docs/MapMint/$i ;
           done
           mkdir -p docs/MapMint4ME ; 
           for i in $(ls MapMint4ME) ; do 
             docker run --rm -v $(pwd)/MapMint4ME/$i:/docs sphinxdoc/sphinx make html ; 
             sudo mv MapMint4ME/$i/_build/html docs/MapMint4ME/$i ; 
-            sudo touch docs/MapMint4ME/$i/.nojekyll ;
-            sudo cp _config.yml docs/MapMint4ME/$i ;
           done
           sudo cp _config.yml docs/ ;
           sudo cp index.md docs/;
-          sudo touch docs/MapMint/.nojekyll;
-          sudo touch docs/MapMint4ME/.nojekyll;
+          sudo touch docs/.nojekyll ;
           
       # Runs a set of commands using the runners shell
       - name: Deploy
