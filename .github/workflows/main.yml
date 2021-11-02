@@ -40,6 +40,8 @@ jobs:
             sudo mv MapMint4ME/$i/_build/html docs/MapMint4ME/$i ; 
             sudo cp _config.yml docs/MapMint4ME/$i ;
           done
+          sudo cp _config.yml docs/ ;
+          sudo touch docs/.nojekyll
           
       # Runs a set of commands using the runners shell
       - name: Deploy
