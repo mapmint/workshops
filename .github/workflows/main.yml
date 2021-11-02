@@ -33,7 +33,7 @@ jobs:
             docker run --rm -v $(pwd)/MapMint/$i:/docs sphinxdoc/sphinx make html ; 
             sudo mv MapMint/$i/_build/html docs/MapMint/$i ;
             sudo touch docs/MapMint/$i/.nojekyll ;
-            sudo cp _config.yml docs/MapMint4ME/$i ;
+            sudo cp _config.yml docs/MapMint/$i ;
           done
           mkdir -p docs/MapMint4ME ; 
           for i in $(ls MapMint4ME) ; do 
