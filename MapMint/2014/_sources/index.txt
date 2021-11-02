@@ -1,0 +1,42 @@
+.. _home:
+
+Building Standards Compliant Geospatial Web Application – The Quick and Easy MapMint Way.
+=========================================================================================
+
+Welcome in the workshop introducing the `MapMint <http://mapmint.com>`__ solution.
+
+|mmm|
+
+.. |mmm| image:: _static/images/intro.jpg
+   :height: 220px
+   :width: 780px
+   :alt: MM Intro
+   :target: http://mapmint.com
+
+.. note::
+    This workshop material is also available in the following formats:
+    `PDF <./ZOOProject.pdf>`__ |image|  and `ePub <./ZOOProject.epub>`__ |image2|
+    
+.. |image| image:: _static/images/pdf.png
+   :height: 16
+   :width: 16
+   :alt: PDF icon
+   :target: /ZOOProject.pdf
+   
+.. |image2| image:: _static/images/epub.png
+   :height: 16
+   :width: 16
+   :alt: ePub icon
+   :target: /ZOOProject.pdf
+
+
+Workshop table of content
+=================
+
+.. toctree::
+   :maxdepth: 3
+   
+   introduction
+   distiller
+   manager   
+   publisher

@@ -1,0 +1,297 @@
+.. _distiller:
+
+The Distiller module
+==================
+
+Overview of the interface
+*************************
+
+The Distiller Interface contains two panels and looks similar to the following image.
+
+.. image:: _static/images/distiller.png
+   :width: 100%
+   :alt: PDF icon
+   :align: center
+   :target: /ZOOProject.pdf
+
+
+
+The Data Stores
+***************
+
+A Datastore contains data sources. These data sources can be local or remote. It is defined by a **unique name** and various parameters depending on its type. Currently, there are 3 different datastore types supported in MapMint: 
+
+.. |adddb| image:: _static/images/add-database.png
+   :height: 24
+   :alt: Add database
+
+.. |adddir| image:: _static/images/add-directory.png
+   :height: 24
+   :alt: Add directory
+   
+.. |addwfs| image:: _static/images/add-wfs.png
+   :height: 24
+   :alt: Add OGC Service
+   
+
+========   ================   ====================
+**Icon**   **Type**   	      **Action**
+--------   ----------------   --------------------
+|adddb|     DataBase	         Add a database connection
+|adddir|    Directory		       Add a server directory
+|addwfs|    OGC Server		     Add a remote WMS/WFS server
+========   ================   ====================
+
+Creating a datastore requires you to set a name, use an existing or new
+directory then select the directory or set the name of the new one.
+
+Create two Directory datastore like the following:
+  * Name: NC_Shapes, Path: north_carolina > shape
+  * Name: NC_Rasters, Path: north_carolina > rast_geotiff
+
+.. warning::
+   The datastore name should not contain any **accent** or any special character available in any language.
+
+.. note::
+	Afterward, you can always add your own data in `/var/data/ftp/your-directory` and then create a corresponding datastore from your Distiller.
+
+If you click on a datastore name on the left hand side (so in the `Data Stores` section), you will get a list of available datasources in this datastore. The list of datasources is displayed on the right hand side (so in the `Data Sources` section).
+
+The Data Sources
+****************
+
+A data source is corresponding to GIS data available in a datastore (it can be a table in a database, a shapefile in a directory, a layer in WFS/WMS layer). MapMint supports a variety of data sources.
+
+.. |vptds| image:: _static/images/data-vector-point-icon.png
+   :height: 24
+   :alt: Vector point datasource icon
+
+.. |vlids| image:: _static/images/data-vector-line-icon.png
+   :height: 24
+   :alt: Vector line datasource icon
+   
+.. |vpods| image:: _static/images/data-vector-polygon-icon.png
+   :height: 24
+   :alt: Vector polygon datasource icon
+   
+.. |rasds| image:: _static/images/data-raster-icon.png
+   :height: 24
+   :alt: Raster datasource icon
+   
+========== ============================================
+**Icon**   **Type**       
+---------- --------------------------------------------
+|vptds|    Point datasource
+|vlids|    Line datasource
+|vpods|    Polygon datasource
+|rasds|    Raster datasource
+========== ============================================
+
+
+
+Data sources toolbar
+--------------------
+
+Once listed, each data source available in a datastore has a toolbar associated with it, which contains the following buttons.
+
+.. |cds| image:: _static/images/preview.png
+   :width: 24
+   :alt: Preview icon
+
+.. |dds| image:: _static/images/privileges.png
+   :width: 24
+   :alt: Set privileges
+   
+.. |oim| image:: _static/images/download.png
+   :width: 24
+   :alt: Download the datasource
+   
+.. |spd| image:: _static/images/select.png
+   :width: 24
+   :alt: Select a datasource
+
+.. |pds| image:: _static/images/process.png
+   :width: 24
+   :alt: Pocess the datasource
+     
+.. |sds| image:: _static/images/openinmanager.png
+   :width: 24
+   :alt: Open the datasource in the Manager
+   
+.. |fl| image:: _static/images/displaycontent.png
+   :width: 24
+   :alt: Display content icon
+
+.. |del| image:: _static/images/delete.png
+   :width: 24
+   :alt: Delete datasource icon
+
+========== ============================================
+**Icon**   **Action**       
+---------- --------------------------------------------
+|spd|      Select the datasource
+|cds|      Preview the datasource
+|dds|      Set the privileges to access the datasource
+|pds|      Process the datasource
+|oim|      Download the datasource
+|sds|      Open the datasource in the Manager
+|del|      Delete the datasource
+|fl|       Display the datasource (attributes table or histogram)
+========== ============================================
+
+.. warning::
+    When the SRS field contain *No EPSG*, it means that MapMint
+    understands the SRS of the data source but cannot display it as EPSG
+    code. When the SRS field displays *(undefined)*, it implies that the SRS is unknown. In
+    such a case, MapMint will use EPSG:4326 definition as default SRS,
+    but at any time, a new datasource can be created with correct SRS settings by clicking on the Process button.
+
+Quickly preview your data
+-------------------------
+
+For both vector and raster data source, you can preview your data
+source by clicking on the *Preview* button. On clicking it, you will then get a window
+presenting the data using a GetMap WMS request and which should look
+like the following:
+ 
+============================== ============================================
+**Vector data source**	          **Raster data source**       
+------------------------------ --------------------------------------------
+|pvec|           	  	       |pras|   
+============================== ============================================
+
+
+Vector data sources
+*******************
+
+You are invited to first display data sources available in the *NC_Shapes* data store.
+
+Display attributes table
+-------------------------------------
+
+If you press the button looking like a down arrow (the last row of
+the `toolbar table <#data-sources-toolbar>`__) you can display
+the attribute values table and browse your data smoothly. Also, you can
+order and modify column order. One important capability of the table
+is that you can modify the encoding of your data in case you are using
+data which is not in UTF-8 encoding. By this, your data will be returned
+correctly in utf-8 from your WFS server.
+
+.. note::
+	Vector data sources are always using a basic style which cannot be accessed.
+	
+.. |pvec| image:: _static/images/pvec.png
+   :width: 380
+   :alt: Preview vector window
+
+.. |pras| image:: _static/images/pras.png
+   :width: 380
+   :alt: Preview raster window
+   
+   
+Convert vector data sources
+-------------------------------------
+
+You are invited to click on the *Convert* button in the toolbar for
+the *poi_names_wake* to access the converting tool window as presented
+in the screenshot below.
+
+|ogr2ogr|
+
+The *Vector Converter* window contains various parameters which can be set
+to create a new data source by transforming the original one. There are
+4 parts in the form:
+
+ * *Source SRS*: optional, to define the source Spatial Reference System (SRS) (should be only used in case when there is undefined written in the SRS section in the data source toolbar.
+ * *Target*: to define:
+    * *Datastore*: the data store where your data source will be created
+    * *Datasource name*: the name by which your data source will be created
+    * *SRS*: optional, the SRS used to create the new data source
+    * *Format*: the data source format of your created data source
+ * *Simplify*: optional, gives you the capability to simplify the data source geometries
+ * *SQL*: optional, gives you the capability to simplify the data source geometries
+ 
+.. warning::
+    In case the created data source is a file, make sure to add the
+    extension in its name otherwise it will lead to a directory creation
+    making your data store unavailable. In case, if a directory gets created, you will have to remove the directory first. Then, to have up-to-date list, first right click on the Data Store
+    unavailable and click on the *Refresh* item from the displayed
+    contextual menu, then check it again.
+
+We will use the following example: from the points of interest data
+source, you would like to extract the subset containing only the
+*Populated Places*. So you will first check the SQL section and fill
+the textarea with the following query:
+
+``SELECT * FROM poi_names_wake WHERE class = 'Populated Place'``
+ 
+Now, click on the *Run convertion* button, once your data source is
+created, the window gets closed automatically. Now, you should refresh
+your data store, by accessing datastorel menu for  the *NC_Shapes*
+data store. Once the Distiller has reloaded the datastore,
+you should be able to see your new data source appearing in the
+datasources list.
+
+
+
+.. |ogr2ogr| image:: _static/images/ogr2ogr.png
+   :width: 780
+   :alt: Ogr2ogr window
+ 
+.. note::
+	The Source code of the ZOO-Service vector-converter is based
+	on **ogr2ogr** from the `GDAL library <http://gdal.org>`__.
+
+Raster data sources
+*******************
+
+You are invited to first display data sources available in the
+*NC_Rasters* data store.
+
+Display histogram
+-------------------------------
+
+If you press the button looking like a down arrow (the last row of
+the `toolbar table <#data-sources-toolbar>`__) you can display
+the histogram of your raster bands.
+	
+Raster tools
+------------
+
+As you did previously for vector data, open the Converter window for
+the *elevation* data source.
+
+|gdaldem|
+
+.. |gdaldem| image:: _static/images/gdaldem.png
+   :width: 780
+   :alt: Gdaldem window
+   
+Your goal is to create a new raster data sources named as *elevation_shaded* having a nice shaded relief effect. First select the
+hillshade method, then set the *Filename* value to
+`test_elevation_shade` then click on the *Run* button.
+
+You are free to generate more raster data sources using other methods.
+Please make sure to change the name every time you generate a new raster
+data source.
+
+Now, you will simply need to refresh you data store as you did
+before. Once you have it listed, you can preview it. 
+
+Open datasources in the Manager
+*********************************
+
+Using the raster datasources created in the previous step, prior to go
+to the next section, please select both the *elevation_shaded* and
+*elevation* datasources, then press the *Open in the Manager* button 
+of the datastore. This should open your manager with the two
+datasources available as layers from your Manager. 
+  
+.. note::
+	The raster convertion tools presented here are based on
+	gdaldem dan gdal_contour source code from the `GDAL library
+	<http://gdal.org>`__.
+	
+	
+
+

@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The Publisher Module &#8212; Building Standards Compliant Geospatial Web Application - The Quick and Easy MapMint Way.</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="The Manager Module" href="manager.html" />
+
+
+     
+
+  </head><body>
+<!-- Begin Header -->
+<div id="wrapper">
+  	<div id="myheader">
+    	<div class="hleft">
+    	  <h1 class="title"><span class="logo"></span><a href="http://mapmint.com" target="_blank">Map<span>Mint</span></a></h1>
+    	</div>
+		<div class="hright">
+		<ul class="soc">
+		<li><a href="#" class="twit"></a></li>
+		<li><a href="#" class="guit"></a></li>
+		</ul>
+		</div>
+  	</div>
+  	<div id="mysubheader">
+  	<h1 class="msg">Building Standards Compliant Geospatial Web Application – The Quick and Easy Map<span>Mint</span> Way.</h1>
+  	</div>
+</div>
+<!-- End Header -->
+    
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="manager.html" title="The Manager Module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Publisher Module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-publisher-module">
+<span id="publisher"></span><h1>The Publisher Module<a class="headerlink" href="#the-publisher-module" title="Permalink to this headline">¶</a></h1>
+<p>The Publisher is a module made to publish your web application. It is
+composed of two pannels: on the left the maps list and on the right the
+configurations tabs.</p>
+<p><a class="reference internal" href="_images/publisher.png"><img alt="App map" src="_images/publisher.png" style="width: 780px; height: 384px;" /></a></p>
+<section id="maps-list">
+<h2>Maps List<a class="headerlink" href="#maps-list" title="Permalink to this headline">¶</a></h2>
+<p>If you click on a map name from the list, the Publisher module will
+reload using the map you choosen and giving the capability to change
+the configuration and publish again.</p>
+</section>
+<section id="configuration-tabs">
+<h2>Configuration tabs<a class="headerlink" href="#configuration-tabs" title="Permalink to this headline">¶</a></h2>
+<p>Options you are able to set in the Publisher interface are grouped by
+tabs, you should click on one of the following icons, to acces the
+parameters.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Every modification made to the any tabs require that you press
+the <em>Publish</em> button to save your modifications.</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 28%" />
+<col style="width: 51%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Icon</strong></p></td>
+<td><p><strong>Tab</strong></p></td>
+<td><p><strong>Action</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/process.png"><img alt="General configuration icon" src="_images/process.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>General</p></td>
+<td><p>General configuration</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/layout-settings.png"><img alt="Layout settings icon" src="_images/layout-settings.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Layout</p></td>
+<td><p>Layout configuration</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/layers-settings.png"><img alt="Layers settings icon" src="_images/layers-settings.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Layers</p></td>
+<td><p>Layers configuration</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/map-settings.png"><img alt="Map settings icon" src="_images/map-settings.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Map</p></td>
+<td><p>Map Configuration</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/controls-settings.png"><img alt="Control settings icon" src="_images/controls-settings.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Control</p></td>
+<td><p>Tools Configuration</p></td>
+</tr>
+</tbody>
+</table>
+<section id="general-configuration">
+<h3>General configuration<a class="headerlink" href="#general-configuration" title="Permalink to this headline">¶</a></h3>
+<p>Per default, it the activated tab, the settings you can made are
+listed below.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>Definition</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Project name</p></td>
+<td><p>The Project name (cannot be modified informative)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Project Title</p></td>
+<td><p>The title displayed in the published application</p></td>
+</tr>
+<tr class="row-even"><td><p>Access privileges</p></td>
+<td><p>Define access privileges</p></td>
+</tr>
+<tr class="row-odd"><td><p>Classify in theme</p></td>
+<td><p>You can group your layers per themes</p></td>
+</tr>
+<tr class="row-even"><td><p>Project URL</p></td>
+<td><p>Display l’URL of the published application</p></td>
+</tr>
+<tr class="row-odd"><td><p>Langue</p></td>
+<td><p>Set the language of the published application</p></td>
+</tr>
+<tr class="row-even"><td><p>Key-Words</p></td>
+<td><p>Metadata information for the published project</p></td>
+</tr>
+<tr class="row-odd"><td><p>Author</p></td>
+<td><p>Metadata information for the published project</p></td>
+</tr>
+<tr class="row-even"><td><p>Copyright</p></td>
+<td><p>Metadata information for the published project</p></td>
+</tr>
+<tr class="row-odd"><td><p>Description</p></td>
+<td><p>Metadata information for the published project</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <em>Description</em> field is set using the <a class="reference external" href="http://docs.cksource.com/Main_Page">WISIWYG editor</a> seen previously, its
+value will be used to define the abstract metadata
+information.</p>
+</div>
+</section>
+<section id="layout-configuration">
+<h3>Layout configuration<a class="headerlink" href="#layout-configuration" title="Permalink to this headline">¶</a></h3>
+<p>By choosing the layout, you decide the way elements will be
+displayed in the final application. You are invited to first choose
+the <em>Fullscreen</em> option.</p>
+<p><a class="reference internal" href="_images/choose-template.png"><img alt="App logo modification" src="_images/choose-template.png" style="width: 800px; height: 105px;" /></a></p>
+</section>
+<section id="layers-configuration">
+<h3>Layers configuration<a class="headerlink" href="#layers-configuration" title="Permalink to this headline">¶</a></h3>
+<section id="base-layers">
+<h4>Base layers<a class="headerlink" href="#base-layers" title="Permalink to this headline">¶</a></h4>
+<p>The base layers are optional, you can display only one prorietary base
+layer per project. Once you select one proprietary option (<em>Google</em>,
+<em>Bing</em> or <em>IGN</em>) you have access to the list of available base layers.</p>
+<p>By using the Default option, you can choose amongst the activated base
+layers the one to use per default.</p>
+<p>Note that you can use your own published project as base
+layers. Indeed once a MapMint project is published, the setup of
+mapcache was automatically made with all the layers defined as
+activated per dafult in the project.</p>
+<p><a class="reference internal" href="_images/configure-blayers.png"><img alt="App layers configuration" src="_images/configure-blayers.png" style="width: 800px; height: 269px;" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use <a href="#id1"><span class="problematic" id="id2">*</span></a>Ctrl*+Click to select multiple base layers from a
+list.</p>
+</div>
+</section>
+<section id="overlays-configuration">
+<h4>Overlays configuration<a class="headerlink" href="#overlays-configuration" title="Permalink to this headline">¶</a></h4>
+<p>You are invited to set all layers as <em>Raster</em> and as <em>Activated</em>.</p>
+<p>You are now invited to activate the popup option for the
+<em>new_poi_names_wake</em> layer and set it as <em>Vector</em>.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>Definition</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Popup</p></td>
+<td><p>Activate the popup to be displayed when a user move his mouse on top of a feature</p></td>
+</tr>
+<tr class="row-odd"><td><p>Window</p></td>
+<td><p>Activate the popup to be displayed when a user click on a feature</p></td>
+</tr>
+<tr class="row-even"><td><p>Vector</p></td>
+<td><p>Display the layer as vector (WFS)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Raster</p></td>
+<td><p>Display the layer as raster (WMS)</p></td>
+</tr>
+<tr class="row-even"><td><p>Activated</p></td>
+<td><p>Define if the layer is activated per default</p></td>
+</tr>
+<tr class="row-odd"><td><p>Min Zoom</p></td>
+<td><p>Define the minimum scale from which the layer should be displayed (same for labels)</p></td>
+</tr>
+<tr class="row-even"><td><p>Max Zoom</p></td>
+<td><p>Define the maximum scale until which the layer should be displayed (same for labels)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Acess</p></td>
+<td><p>Définit les groupes d’utilisateurs autorisés à consulter la couche</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="map-configuration">
+<h3>Map Configuration<a class="headerlink" href="#map-configuration" title="Permalink to this headline">¶</a></h3>
+<p>In the Map Configuration pannel, selecting a layer in the list on the
+right of the table, automatically update the extent on the
+corresponding row.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22%" />
+<col style="width: 78%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>Definition</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Display Project Système</p></td>
+<td><p>Define the SRS used to display mouse position</p></td>
+</tr>
+<tr class="row-odd"><td><p>Render Method</p></td>
+<td><p>Define the OpenLayer renderer (<em>SVG</em> or <em>Canvas</em>)</p></td>
+</tr>
+<tr class="row-even"><td><p>Unit of Measure</p></td>
+<td><p>Define the unit of measure used to display measure tools informations</p></td>
+</tr>
+<tr class="row-odd"><td><p>Default extent</p></td>
+<td><p>Define the extent used per default when loading the application</p></td>
+</tr>
+<tr class="row-even"><td><p>Minimum extent</p></td>
+<td><p>Define the minimum extent for the application</p></td>
+</tr>
+<tr class="row-odd"><td><p>Maximum extent</p></td>
+<td><p>Define the maximum extent for the application</p></td>
+</tr>
+<tr class="row-even"><td><p>Restricted extent</p></td>
+<td><p>You can check this option to strictly restrict the extent to the one defined as maximum extent</p></td>
+</tr>
+</tbody>
+</table>
+<p><a class="reference internal" href="_images/edit-map.png"><img alt="App map configuration" src="_images/edit-map.png" style="width: 800px; height: 188px;" /></a></p>
+</section>
+<section id="tools-configuration">
+<h3>Tools Configuration<a class="headerlink" href="#tools-configuration" title="Permalink to this headline">¶</a></h3>
+<p>In this section you can activate tools which will be available from
+the published application.</p>
+<p><a class="reference internal" href="_images/edit-controls.png"><img alt="App Controls configuration" src="_images/edit-controls.png" style="width: 800px; height: 320px;" /></a></p>
+<p>You are invited to select the following options:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Pan</strong></p></li>
+<li><p><strong>Zoom Box</strong></p></li>
+<li><p><strong>Zoom to max extent</strong></p></li>
+<li><p><strong>Profile tool</strong></p></li>
+<li><p><strong>Mouse position</strong></p></li>
+<li><p><strong>Search Box</strong></p></li>
+</ul>
+</div></blockquote>
+<p>Sélectionnez la valeur <em>None</em> pour les outils d’analyse spatiale.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use <em>Ctrl</em> + Click to add multiple tools at the same time.</p>
+</div>
+<section id="navigation-toolbar">
+<h4>Navigation toolbar<a class="headerlink" href="#navigation-toolbar" title="Permalink to this headline">¶</a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 35%" />
+<col style="width: 48%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Icone</strong></p></td>
+<td><p><strong>Paramètre</strong></p></td>
+<td><p><strong>Définition</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/login-icon.png"><img alt="Login icon" src="_images/login-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Authenticate</p></td>
+<td><p>Provide tools to authenticate users</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/permalink-icon.png"><img alt="Link icon" src="_images/permalink-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Permalink</p></td>
+<td><p>Generate a permalink and the corresponding QRCode</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/twitter-icon.png"><img alt="Twitter icon" src="_images/twitter-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Twitter sharing</p></td>
+<td><p>Share the permalink through Twitter</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/facebook-icon.png"><img alt="Facebook icon" src="_images/facebook-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Facebook sharing</p></td>
+<td><p>Share the permalink through Facebook</p></td>
+</tr>
+<tr class="row-even"><td><p>none</p></td>
+<td><p>Scroll</p></td>
+<td><p>Zoom in/out by using mouse scroll</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/pan-map-icon.png"><img alt="Pan icon" src="_images/pan-map-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Pan</p></td>
+<td><p>Move the map by draging</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/geolocate-icon.png"><img alt="My position icon" src="_images/geolocate-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>My position</p></td>
+<td><p>Access the browser localisation information and center the map on its location</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/position-icon.png"><img alt="Follow my position icon" src="_images/position-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Track my position</p></td>
+<td><p>Track the browser location</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/zoom-in-icon.png"><img alt="ZoomBox icon" src="_images/zoom-in-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Zoom Box</p></td>
+<td><p>Zoom by extent defined by drawing a rectangle</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/zoom-to-maxextent-icon.png"><img alt="ZoomToMaxExtent icon" src="_images/zoom-to-maxextent-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Zoom to max extent</p></td>
+<td><p>Zoom to the maximum extent</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/profile-icon.png"><img alt="Profile icon" src="_images/profile-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Profile tool</p></td>
+<td><p>Activate the profile tool</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/information-icon.png"><img alt="Query layer icon" src="_images/information-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Identify</p></td>
+<td><p>Activate the simple selection tool (by rectangle)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/information-c-icon.png"><img alt="Query layer by circle icon" src="_images/information-c-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Identify Circle</p></td>
+<td><p>Activate the simple selection tool (by circle)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/mesure-distance-icon.png"><img alt="Mesure distance icon" src="_images/mesure-distance-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Mesure distance</p></td>
+<td><p>Activate the measurement tools</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/mesure-area-icon.png"><img alt="Mesure area icon" src="_images/mesure-area-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Mesure area</p></td>
+<td><p>Activate the measurement tools</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/print-icon.png"><img alt="Print map icon" src="_images/print-icon.png" style="width: 24px; height: 24px;" /></a></p></td>
+<td><p>Print</p></td>
+<td><p>Print your map in a PDF document</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Identify tool imply that you have at least one layer with the
+<em>Query</em> option checked in the layer properties window of the
+Manager module.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Profile tool imply that you have at least one raster layer
+with the <em>Query</em> option checked in the layer properties windows of
+the Manager module.</p>
+</div>
+</section>
+<section id="other-tools">
+<h4>Other tools<a class="headerlink" href="#other-tools" title="Permalink to this headline">¶</a></h4>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 68%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Parameter</strong></p></td>
+<td><p><strong>Definition</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Overview Map</p></td>
+<td><p>Display an overview map</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pan and Zoom</p></td>
+<td><p>Display a zoom slider</p></td>
+</tr>
+<tr class="row-even"><td><p>Scalebar</p></td>
+<td><p>Display a scalebar</p></td>
+</tr>
+<tr class="row-odd"><td><p>Search Box</p></td>
+<td><p>Display a search engine</p></td>
+</tr>
+<tr class="row-even"><td><p>Mouse position</p></td>
+<td><p>Display the geographical position corresponding to the mouse</p></td>
+</tr>
+<tr class="row-odd"><td><p>Add layer</p></td>
+<td><p>Give capbility to add layer from the <em>Overlays</em> map</p></td>
+</tr>
+<tr class="row-even"><td><p>Add WMS layer</p></td>
+<td><p>Give capability to add layer from WMS setup in the Distiller</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Search Box should be activated only if one layer as been defined
+with the <em>Search</em> and <em>Query</em> option checked in the layer properties window.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="publish-an-application">
+<h2>Publish an application<a class="headerlink" href="#publish-an-application" title="Permalink to this headline">¶</a></h2>
+<section id="publish-and-preview">
+<h3>Publish and preview<a class="headerlink" href="#publish-and-preview" title="Permalink to this headline">¶</a></h3>
+<p>Once you have made all the settings required, you can publish
+application by clicking on the <em>Publish</em> button on top of the right
+pannel. Then, you can preview your project by clicking on the
+<em>Preview</em> button.</p>
+</section>
+<section id="access-the-map-publicly">
+<h3>Access the map publicly<a class="headerlink" href="#access-the-map-publicly" title="Permalink to this headline">¶</a></h3>
+<p>To access the map publicly, use the link <em>MapMint Client</em> on your
+Desktop or direclty use the following link:
+<a class="reference external" href="http:localhost/mapmint/ui/public/Sample1">http:localhost/mapmint/ui/public/Sample1</a>.</p>
+<p>If you move mouse on top of a green points, you should see the popup
+window you created in the previoues section.</p>
+<p><a class="reference internal" href="_images/vpop.png"><img alt="App map" src="_images/vpop.png" style="width: 780px; height: 384px;" /></a></p>
+<p>To use the Profile tool, first click on the <em>Profile</em> button, then
+draw a line on the map, once your line is finished double click on the
+end position and you will see the elevation profile displayed.</p>
+<p><a class="reference internal" href="_images/rpop.png"><img alt="App map" src="_images/rpop.png" style="width: 780px; height: 384px;" /></a></p>
+<p>To use the search engine, type few letter in the text field and wait
+for the list of available featured displayed, then click on one in the
+list to zoom on it.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distiller.html">The Distiller module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manager.html">The Manager Module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Publisher Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#maps-list">Maps List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-tabs">Configuration tabs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-configuration">General configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#layout-configuration">Layout configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#layers-configuration">Layers configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#map-configuration">Map Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tools-configuration">Tools Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#publish-an-application">Publish an application</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#publish-and-preview">Publish and preview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-the-map-publicly">Access the map publicly</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<!-- Begin Footer -->
+<div id="footer">
+<div class="container">
+<div class="lft">
+ <h1 class="titleb"><span class="logo"></span><a href="http://mapmint.com" target="_blank">Map<span>Mint</span></a></h1>
+<hr/>
+</div>
+<div class="rgt">
+<img src="http://test.trial.mapmint.com/cgi-bin/zoo_loader.cgi?service=WPS&version=1.0.0&request=Execute&Identifier=QREncode&DataInputs=size=3;bgcolor=3A3A3A;fgcolor=83C849;Text=http://mapmint.com&RawDataOutput=QR" />
+</div>
+</div>
+</div>
+<!-- End Footer -->
+<div class="bottom-block">
+<div class="btm-cnt">
+<p>&copy; Copyright 2011-2014 
+<a href="http://mapmint.com" class="ftr" target="_blank">
+<span class="mmw">Map</span><span class="mmg">Mint</span>
+</a>
+</p>
+</div>
+</div>
+
+<script>
+</script>
+
+  </body>
+</html>

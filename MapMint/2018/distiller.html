@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The Distiller module &#8212; Building Standards Compliant Geospatial Web Applications - The Quick and Easy MapMint Way.</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Manager Module" href="manager.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="manager.html" title="The Manager Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="Introduction"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Distiller module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-distiller-module">
+<span id="distiller"></span><h1>The Distiller module<a class="headerlink" href="#the-distiller-module" title="Permalink to this headline">¶</a></h1>
+<section id="overview-of-the-interface">
+<h2>Overview of the interface<a class="headerlink" href="#overview-of-the-interface" title="Permalink to this headline">¶</a></h2>
+<p>The Distiller Interface contains two panels and looks similar to the following image.</p>
+<a class="reference external image-reference" href="/ZOOProject.pdf"><img alt="PDF icon" class="align-center" src="_images/distiller.png" style="width: 100%;" /></a>
+</section>
+<section id="the-data-stores">
+<h2>The Data Stores<a class="headerlink" href="#the-data-stores" title="Permalink to this headline">¶</a></h2>
+<p>A Datastore contains data sources. These data sources can be local or remote. It is defined by a <strong>unique name</strong> and various parameters depending on its type. Currently, there are 3 different datastore types supported in MapMint:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 28%" />
+<col style="width: 59%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Icon</strong></p></td>
+<td><p><strong>Type</strong></p></td>
+<td><p><strong>Action</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/add-database.png"><img alt="Add database" src="_images/add-database.png" style="height: 24px;" /></a></p></td>
+<td><p>DataBase</p></td>
+<td><p>Add a database connection</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/add-directory.png"><img alt="Add directory" src="_images/add-directory.png" style="height: 24px;" /></a></p></td>
+<td><p>Directory</p></td>
+<td><p>Add a server directory</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/add-wfs.png"><img alt="Add OGC Service" src="_images/add-wfs.png" style="height: 24px;" /></a></p></td>
+<td><p>OGC Server</p></td>
+<td><p>Add a remote WMS/WFS server</p></td>
+</tr>
+</tbody>
+</table>
+<p>Creating a datastore requires you to set a name, use an existing or new
+directory then select the directory or set the name of the new one.</p>
+<dl class="simple">
+<dt>Create two Directory datastore like the following:</dt><dd><ul class="simple">
+<li><p>Name: NC_Shapes, Path: north_carolina &gt; shape</p></li>
+<li><p>Name: NC_Rasters, Path: north_carolina &gt; rast_geotiff</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The datastore name should not contain any <strong>accent</strong> or any special character available in any language.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Afterward, you can always add your own data in <cite>/var/data/ftp/your-directory</cite> and then create a corresponding datastore from your Distiller.</p>
+</div>
+<p>If you click on a datastore name on the left hand side (so in the <cite>Data Stores</cite> section), you will get a list of available datasources in this datastore. The list of datasources is displayed on the right hand side (so in the <cite>Data Sources</cite> section).</p>
+</section>
+<section id="the-data-sources">
+<h2>The Data Sources<a class="headerlink" href="#the-data-sources" title="Permalink to this headline">¶</a></h2>
+<p>A data source is corresponding to GIS data available in a datastore (it can be a table in a database, a shapefile in a directory, a layer in WFS/WMS layer). MapMint supports a variety of data sources.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Icon</strong></p></td>
+<td><p><strong>Type</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/data-vector-point-icon.png"><img alt="Vector point datasource icon" src="_images/data-vector-point-icon.png" style="height: 24px;" /></a></p></td>
+<td><p>Point datasource</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/data-vector-line-icon.png"><img alt="Vector line datasource icon" src="_images/data-vector-line-icon.png" style="height: 24px;" /></a></p></td>
+<td><p>Line datasource</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/data-vector-polygon-icon.png"><img alt="Vector polygon datasource icon" src="_images/data-vector-polygon-icon.png" style="height: 24px;" /></a></p></td>
+<td><p>Polygon datasource</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/data-raster-icon.png"><img alt="Raster datasource icon" src="_images/data-raster-icon.png" style="height: 24px;" /></a></p></td>
+<td><p>Raster datasource</p></td>
+</tr>
+</tbody>
+</table>
+<section id="data-sources-toolbar">
+<h3>Data sources toolbar<a class="headerlink" href="#data-sources-toolbar" title="Permalink to this headline">¶</a></h3>
+<p>Once listed, each data source available in a datastore has a toolbar associated with it, which contains the following buttons.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Icon</strong></p></td>
+<td><p><strong>Action</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/select.png"><img alt="Select a datasource" src="_images/select.png" style="width: 24px;" /></a></p></td>
+<td><p>Select the datasource</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/preview.png"><img alt="Preview icon" src="_images/preview.png" style="width: 24px;" /></a></p></td>
+<td><p>Preview the datasource</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/privileges.png"><img alt="Set privileges" src="_images/privileges.png" style="width: 24px;" /></a></p></td>
+<td><p>Set the privileges to access the datasource</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/process.png"><img alt="Pocess the datasource" src="_images/process.png" style="width: 24px;" /></a></p></td>
+<td><p>Process the datasource</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/download.png"><img alt="Download the datasource" src="_images/download.png" style="width: 24px;" /></a></p></td>
+<td><p>Download the datasource</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/openinmanager.png"><img alt="Open the datasource in the Manager" src="_images/openinmanager.png" style="width: 24px;" /></a></p></td>
+<td><p>Open the datasource in the Manager</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/delete.png"><img alt="Delete datasource icon" src="_images/delete.png" style="width: 24px;" /></a></p></td>
+<td><p>Delete the datasource</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/displaycontent.png"><img alt="Display content icon" src="_images/displaycontent.png" style="width: 24px;" /></a></p></td>
+<td><p>Display the datasource (attributes table or histogram)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When the SRS field contain <em>No EPSG</em>, it means that MapMint
+understands the SRS of the data source but cannot display it as EPSG
+code. When the SRS field displays <em>(undefined)</em>, it implies that the SRS is unknown. In
+such a case, MapMint will use EPSG:4326 definition as default SRS,
+but at any time, a new datasource can be created with correct SRS settings by clicking on the Process button.</p>
+</div>
+</section>
+<section id="quickly-preview-your-data">
+<h3>Quickly preview your data<a class="headerlink" href="#quickly-preview-your-data" title="Permalink to this headline">¶</a></h3>
+<p>For both vector and raster data source, you can preview your data
+source by clicking on the <em>Preview</em> button. On clicking it, you will then get a window
+presenting the data using a GetMap WMS request and which should look
+like the following:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 59%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Vector data source</strong></p></td>
+<td><p><strong>Raster data source</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/pvec.png"><img alt="Preview vector window" src="_images/pvec.png" style="width: 380px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/pras.png"><img alt="Preview raster window" src="_images/pras.png" style="width: 380px;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="vector-data-sources">
+<h2>Vector data sources<a class="headerlink" href="#vector-data-sources" title="Permalink to this headline">¶</a></h2>
+<p>You are invited to first display data sources available in the <em>NC_Shapes</em> data store.</p>
+<section id="display-attributes-table">
+<h3>Display attributes table<a class="headerlink" href="#display-attributes-table" title="Permalink to this headline">¶</a></h3>
+<p>If you press the button looking like a down arrow (the last row of
+the <a class="reference external" href="#data-sources-toolbar">toolbar table</a>) you can display
+the attribute values table and browse your data smoothly. Also, you can
+order and modify column order. One important capability of the table
+is that you can modify the encoding of your data in case you are using
+data which is not in UTF-8 encoding. By this, your data will be returned
+correctly in utf-8 from your WFS server.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Vector data sources are always using a basic style which cannot be accessed.</p>
+</div>
+</section>
+<section id="convert-vector-data-sources">
+<h3>Convert vector data sources<a class="headerlink" href="#convert-vector-data-sources" title="Permalink to this headline">¶</a></h3>
+<p>You are invited to click on the <em>Convert</em> button in the toolbar for
+the <em>poi_names_wake</em> to access the converting tool window as presented
+in the screenshot below.</p>
+<p><a class="reference internal" href="_images/ogr2ogr.png"><img alt="Ogr2ogr window" src="_images/ogr2ogr.png" style="width: 780px;" /></a></p>
+<p>The <em>Vector Converter</em> window contains various parameters which can be set
+to create a new data source by transforming the original one. There are
+4 parts in the form:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>Source SRS</em>: optional, to define the source Spatial Reference System (SRS) (should be only used in case when there is undefined written in the SRS section in the data source toolbar.</p></li>
+<li><dl class="simple">
+<dt><em>Target</em>: to define:</dt><dd><ul>
+<li><p><em>Datastore</em>: the data store where your data source will be created</p></li>
+<li><p><em>Datasource name</em>: the name by which your data source will be created</p></li>
+<li><p><em>SRS</em>: optional, the SRS used to create the new data source</p></li>
+<li><p><em>Format</em>: the data source format of your created data source</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p><em>Simplify</em>: optional, gives you the capability to simplify the data source geometries</p></li>
+<li><p><em>SQL</em>: optional, gives you the capability to simplify the data source geometries</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In case the created data source is a file, make sure to add the
+extension in its name otherwise it will lead to a directory creation
+making your data store unavailable. In case, if a directory gets created, you will have to remove the directory first. Then, to have up-to-date list, first right click on the Data Store
+unavailable and click on the <em>Refresh</em> item from the displayed
+contextual menu, then check it again.</p>
+</div>
+<p>We will use the following example: from the points of interest data
+source, you would like to extract the subset containing only the
+<em>Populated Places</em>. So you will first check the SQL section and fill
+the textarea with the following query:</p>
+<p><code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">*</span> <span class="pre">FROM</span> <span class="pre">poi_names_wake</span> <span class="pre">WHERE</span> <span class="pre">class</span> <span class="pre">=</span> <span class="pre">'Populated</span> <span class="pre">Place'</span></code></p>
+<p>Now, click on the <em>Run convertion</em> button, once your data source is
+created, the window gets closed automatically. Now, you should refresh
+your data store, by accessing datastorel menu for  the <em>NC_Shapes</em>
+data store. Once the Distiller has reloaded the datastore,
+you should be able to see your new data source appearing in the
+datasources list.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Source code of the ZOO-Service vector-converter is based
+on <strong>ogr2ogr</strong> from the <a class="reference external" href="http://gdal.org">GDAL library</a>.</p>
+</div>
+</section>
+</section>
+<section id="raster-data-sources">
+<h2>Raster data sources<a class="headerlink" href="#raster-data-sources" title="Permalink to this headline">¶</a></h2>
+<p>You are invited to first display data sources available in the
+<em>NC_Rasters</em> data store.</p>
+<section id="display-histogram">
+<h3>Display histogram<a class="headerlink" href="#display-histogram" title="Permalink to this headline">¶</a></h3>
+<p>If you press the button looking like a down arrow (the last row of
+the <a class="reference external" href="#data-sources-toolbar">toolbar table</a>) you can display
+the histogram of your raster bands.</p>
+</section>
+<section id="raster-tools">
+<h3>Raster tools<a class="headerlink" href="#raster-tools" title="Permalink to this headline">¶</a></h3>
+<p>As you did previously for vector data, open the Converter window for
+the <em>elevation</em> data source.</p>
+<p><a class="reference internal" href="_images/gdaldem.png"><img alt="Gdaldem window" src="_images/gdaldem.png" style="width: 780px;" /></a></p>
+<p>Your goal is to create a new raster data sources named as <em>elevation_shaded</em> having a nice shaded relief effect. First select the
+hillshade method, then set the <em>Filename</em> value to
+<cite>test_elevation_shade</cite> then click on the <em>Run</em> button.</p>
+<p>You are free to generate more raster data sources using other methods.
+Please make sure to change the name every time you generate a new raster
+data source.</p>
+<p>Now, you will simply need to refresh you data store as you did
+before. Once you have it listed, you can preview it.</p>
+</section>
+</section>
+<section id="open-datasources-in-the-manager">
+<h2>Open datasources in the Manager<a class="headerlink" href="#open-datasources-in-the-manager" title="Permalink to this headline">¶</a></h2>
+<p>Using the raster datasources created in the previous step, prior to go
+to the next section, please select both the <em>elevation_shaded</em> and
+<em>elevation</em> datasources, then press the <em>Open in the Manager</em> button
+of the datastore. This should open your manager with the two
+datasources available as layers from your Manager.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The raster convertion tools presented here are based on
+gdaldem dan gdal_contour source code from the <a class="reference external" href="http://gdal.org">GDAL library</a>.</p>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Distiller module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview-of-the-interface">Overview of the interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-data-stores">The Data Stores</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-data-sources">The Data Sources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-sources-toolbar">Data sources toolbar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quickly-preview-your-data">Quickly preview your data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#vector-data-sources">Vector data sources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#display-attributes-table">Display attributes table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#convert-vector-data-sources">Convert vector data sources</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#raster-data-sources">Raster data sources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#display-histogram">Display histogram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#raster-tools">Raster tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#open-datasources-in-the-manager">Open datasources in the Manager</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manager.html">The Manager Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publisher.html">The Publisher Module</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="manager.html" title="The Manager Module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="Introduction"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Distiller module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    </div>
+  </body>
+</html>

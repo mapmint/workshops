@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Introduction &#8212; Building Standards Compliant Geospatial Web Applications - The Quick and Easy MapMint Way.</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Distiller module" href="distiller.html" />
+    <link rel="prev" title="Building Standards Compliant Geospatial Web Applications – The Quick and Easy MapMint Way." href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="distiller.html" title="The Distiller module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Building Standards Compliant Geospatial Web Applications – The Quick and Easy MapMint Way."
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Introduction</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="introduction">
+<span id="userguidegeneral"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<section id="a-brief-overview">
+<h2>A brief overview<a class="headerlink" href="#a-brief-overview" title="Permalink to this headline">¶</a></h2>
+<section id="general-presentation">
+<h3>General presentation<a class="headerlink" href="#general-presentation" title="Permalink to this headline">¶</a></h3>
+<p>MapMint is a Geographic Information System (GIS) software running on a
+web server. It is made to facilitate the administration of a <strong>Spatial Data
+Infrastructure</strong> (SDI), publishing cartographic portals and dynamic
+applications.</p>
+<p>The MapMint platform is not only a GIS Software accessible through a simple web
+browser but also a modular and extensible WEB-GIS application
+generator. It provides numerous GIS capabilities and lets the user accomplish
+the following tasks:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Import and store GIS data</strong> (both vector and raster data)</p></li>
+<li><p><strong>Query Relational Database System</strong> and external WMS/WFS servers</p></li>
+<li><p><strong>Publish GIS data</strong> by using OGC Web Services: WMS, WFS et WMTS</p></li>
+<li><p><strong>Create, edit and style</strong> data sources</p></li>
+<li><p>Compose and save maps to create application projects (using mapfile)</p></li>
+<li><p>Configure and generate Web GIS applications</p></li>
+<li><p><strong>Configure</strong> and use GIS portals</p></li>
+<li><p><strong>Access</strong> and share maps</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="basic-concepts-using-the-ogc-standards">
+<h3>Basic concepts: using the OGC standards<a class="headerlink" href="#basic-concepts-using-the-ogc-standards" title="Permalink to this headline">¶</a></h3>
+<p>The main idea behind the MapMint solution is the massive usage of OGC
+Web Services and making all processing in the solution available as
+WPS services, using the ZOO-Project OpenSource software.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/mmarch.png"><img alt="ZOO logo" src="_images/mmarch.png" style="width: 380px; height: 236px;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/mm-architecture-scheme.png"><img alt="MapMint architecture preview image" src="_images/mm-architecture-scheme.png" style="width: 100%;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="main-software-components">
+<h3>Main software components<a class="headerlink" href="#main-software-components" title="Permalink to this headline">¶</a></h3>
+<p>MapMint is using numerous OSGeo software and brings them all together
+in a complete and integrated Web-GIS platform by using the WPS to make them
+understandable and usable from each other.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 92%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Software</strong></p></td>
+<td><p><strong>Usage</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://zoo-project.org"><img alt="ZOO logo" src="_images/zoo-logo-green.png" style="width: 64px; height: 64px;" /></a></p></td>
+<td><p>All the processing in the MapMint solution is based on the ZOO-Project and on the OGC WPS standard, even to produce dynamic web pages.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://mapserver.org"><img alt="MapServer logo" src="_images/ms-logo-green.png" style="width: 64px; height: 64px;" /></a></p></td>
+<td><p>MapMint use the MapServer cartographic engine to publish the data through OGC Web Services (WMS,WFS and WCS) in an efficient way.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="http://gdal.org"><img alt="GDAL logo" src="_images/gdal-logo-green.png" style="width: 64px; height: 64px;" /></a></p></td>
+<td><p>The abstraction library used to access and interact with datasources transparently is the GDAL/OGR library.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://openlayers.org"><img alt="OpenLayers logo" src="_images/ol-logo-green.png" style="width: 64px; height: 64px;" /></a></p></td>
+<td><p>MapMint User Interfaces (UI) are using OpenLayers.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="the-workshop-content">
+<h2>The workshop content<a class="headerlink" href="#the-workshop-content" title="Permalink to this headline">¶</a></h2>
+<p>In the upcoming sections, you will find general information about what will be done
+during this workshop and what are the main objectives. The geographic
+data used is also introduced briefly.</p>
+<section id="workshop-schedule">
+<h3>Workshop schedule<a class="headerlink" href="#workshop-schedule" title="Permalink to this headline">¶</a></h3>
+<p>You are invited to use the computer available in the room and to start
+the OSGeoLive 12.0 virtual machine from virtual box.</p>
+<p>The workshop is organized in 5 sections:</p>
+<ul class="simple">
+<li><p>A presentation on how to install MapMint on your VM</p></li>
+<li><p>A presentation of MapMint and how it works</p></li>
+<li><p>Use case example of the module to administrate your GIS data by using an available dataset</p></li>
+<li><p>An example of map production and spreading of the data as WMS and WFS</p></li>
+<li><p>A presentation on how to publish an application using map created previously</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please, at any time, do not hesitate to ask the presenters any question you have during the workshop.</p>
+</div>
+</section>
+<section id="geographic-dataset">
+<h3>Geographic dataset<a class="headerlink" href="#geographic-dataset" title="Permalink to this headline">¶</a></h3>
+<p>During this workshop, the geographic dataset used is coming from <a class="reference external" href="http://www.grassbook.org/data_menu3rd.php">Edu Data Package North
+Carolina</a>, provided by
+contributors of the <a class="reference external" href="http://grass.osgeo.org/">GRASS GIS</a> project
+and available by default in OSGeoLive.</p>
+<p>Data are subject to <a class="reference external" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike
+(CC-BY-SA)</a>. More
+information on this dataset are available on this <a class="reference external" href="http://wiki.osgeo.org/wiki/Edu_Data_Package_North_Carolina">page</a> .</p>
+<p><a class="reference internal" href="_images/nc-data.png"><img alt="North Carolina dataset snapshot" src="_images/nc-data.png" style="width: 780px; height: 455px;" /></a></p>
+</section>
+</section>
+<section id="installing-mapmint-on-the-osgeolive-12-0-vm">
+<h2>Installing MapMint on the OSGeoLive 12.0 VM<a class="headerlink" href="#installing-mapmint-on-the-osgeolive-12-0-vm" title="Permalink to this headline">¶</a></h2>
+<p>The MapMint application can be installed very simply using <a class="reference external" href="http://ansible.com">Ansible
+scripts</a>. It is thus possible to deploy several
+instances of MapMint through the use of the <code class="docutils literal notranslate"><span class="pre">ansible-playbook</span></code>.
+In this section, you will learn how to setup only a single instance
+which is your local OSGeoLive 12.0 VM.</p>
+<p>Before you can install MapMint using Ansible scripts, it is necessary
+to ensure the presence of some packages and specific Python modules.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">ansible</span> <span class="n">git</span> <span class="n">python</span><span class="o">-</span><span class="n">setuptools</span> <span class="n">openssh</span><span class="o">-</span><span class="n">server</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span>
+</pre></div>
+</div>
+<p>It is necessary to download Ansible and specific MapMint installation
+scripts. To do this, use the following commands.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>cd
+mkdir mm-install
+cd mm-install
+git clone git://github.com/mapmint/ansible-roles mapmint-setup
+</pre></div>
+</div>
+<p>For making your user able connect to the server on which to install
+MapMint, you must create a key to enable an automatic
+authentication. To do this use the following commands.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>mkdir ~/.ssh
+ssh-keygen -t rsa
+</pre></div>
+</div>
+<p>When you will be prompted, you are required to confirm every question
+by pressing “Enter”.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>sudo mkdir /root/.ssh
+sudo cp ~/.ssh/id_rsa.pub /root/.ssh/authorized_keys
+</pre></div>
+</div>
+<p>Installing MapMint is fully automated via the previously
+downloaded Ansible scripts, so only remaining task is to launch it. Before that, it
+will be necessary to set Ansible and specific scripts installation for
+MapMint to define the name of the machine that will be used to access
+the instance.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;localhost&quot;</span> <span class="o">&gt;</span> <span class="o">~/</span><span class="n">ansible_hosts</span>
+<span class="n">sed</span> <span class="s2">&quot;s:myhost.net:localhost:g&quot;</span> <span class="o">-</span><span class="n">i</span> \
+   <span class="o">~/</span><span class="n">mm</span><span class="o">-</span><span class="n">install</span><span class="o">/</span><span class="n">mapmint</span><span class="o">-</span><span class="n">setup</span><span class="o">/</span><span class="n">osgeolive</span><span class="o">/</span><span class="n">dependencies</span><span class="o">/</span><span class="n">vars</span><span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">yml</span>
+<span class="k">export</span> <span class="n">ANSIBLE_INVENTORY</span><span class="o">=~/</span><span class="n">ansible_hosts</span>
+</pre></div>
+</div>
+<p>You are almost ready to start installing MapMint on OSGeoLive
+12.0. You only need to make sure that the settings in the installer
+are correct and the packages required are well available on your local
+VM. To do this, simply run the following commands.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>~/mm-install/mapmint-setup/scripts/loVersion.sh
+apt-cache search postgis
+</pre></div>
+</div>
+<p>Once run, the first script will inform you in case you need to edit
+any file to fix the correct version of the LibreOffice software to
+install. The second command, will give you the version number of the
+PostgreSQL server and PostGIS available for your distribution.</p>
+<p>So the first file to edit is
+<code class="docutils literal notranslate"><span class="pre">mapmint-setup/osgeolive/dependencies/vars/main.yml</span></code>. Here, you should make sure
+the correct PostgreSQL, PostGIS and LibreOffice versions are correctl
+set:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>pgvers=10,</p></li>
+<li><p>pgisvers=2.4</p></li>
+<li><p>lo_version=6.1.6</p></li>
+</ul>
+</div></blockquote>
+<p>To proceed with the installation, please use the following commands.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>cd ~/mm-install/mapmint-setup/osgeolive
+ansible-playbook -b server.yml -u root
+</pre></div>
+</div>
+<p>In case you face any issue (like connexion timeout) running the last
+command above, please run the following commands.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">mapserver</span><span class="o">-</span><span class="mf">7.2</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">build</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">tmp</span>
+<span class="n">sudo</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">tmp</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="n">tmp</span>
+<span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">postgres</span> <span class="n">dropdb</span> <span class="n">mmdb</span>
+</pre></div>
+</div>
+<p>Then run the following command to try installing again.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>ansible-playbook -b server.yml -u root
+sudo /etc/init.d/apache2 restart
+</pre></div>
+</div>
+<p>Once the last command is finished, you are almost ready to start using
+your MapMint instance that you have just setup. Fist you should ensure
+that the settings defined in your main.cfg file is correct and
+correspond to your setup. To make sure that the main.cfg file is
+correct, please edit the file <code class="docutils literal notranslate"><span class="pre">/ur/lib/cgi-bin/mm/main.cfg</span></code> which
+contains the main settings for your MapMint instance. You will need to
+replace every occurence of <code class="docutils literal notranslate"><span class="pre">myhost.net</span></code> by <code class="docutils literal notranslate"><span class="pre">localhost</span></code>. The
+easiest way to achieve this is to use the following command.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>sudo sed -i &quot;s:myhost.net:localhost:g&quot; /usr/lib/cgi-bin/mm/main.cfg
+</pre></div>
+</div>
+<p>During this workshop, you will use two datastores already available
+on OSGeoLive 12.0, by the names: <cite>NC_Raster</cite> and <cite>NC_Shapes</cite>. To make them available
+through the Distiller, you have to create a symlink to these
+directories and allow the apache user to make any modification
+required to store files in these directories. To do this, use the
+following commands.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">north_carolina</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">ftp</span><span class="o">/</span>
+<span class="n">sudo</span> <span class="n">chown</span> <span class="o">-</span><span class="n">R</span> <span class="n">www</span><span class="o">-</span><span class="n">data</span><span class="p">:</span><span class="n">www</span><span class="o">-</span><span class="n">data</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">ftp</span><span class="o">/*/</span>
+</pre></div>
+</div>
+<p>Now, you are ready to use your MapMint instance.</p>
+<p><strong>Welcome to MapMint!</strong></p>
+</section>
+<section id="using-mapmint">
+<h2>Using MapMint<a class="headerlink" href="#using-mapmint" title="Permalink to this headline">¶</a></h2>
+<p>MaMint is made of an <strong>administration interface</strong> (<em>MapMint Admin</em>)
+composed of various modules and a <strong>public interface</strong> (<em>MapMint
+Client</em>) containing published maps.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><em>MapMint Admin</em></p></td>
+<td><p><em>MapMint Client</em></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/dashboard.png"><img alt="MM admin" src="_images/dashboard.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/mmc.png"><img alt="MM client" src="_images/mmc.png" style="width: 100%;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<section id="mapmint-admin">
+<h3>MapMint Admin<a class="headerlink" href="#mapmint-admin" title="Permalink to this headline">¶</a></h3>
+<p>For accessing the administration interface, first use this link
+<a class="reference external" href="http://localhost/ui/Dashboard_bs">MapMint Admin</a> then fill the
+<strong>login</strong> and <strong>password</strong> provided below and press the
+login button.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>login: <strong>test</strong></p></li>
+<li><p>password: <strong>demo02</strong></p></li>
+</ul>
+</div>
+<p><a class="reference internal" href="_images/login-screen.png"><img alt="MapMint login screen" src="_images/login-screen.png" style="width: 100%;" /></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also simply press <em>Enter</em> rather than using the Login button.</p>
+</div>
+<p>A success message should be displayed on top of your interface and the Dashboard module will load. In case you see a red banner on top
+rather than the expected green one, then please re-check the credentials and information entered by you.</p>
+<p>Despite more modules are available in MapMint and can be activated by
+using specific parameter, for this workshop, the following modules are available in the
+administration interface. You can access them by using links on top of
+the interface, once logged in MapMint Admin.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Module</strong></p></td>
+<td><p><strong>URL</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Dashboard</p></td>
+<td><p><a class="reference external" href="http://localhost/ui/Dashboard_bs">http://localhost/ui/Dashboard_bs</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Distiller</p></td>
+<td><p><a class="reference external" href="http://localhost/ui/Distiller_bs">http://localhost/ui/Distiller_bs</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Themes</p></td>
+<td><p><a class="reference external" href="http://localhost/ui/Themes_bs">http://localhost/ui/Themes_bs</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Manager</p></td>
+<td><p><a class="reference external" href="http://localhost/ui/Manager_bs">http://localhost/ui/Manager_bs</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Publisher</p></td>
+<td><p><a class="reference external" href="http://localhost/ui/Publisher_bs">http://localhost/ui/Publisher_bs</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="accessing-the-public-interface">
+<h3>Accessing the public interface<a class="headerlink" href="#accessing-the-public-interface" title="Permalink to this headline">¶</a></h3>
+<p>The MapMint public interface can be accessed by using the following link
+<a class="reference external" href="http:localhost/ui/public/">http:localhost/ui/public/</a>. Each published map is accessible
+from the maps listing page or can be directly accessed by using a
+specific URL (such as <a class="reference external" href="http://localhost/ui/public/your-map-name">http://localhost/ui/public/your-map-name</a>).</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 59%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Module</strong></p></td>
+<td><p><strong>URL</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Public Interface</p></td>
+<td><p><a class="reference external" href="http://localhost/ui/public/">http://localhost/ui/public/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Published Map</p></td>
+<td><p><a class="reference external" href="http://localhost/ui/public/your-map-name">http://localhost/ui/public/your-map-name</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a-brief-overview">A brief overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-presentation">General presentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#basic-concepts-using-the-ogc-standards">Basic concepts: using the OGC standards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#main-software-components">Main software components</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-workshop-content">The workshop content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#workshop-schedule">Workshop schedule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#geographic-dataset">Geographic dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-mapmint-on-the-osgeolive-12-0-vm">Installing MapMint on the OSGeoLive 12.0 VM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-mapmint">Using MapMint</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mapmint-admin">MapMint Admin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-the-public-interface">Accessing the public interface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="distiller.html">The Distiller module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manager.html">The Manager Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publisher.html">The Publisher Module</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="distiller.html" title="The Distiller module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Building Standards Compliant Geospatial Web Applications – The Quick and Easy MapMint Way."
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Introduction</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    </div>
+  </body>
+</html>

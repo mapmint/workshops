@@ -1,0 +1,29 @@
+.. _home:
+
+Building Standards Compliant Geospatial Web Applications – The Quick and Easy MapMint Way.
+=========================================================================================
+
+Welcome in the workshop introducing the `MapMint <http://mapmint.com>`__ solution.
+
+|mmm| |foss4g|
+
+.. |mmm| image:: _static/images/intro.jpg
+   :width: 40%
+   :alt: MM Intro
+   :target: http://mapmint.com
+
+.. |foss4g| image:: http://2017.foss4g.org/images/rectangle_color_150_350.png
+   :width: 25%
+   :alt: FOSS4G Boston
+   :target: http://2017.foss4g.org
+
+Workshop table of content
+=================
+
+.. toctree::
+   :maxdepth: 3
+   
+   introduction
+   distiller
+   manager   
+   publisher

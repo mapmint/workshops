@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>The MapMint4ME data collector &#8212; MapMint data collection - MapMint4ME</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Applications with recorded data" href="dmap.html" />
+    <link rel="prev" title="The Table modules" href="tables.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="dmap.html" title="Applications with recorded data"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="tables.html" title="The Table modules"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The MapMint4ME data collector</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-mapmint4me-data-collector">
+<span id="mm4me"></span><h1>The MapMint4ME data collector<a class="headerlink" href="#the-mapmint4me-data-collector" title="Permalink to this headline">¶</a></h1>
+<p>The MapMint4ME application is available on the Google Play Store™ at
+the following <a class="reference external" href="https://play.google.com/store/apps/details?id=fr.geolabs.dev.mapmint4me&amp;hl=en">URL</a>.</p>
+<p>So, to setup MapMint4ME on your Android phone or tablet you can launch
+the Google Play Store™ on your device then search for
+<em>mapmint4me</em>. Once found, simply install it as any other Android
+application.</p>
+<p>As presented in the screenshot below, after MapMint4ME installation
+ends you can start the application.</p>
+<a class="reference internal image-reference" href="_images/mm4me0.png"><img alt="MapMint4ME Home" class="align-center" src="_images/mm4me0.png" style="width: 30%;" /></a>
+<section id="import">
+<h2>Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<p>By clicking on the Import button from the MapMint4ME application, you
+can access the Import module. It is used to create the local copies of
+the 3 databses we have presented in introduction
+(configuration/dependencies, data to be recorded, and tiles).</p>
+<p>As presented in the first screenshot below, the first time you access
+the Import there is no MapMint server configured yet. So, you should
+click on the <em>Add Server</em> button to acces the MapMint server settings,
+as shown in the second screenshot below.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/mm4mei0.png"><img alt="MM admin" src="_images/mm4mei0.png" style="width: 60%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/mm4mei1.png"><img alt="MM client" src="_images/mm4mei1.png" style="width: 60%;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>In the MapMint server settings, you should define the follwing
+parameters:</p>
+<ul class="simple">
+<li><p><strong>Server Name</strong>: the server name that will appear in the list of available MapMint Server available from the “Import” and “Export” modules,</p></li>
+<li><p><strong>Server URL</strong>: the ZOO-Kernel URL associated with your MapMint Server,</p></li>
+<li><p><strong>Login</strong>: the user name you have defined previously allowing you to access the MapMint client table module online,</p></li>
+<li><p><strong>Password</strong>: the password used to authenticate your user.</p></li>
+</ul>
+<p>In your case you are invited to set <code class="docutils literal notranslate"><span class="pre">WS</span> <span class="pre">Server</span></code> for the server name
+and <code class="docutils literal notranslate"><span class="pre">https://demo.mapmint.com/cgi-bin/mm/zoo_loader.cgi</span></code> for the
+server URL. Finaly use your personal login and password prior to click
+on the <em>Add server</em> button below the form.</p>
+<p>Then you be redirected to the Import module where your server should
+now be listed, click on the Import button to start the production of
+the databases on the server side then download it to get it embedded
+within the application. Once you have pressed the Import button, you
+are first prompted to select the tiles you want to download locally on
+your Android device. Then, the process start on the server side and
+you are kept informed about the status of the ongoing service from the
+importer module. Once the production ends, the download of your local
+copy start. You should be able to follow progress of the database
+download from the notification bar of your Android device. Once the
+download ends, the message “Import success” should appear.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 32%" />
+<col style="width: 37%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/mm4mei4.png"><img alt="MM admin" class="align-middle" src="_images/mm4mei4.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/mm4mei5.png"><img alt="MM client" class="align-middle" src="_images/mm4mei5.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/mm4mei6.png"><img alt="MM client" src="_images/mm4mei6.png" style="width: 100%;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>You are now ready to go on the field to record data with or without
+internet connection.</p>
+</section>
+<section id="edit-and-view">
+<h2>Edit and View<a class="headerlink" href="#edit-and-view" title="Permalink to this headline">¶</a></h2>
+<p>As your first goal is the record new data, you should click on the
+<em>Edit</em> button, then select the table you want to use to load the
+dedicated edition form. Fill the form, take a picture and press the
+<em>Use GPS position</em> button. Then, press the save button to record
+your data on your local database.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/mm4meae0.png"><img alt="MM4ME AE0" src="_images/mm4meae0.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/mm4meae1.png"><img alt="MM4ME AE1" src="_images/mm4meae1.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/mm4meae2.png"><img alt="MM4ME AE2" src="_images/mm4meae2.png" style="width: 100%;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Once data have been successfuly stored locally, you can still access
+the elements you have already recorded. This first tool you may use is
+the Map module, it lets you visualize every record you have made
+(points, lines, and polygon). The second one, is the View module, it
+gives you access to the full informations your have recorded and let
+you modify one or multiple fields.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/mm4mev0.png"><img alt="MM4ME AE0" src="_images/mm4mev0.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/mm4mev1.png"><img alt="MM4ME AE1" src="_images/mm4mev1.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/mm4mev2.png"><img alt="MM4ME AE2" src="_images/mm4mev2.png" style="width: 100%;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>Note that in case you are recording Lines or Polygons, you will have
+access to two version
+Export
+<strong>**</strong></p>
+<p>Once your data collection mission is over, by cliking on the <em>Export</em>
+button you access the Export module. From here, you can easily upload
+your recroded data back on the MapMint sever you have configured in
+the previous section. For doing so, you only need to press the
+<em>Export</em> button for the <em>WS Server</em>. Now, you should not have any of
+your recorded data left in your Android application and be able to
+access your data available on the MapMint server.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/mm4meaex0.png"><img alt="MM4ME AEX0" src="_images/mm4meaex0.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/mm4meaex1.png"><img alt="MM4ME AEX1" src="_images/mm4meaex1.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/mm4meaex2.png"><img alt="MM4ME AEX2" src="_images/mm4meaex2.png" style="width: 100%;" /></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>At this step you shall be ready to go on the field and record data on
+your own. You are invited to go outside and record few data in the
+places nearby the workshop room. On signal, you will be invited to
+come back to the workshop room to go to the final section of this
+workshop where you will guided through the process of publishing
+MapMint projects dedicated to MapMint table client module.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">The Table modules</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The MapMint4ME data collector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#import">Import</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-and-view">Edit and View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dmap.html">Applications with recorded data</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="dmap.html" title="Applications with recorded data"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="tables.html" title="The Table modules"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The MapMint4ME data collector</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    </div>
+  </body>
+</html>
