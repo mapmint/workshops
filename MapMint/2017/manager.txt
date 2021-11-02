@@ -8,7 +8,7 @@ following, when opened for the first time after following the `instructions <./d
 
 |manager|
 
-.. |manager| image:: ../../_static/images/manager.png
+.. |manager| image:: _static/images/manager.png
    :width: 100%
    :alt: Manager UI
 
@@ -31,7 +31,7 @@ and the *Open Map* window presented below to let you choose one
 amongst the listed ones.
 
 
-.. |opmap| image:: ../../_static/images/open-map.png
+.. |opmap| image:: _static/images/open-map.png
 	:width: 24
 	:alt: open map window
 
@@ -46,7 +46,7 @@ be reloaded using the choosen map.
 
 |opmapw|
 
-.. |opmapw| image:: ../../_static/images/open-map-window.png
+.. |opmapw| image:: _static/images/open-map-window.png
    :width: 20%
    :alt: Open map window
 
@@ -56,7 +56,7 @@ Save a map
 To save your current map, you should click on the *Save* button in the toolbar.
 You can use the text field to save your map using a different name.
 
-.. |savema| image:: ../../_static/images/saveasmap-window.png
+.. |savema| image:: _static/images/saveasmap-window.png
    :width: 20%
    :alt: Open map window
 
@@ -83,15 +83,15 @@ Layers tree
 Just on top of your layers tree, you have access to the specific
 layers toolbar which gives you access to the following options.
 
-.. |addlay| image:: ../../_static/images/add-layer-m.png
+.. |addlay| image:: _static/images/add-layer-m.png
    :width: 24
    :alt: Add layer icon
 
-.. |setlay| image:: ../../_static/images/move.png
+.. |setlay| image:: _static/images/move.png
    :width: 24
    :alt: Set layer order icon
 
-.. |addgri| image:: ../../_static/images/toggle_grid.png
+.. |addgri| image:: _static/images/toggle_grid.png
    :width: 24
    :alt: Add graticule icon
    
@@ -106,19 +106,19 @@ layers toolbar which gives you access to the following options.
 If you right click on a layer, then you will get access to the
 following tools:
 
-.. |zoomt| image:: ../../_static/images/zoomtolayer.png
+.. |zoomt| image:: _static/images/zoomtolayer.png
    :width: 24
    :alt: Zoom to extent icon
 
-.. |viewt| image:: ../../_static/images/table.png
+.. |viewt| image:: _static/images/table.png
    :width: 24
    :alt: View table icon
    
-.. |viewp| image:: ../../_static/images/properties.png
+.. |viewp| image:: _static/images/properties.png
    :width: 24
    :alt: View properties icon
    
-.. |delgr| image:: ../../_static/images/delete-user.png
+.. |delgr| image:: _static/images/delete-user.png
    :width: 24
    :alt: Set template icon
 
@@ -138,19 +138,19 @@ Map viewer
 The Map viewer is the right panel where the map and potential layer (if any is activated) is displayed. You can choose which base layers you want
 to use by using the toolbar on the right side on top of the map.
 
-.. |colbl| image:: ../../_static/images/color-bl.png
+.. |colbl| image:: _static/images/color-bl.png
    :width: 24
    :alt: Color baselayer icon
 
-.. |mapq| image:: ../../_static/images/mapquest-str.png
+.. |mapq| image:: _static/images/mapquest-str.png
    :width: 24
    :alt: MapQuest street baselayer icon
 
-.. |maps| image:: ../../_static/images/mapquest-sat.png
+.. |maps| image:: _static/images/mapquest-sat.png
    :width: 24
    :alt: MapQuest satellite baselayer icon
 
-.. |osm| image:: ../../_static/images/osm.png
+.. |osm| image:: _static/images/osm.png
    :width: 24
    :alt: OpenStreetMap baselayer icon
 
@@ -164,7 +164,7 @@ to use by using the toolbar on the right side on top of the map.
 |osm|       Use OpenStreetMap as base layer
 ========== ===================================================	
 
-.. |oim| image:: ../../_static/images/addlayer-window.png
+.. |oim| image:: _static/images/addlayer-window.png
    :height: 384
    :width: 780
    :alt: Save new map
@@ -234,7 +234,7 @@ the default value for *Legend Type* (*GreyScale*), then press the
 
 |bsv|
 
-.. |bsv| image:: ../../_static/images/bsv.png
+.. |bsv| image:: _static/images/bsv.png
    :height: 384
    :width: 780
    :alt: Classify raster
@@ -261,7 +261,7 @@ By now, let's start by choosing a minimum and maximum color, set
 number of classes to 25, then press *Classify*, you should have
 similar result as the one above.
 
-.. |rasc| image:: ../../_static/images/rasc.png
+.. |rasc| image:: _static/images/rasc.png
    :height: 384
    :width: 780
    :alt: Classify raster
@@ -298,25 +298,25 @@ presented below.
 
 |emap1|
 
-.. |vecc| image:: ../../_static/images/vecc.png
+.. |vecc| image:: _static/images/vecc.png
    :width: 780
    :alt: Classify vector
    
 Before closing this section about Styling, you are invited to apply a
 style to  your *roadsmajor* layer.
 
-.. |emap0| image:: ../../_static/images/emap0.png
+.. |emap0| image:: _static/images/emap0.png
    :width: 780
    :alt: Example map
    
 
-.. |emap1| image:: ../../_static/images/emap1.png
+.. |emap1| image:: _static/images/emap1.png
    :width: 780
    :alt: Example map
 
 |emap2|
    
-.. |emap2| image:: ../../_static/images/emap2.png
+.. |emap2| image:: _static/images/emap2.png
    :width: 780
    :alt: Example map
    
@@ -371,7 +371,7 @@ the *elevation* layer.
 |vecp|
 
 
-.. |vecp| image:: ../../_static/images/vecprop.png
+.. |vecp| image:: _static/images/vecprop.png
    :width: 780
    :alt: vector properties
    
@@ -387,7 +387,7 @@ editor. Click on the *Save* button to save your template.
  
 |cpop|
 
-.. |cpop| image:: ../../_static/images/cprop.png
+.. |cpop| image:: _static/images/cprop.png
    :width: 780
    :alt: template editor window
    

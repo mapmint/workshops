@@ -8,7 +8,7 @@ Overview of the interface
 
 The Distiller Interface contains two panels and looks similar to the following image.
 
-.. image:: ../../_static/images/distiller.png
+.. image:: _static/images/distiller.png
    :width: 100%
    :alt: PDF icon
    :align: center
@@ -21,15 +21,15 @@ The Data Stores
 
 A Datastore contains data sources. These data sources can be local or remote. It is defined by a **unique name** and various parameters depending on its type. Currently, there are 3 different datastore types supported in MapMint: 
 
-.. |adddb| image:: ../../_static/images/add-database.png
+.. |adddb| image:: _static/images/add-database.png
    :height: 24
    :alt: Add database
 
-.. |adddir| image:: ../../_static/images/add-directory.png
+.. |adddir| image:: _static/images/add-directory.png
    :height: 24
    :alt: Add directory
    
-.. |addwfs| image:: ../../_static/images/add-wfs.png
+.. |addwfs| image:: _static/images/add-wfs.png
    :height: 24
    :alt: Add OGC Service
    
@@ -62,19 +62,19 @@ The Data Sources
 
 A data source is corresponding to GIS data available in a datastore (it can be a table in a database, a shapefile in a directory, a layer in WFS/WMS layer). MapMint supports a variety of data sources.
 
-.. |vptds| image:: ../../_static/images/data-vector-point-icon.png
+.. |vptds| image:: _static/images/data-vector-point-icon.png
    :height: 24
    :alt: Vector point datasource icon
 
-.. |vlids| image:: ../../_static/images/data-vector-line-icon.png
+.. |vlids| image:: _static/images/data-vector-line-icon.png
    :height: 24
    :alt: Vector line datasource icon
    
-.. |vpods| image:: ../../_static/images/data-vector-polygon-icon.png
+.. |vpods| image:: _static/images/data-vector-polygon-icon.png
    :height: 24
    :alt: Vector polygon datasource icon
    
-.. |rasds| image:: ../../_static/images/data-raster-icon.png
+.. |rasds| image:: _static/images/data-raster-icon.png
    :height: 24
    :alt: Raster datasource icon
    
@@ -94,35 +94,35 @@ Data sources toolbar
 
 Once listed, each data source available in a datastore has a toolbar associated with it, which contains the following buttons.
 
-.. |cds| image:: ../../_static/images/preview.png
+.. |cds| image:: _static/images/preview.png
    :width: 24
    :alt: Preview icon
 
-.. |dds| image:: ../../_static/images/privileges.png
+.. |dds| image:: _static/images/privileges.png
    :width: 24
    :alt: Set privileges
    
-.. |oim| image:: ../../_static/images/download.png
+.. |oim| image:: _static/images/download.png
    :width: 24
    :alt: Download the datasource
    
-.. |spd| image:: ../../_static/images/select.png
+.. |spd| image:: _static/images/select.png
    :width: 24
    :alt: Select a datasource
 
-.. |pds| image:: ../../_static/images/process.png
+.. |pds| image:: _static/images/process.png
    :width: 24
    :alt: Pocess the datasource
      
-.. |sds| image:: ../../_static/images/openinmanager.png
+.. |sds| image:: _static/images/openinmanager.png
    :width: 24
    :alt: Open the datasource in the Manager
    
-.. |fl| image:: ../../_static/images/displaycontent.png
+.. |fl| image:: _static/images/displaycontent.png
    :width: 24
    :alt: Display content icon
 
-.. |del| image:: ../../_static/images/delete.png
+.. |del| image:: _static/images/delete.png
    :width: 24
    :alt: Delete datasource icon
 
@@ -180,11 +180,11 @@ correctly in utf-8 from your WFS server.
 .. note::
 	Vector data sources are always using a basic style which cannot be accessed.
 	
-.. |pvec| image:: ../../_static/images/pvec.png
+.. |pvec| image:: _static/images/pvec.png
    :width: 380
    :alt: Preview vector window
 
-.. |pras| image:: ../../_static/images/pras.png
+.. |pras| image:: _static/images/pras.png
    :width: 380
    :alt: Preview raster window
    
@@ -234,7 +234,7 @@ datasources list.
 
 
 
-.. |ogr2ogr| image:: ../../_static/images/ogr2ogr.png
+.. |ogr2ogr| image:: _static/images/ogr2ogr.png
    :width: 780
    :alt: Ogr2ogr window
  
@@ -263,7 +263,7 @@ the *elevation* data source.
 
 |gdaldem|
 
-.. |gdaldem| image:: ../../_static/images/gdaldem.png
+.. |gdaldem| image:: _static/images/gdaldem.png
    :width: 780
    :alt: Gdaldem window
    

@@ -40,12 +40,12 @@ WPS services using the ZOO-Project OpenSource software.
 |mmarch|   |archi|                
 ========== ===================================================	
       
-.. |mmarch| image:: ../../_static/images/mmarch.png
+.. |mmarch| image:: _static/images/mmarch.png
    :height: 236
    :width: 380
    :alt: ZOO logo
 
-.. |archi| image:: ../../_static/images/mm-architecture-scheme.png
+.. |archi| image:: _static/images/mm-architecture-scheme.png
    :height: 236
    :width: 380
    :alt: MapMint architecture preview image
@@ -71,27 +71,27 @@ understandable and usable to and from each other.
 
 
 
-.. |zoo| image:: ../../_static/images/zoo-logo-green.png
+.. |zoo| image:: _static/images/zoo-logo-green.png
    :height: 64
    :width: 64
    :alt: ZOO logo
    :target: http://zoo-project.org
 
-.. |ms| image:: ../../_static/images/ms-logo-green.png
+.. |ms| image:: _static/images/ms-logo-green.png
    :height: 64
    :width: 64
    :alt: MapServer logo
    :target: http://mapserver.org
 
    
-.. |gd| image:: ../../_static/images/gdal-logo-green.png
+.. |gd| image:: _static/images/gdal-logo-green.png
    :height: 64
    :width: 64
    :alt: GDAL logo
    :target: http://gdal.org
    
    
-.. |ol| image:: ../../_static/images/ol-logo-green.png
+.. |ol| image:: _static/images/ol-logo-green.png
    :height: 64
    :width: 64
    :alt: OpenLayers logo
@@ -134,7 +134,7 @@ Using the MapMint USB Stick
 			       <http://live.osgeo.org>`__
 ============================== ============================================
 
-.. |usb| image:: ../../_static/images/mmusb3.png
+.. |usb| image:: _static/images/mmusb3.png
    :height: 100
    :width: 175
    :alt: MMlive usbstick
@@ -166,12 +166,12 @@ have access to the desktop environment as presented in the following.
 |grub|                         |mml|                               
 ============================== ============================================
 
-.. |grub| image:: ../../_static/images/grub.png
+.. |grub| image:: _static/images/grub.png
    :height: 253
    :width: 380
    :alt: Grub prompt screen
    
-.. |mml| image:: ../../_static/images/mml.png
+.. |mml| image:: _static/images/mml.png
    :height: 253
    :width: 380
    :alt: MM Live desktop
@@ -192,7 +192,7 @@ information on this dataset are available on this `page
 
 |ncd|
 
-.. |ncd| image:: ../../_static/images/nc-data.png
+.. |ncd| image:: _static/images/nc-data.png
    :height: 455
    :width: 780
    :alt: North Carolina dataset snapshot
@@ -217,13 +217,13 @@ links on your desktop.
 |mma|           	  	                     |mmc|   
 ============================================ ============================================
 
-.. |mma| image:: ../../_static/images/dashboard.png
+.. |mma| image:: _static/images/dashboard.png
    :height: 250
    :width: 380
    :alt: MM admin
    
 
-.. |mmc| image:: ../../_static/images/mmc.png
+.. |mmc| image:: _static/images/mmc.png
    :height: 250
    :width: 380
    :alt: MM client
@@ -246,7 +246,7 @@ provided in the following, then press the login button.
 	* login: **test**
 	* password: **demo02**
 
-.. |login| image:: ../../_static/images/login-screen.png
+.. |login| image:: _static/images/login-screen.png
    :width: 780
    :alt: MapMint login screen
    

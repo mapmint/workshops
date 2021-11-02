@@ -9,7 +9,7 @@ configurations tabs.
 
 |publisher|
 
-.. |publisher| image:: ../../_static/images/publisher.png
+.. |publisher| image:: _static/images/publisher.png
    :height: 384
    :width: 780
    :alt: App map
@@ -32,27 +32,27 @@ parameters.
 	Every modification made to the any tabs require that you press
 	the *Publish* button to save your modifications.
    
-.. |general| image:: ../../_static/images/process.png
+.. |general| image:: _static/images/process.png
    :height: 24
    :width: 24
    :alt: General configuration icon
 
-.. |layouts| image:: ../../_static/images/layout-settings.png
+.. |layouts| image:: _static/images/layout-settings.png
    :height: 24
    :width: 24
    :alt: Layout settings icon
 
-.. |layerss| image:: ../../_static/images/layers-settings.png
+.. |layerss| image:: _static/images/layers-settings.png
    :height: 24
    :width: 24
    :alt: Layers settings icon
 
-.. |mapssss| image:: ../../_static/images/map-settings.png
+.. |mapssss| image:: _static/images/map-settings.png
    :height: 24
    :width: 24
    :alt: Map settings icon
    
-.. |ctrlsss| image:: ../../_static/images/controls-settings.png
+.. |ctrlsss| image:: _static/images/controls-settings.png
    :height: 24
    :width: 24
    :alt: Control settings icon
@@ -103,7 +103,7 @@ By choosing the layout, you decide the way elements will be
 displayed in the final application. You are invited to first choose
 the *Fullscreen* option.
 
-.. |choot| image:: ../../_static/images/choose-template.png
+.. |choot| image:: _static/images/choose-template.png
    :height: 105
    :width: 800
    :alt: App logo modification
@@ -128,7 +128,7 @@ layers. Indeed once a MapMint project is published, the setup of
 mapcache was automatically made with all the layers defined as
 activated per dafult in the project.
 
-.. |confbl| image:: ../../_static/images/configure-blayers.png
+.. |confbl| image:: _static/images/configure-blayers.png
    :height: 269
    :width: 800
    :alt: App layers configuration
@@ -181,7 +181,7 @@ Maximum extent			Define the maximum extent for the application
 Restricted extent		You can check this option to strictly restrict the extent to the one defined as maximum extent 
 ============================ ===================================================
 
-.. |edmap| image:: ../../_static/images/edit-map.png
+.. |edmap| image:: _static/images/edit-map.png
    :height: 188
    :width: 800
    :alt: App map configuration
@@ -195,7 +195,7 @@ Tools Configuration
 In this section you can activate tools which will be available from
 the published application.
 
-.. |edctrl| image:: ../../_static/images/edit-controls.png
+.. |edctrl| image:: _static/images/edit-controls.png
    :height: 320
    :width: 800
    :alt: App Controls configuration
@@ -221,77 +221,77 @@ Sélectionnez la valeur *None* pour les outils d'analyse spatiale.
 Navigation toolbar
 ...................
 
-.. |auth| image:: ../../_static/images/login-icon.png
+.. |auth| image:: _static/images/login-icon.png
    :height: 24
    :width: 24
    :alt: Login icon
 
-.. |perm| image:: ../../_static/images/permalink-icon.png
+.. |perm| image:: _static/images/permalink-icon.png
    :height: 24
    :width: 24
    :alt: Link icon
    
-.. |twit| image:: ../../_static/images/twitter-icon.png
+.. |twit| image:: _static/images/twitter-icon.png
    :height: 24
    :width: 24
    :alt: Twitter icon  
 
-.. |face| image:: ../../_static/images/facebook-icon.png
+.. |face| image:: _static/images/facebook-icon.png
    :height: 24
    :width: 24
    :alt: Facebook icon
    
-.. |pann| image:: ../../_static/images/pan-map-icon.png
+.. |pann| image:: _static/images/pan-map-icon.png
    :height: 24
    :width: 24
    :alt: Pan icon
    
-.. |mpos| image:: ../../_static/images/geolocate-icon.png
+.. |mpos| image:: _static/images/geolocate-icon.png
    :height: 24
    :width: 24
    :alt: My position icon
    
-.. |spos| image:: ../../_static/images/position-icon.png
+.. |spos| image:: _static/images/position-icon.png
    :height: 24
    :width: 24
    :alt: Follow my position icon
    
-.. |zrec| image:: ../../_static/images/zoom-in-icon.png
+.. |zrec| image:: _static/images/zoom-in-icon.png
    :height: 24
    :width: 24
    :alt: ZoomBox icon 
    
-.. |zmax| image:: ../../_static/images/zoom-to-maxextent-icon.png
+.. |zmax| image:: _static/images/zoom-to-maxextent-icon.png
    :height: 24
    :width: 24
    :alt: ZoomToMaxExtent icon
    
-.. |elev| image:: ../../_static/images/profile-icon.png
+.. |elev| image:: _static/images/profile-icon.png
    :height: 24
    :width: 24
    :alt: Profile icon
    
-.. |inte| image:: ../../_static/images/information-icon.png
+.. |inte| image:: _static/images/information-icon.png
    :height: 24
    :width: 24
    :alt: Query layer icon
    
-.. |intc| image:: ../../_static/images/information-c-icon.png
+.. |intc| image:: _static/images/information-c-icon.png
    :height: 24
    :width: 24
    :alt: Query layer by circle icon
 
-.. |mdis| image:: ../../_static/images/mesure-distance-icon.png
+.. |mdis| image:: _static/images/mesure-distance-icon.png
    :height: 24
    :width: 24
    :alt: Mesure distance icon
    
-.. |mare| image:: ../../_static/images/mesure-area-icon.png
+.. |mare| image:: _static/images/mesure-area-icon.png
    :height: 24
    :width: 24
    :alt: Mesure area icon
    
-.. |prin| image:: ../../_static/images/print-icon.png
+.. |prin| image:: _static/images/print-icon.png
    :height: 24
    :width: 24
    :alt: Print map icon
@@ -367,12 +367,12 @@ Desktop or direclty use the following link:
 http:localhost/mapmint/ui/public/Sample1.
 
 
-.. |fmap0| image:: ../../_static/images/vpop.png
+.. |fmap0| image:: _static/images/vpop.png
    :height: 384
    :width: 780
    :alt: App map
 
-.. |fmap1| image:: ../../_static/images/rpop.png
+.. |fmap1| image:: _static/images/rpop.png
    :height: 384
    :width: 780
    :alt: App map
