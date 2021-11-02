@@ -1,1 +1,0 @@
-include             : ["MapMint*/*/_static","MapMint*/*/_static/*","MapMint*/*/_static/*/*","MapMint*/*/_static/images","MapMint*/*/_images","MapMint*/*/_sources"]
