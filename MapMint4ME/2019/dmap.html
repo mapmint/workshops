@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Applications with recorded data &#8212; MapMint data collection - MapMint4ME</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -13,6 +13,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     
     <link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -40,9 +41,9 @@
           <div class="body" role="main">
             
   <section id="applications-with-recorded-data">
-<span id="dmap"></span><h1>Applications with recorded data<a class="headerlink" href="#applications-with-recorded-data" title="Permalink to this headline">¶</a></h1>
+<span id="dmap"></span><h1>Applications with recorded data<a class="headerlink" href="#applications-with-recorded-data" title="Permalink to this heading">¶</a></h1>
 <section id="show-a-map-for-your-table">
-<h2>Show a map for your table<a class="headerlink" href="#show-a-map-for-your-table" title="Permalink to this headline">¶</a></h2>
+<h2>Show a map for your table<a class="headerlink" href="#show-a-map-for-your-table" title="Permalink to this heading">¶</a></h2>
 <p>You may want to add a map to your online table edition form. In such a
 case, there are some rules to respect to get the map functionning
 properly.</p>
@@ -67,7 +68,7 @@ selected.</p>
 <a class="reference internal image-reference" href="_images/mmtmc2.png"><img alt="MapMint4ME Home" class="align-center" src="_images/mmtmc2.png" style="width: 100%;" /></a>
 </section>
 <section id="create-report-for-your-data">
-<h2>Create report for your data<a class="headerlink" href="#create-report-for-your-data" title="Permalink to this headline">¶</a></h2>
+<h2>Create report for your data<a class="headerlink" href="#create-report-for-your-data" title="Permalink to this heading">¶</a></h2>
 <p>Depending on the type of your data you may want to produce a
 report. MapMint relies on LibreOffice server which is responsible for
 generating the reports in various formats. MapMint uses its own
@@ -89,10 +90,6 @@ using the <em>Object…</em> itemfrom the contextual menu appearing when you
 right-click on the diagram in your document. Here, choose the name
 <code class="docutils literal notranslate"><span class="pre">[_diag1_]</span></code> and press <em>OK</em>.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="_images/mmr-2.png"><img alt="MapMint4ME Home" src="_images/mmr-2.png" style="width: 100%;" /></a></p></td>
 <td><p><a class="reference internal" href="_images/mmr-1.png"><img alt="MapMint4ME Home" src="_images/mmr-1.png" style="width: 100%;" /></a></p></td>
@@ -107,10 +104,6 @@ select your table configuration from the list then click on the
 <a class="reference internal image-reference" href="_images/mmr0.png"><img alt="MapMint4ME Home" class="align-center" src="_images/mmr0.png" style="width: 80%;" /></a>
 <p>Here, you can set the following parameters:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 23%" />
-<col style="width: 78%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Title</strong></p></td>
 <td><p>the tab title</p></td>
@@ -137,18 +130,18 @@ you have defined in your template. So, in your case the <code class="docutils li
 value to be included in the report.</p>
 <p>In your case, the <code class="docutils literal notranslate"><span class="pre">diag1</span></code> type should be <strong>Diagram</strong> and
 the value the following SQL query:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>(select
-  $q$ &#39;{$q$ || &#39;&#39;&#39;&#39; || a::text || &#39;&#39;&#39;&#39; || $q$, &#39;{&quot;Categories&quot;}&#39;,  $q$ || &#39;&#39;&#39;&#39; || b::text || &#39;&#39;&#39;&#39;
-  || $q$}&#39;$q$
-from
- (
-  select
-   array( select name||$q$ $q$ from sample.categories
-      where id in (select distinct category from sample.wsxpoints) ) as a,
-  array(select
-          array[count(*)] from sample.wsxpoints
-   group by category order by category) as b
- ) as v)
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">select</span><span class="w"></span>
+<span class="w">  </span><span class="p">$</span><span class="nv">q</span><span class="p">$</span><span class="w"> </span><span class="o">&#39;</span><span class="p">{$</span><span class="nv">q</span><span class="p">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">&#39;&#39;&#39;&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nv">a::text</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">&#39;&#39;&#39;&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">$</span><span class="nv">q</span><span class="p">$,</span><span class="w"> </span><span class="o">&#39;</span><span class="p">{</span><span class="s">&quot;Categories&quot;</span><span class="p">}</span><span class="o">&#39;</span><span class="p">,</span><span class="w">  </span><span class="p">$</span><span class="nv">q</span><span class="p">$</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">&#39;&#39;&#39;&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nv">b::text</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="o">&#39;&#39;&#39;&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="o">||</span><span class="w"> </span><span class="p">$</span><span class="nv">q</span><span class="p">$}</span><span class="o">&#39;</span><span class="p">$</span><span class="nv">q</span><span class="p">$</span><span class="w"></span>
+<span class="k">from</span><span class="w"></span>
+<span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="nv">select</span><span class="w"></span>
+<span class="w">   </span><span class="nf">array</span><span class="p">(</span><span class="w"> </span><span class="nv">select</span><span class="w"> </span><span class="nv">name</span><span class="o">||</span><span class="p">$</span><span class="nv">q</span><span class="p">$</span><span class="w"> </span><span class="p">$</span><span class="nv">q</span><span class="p">$</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="nv">sample</span><span class="o">.</span><span class="nv">categories</span><span class="w"></span>
+<span class="w">      </span><span class="nv">where</span><span class="w"> </span><span class="nv">id</span><span class="w"> </span><span class="nf">in</span><span class="w"> </span><span class="p">(</span><span class="nv">select</span><span class="w"> </span><span class="nv">distinct</span><span class="w"> </span><span class="nv">category</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="nv">sample</span><span class="o">.</span><span class="nv">wsxpoints</span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">a</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nf">array</span><span class="p">(</span><span class="nv">select</span><span class="w"></span>
+<span class="w">          </span><span class="nv">array</span><span class="p">[</span><span class="nf">count</span><span class="p">(</span><span class="o">*</span><span class="p">)]</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="nv">sample</span><span class="o">.</span><span class="nv">wsxpoints</span><span class="w"></span>
+<span class="w">   </span><span class="nv">group</span><span class="w"> </span><span class="nv">by</span><span class="w"> </span><span class="nv">category</span><span class="w"> </span><span class="ow">or</span><span class="nv">der</span><span class="w"> </span><span class="nv">by</span><span class="w"> </span><span class="nv">category</span><span class="p">)</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">b</span><span class="w"></span>
+<span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">v</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 <p>For the <code class="docutils literal notranslate"><span class="pre">listing1</span></code> field, set the type to <strong>SQL Table</strong> and the
@@ -167,10 +160,6 @@ to ask the server to generate the report. At the end of its
 processing, it will return a link to the pdf, odt, doc, and html
 version of the produced report.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="_images/mmr1.png"><img alt="MapMint4ME Home" src="_images/mmr1.png" style="width: 100%;" /></a></p></td>
 <td><p><a class="reference internal" href="_images/mmr2.png"><img alt="MapMint4ME Home" src="_images/mmr2.png" style="width: 100%;" /></a></p></td>
@@ -179,7 +168,7 @@ version of the produced report.</p>
 </table>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">¶</a></h2>
 <p>In this final section, you have leanrt how to add a map to your
 MapMint table client module and to produce reports out of the
 recorded data.</p>

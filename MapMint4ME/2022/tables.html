@@ -1,0 +1,547 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>The Table modules &#8212; MapMint data collection - MapMint4ME</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The MapMint4ME data collector" href="mm4me.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="mm4me.html" title="The MapMint4ME data collector"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="Introduction"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Table modules</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-table-modules">
+<span id="tables"></span><h1>The Table modules<a class="headerlink" href="#the-table-modules" title="Permalink to this heading">¶</a></h1>
+<section id="overview-of-the-adminstrative-interface">
+<h2>Overview of the adminstrative interface<a class="headerlink" href="#overview-of-the-adminstrative-interface" title="Permalink to this heading">¶</a></h2>
+<p>For being able to access to the Table administrative module from your
+MapMint installation, you need to edit the <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> configuration
+file of the ZOO-Kernel used by your MapMnit instance for setting the
+value of the <code class="docutils literal notranslate"><span class="pre">tables</span></code> parameter available in the [mm] section to
+<code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+<p>The table administration module is accessible through the following
+URL: <a class="reference external" href="http://demo.mapmint.com/ui/Tables_bs">http://demo.mapmint.com/ui/Tables_bs</a>. It gives you access to every table stored in
+the MapMint database and makes you able to configure them as editable
+by end-users of the application.</p>
+<p>The Table administrative interface contains two distinct parts. On the
+left part, you get a toolbar to start a new table configuration and,
+below, a list of configured tables. On the right part, the multiple
+tabs give access to the various forms required for configuring a table
+in MapMint. We will detail all these configuration parameters.</p>
+<a class="reference internal image-reference" href="_images/mmtablea1.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablea1.png" style="width: 100%;" /></a>
+</section>
+<section id="create-your-first-form">
+<h2>Create your first form<a class="headerlink" href="#create-your-first-form" title="Permalink to this heading">¶</a></h2>
+<p>In this section you will be introduced to the table configuration
+parameters. We have tried to be exhaustive in defining supported types
+and options you can use with every types. Nevertheless, you will use
+only a simple subset of all the options available in the module.</p>
+<section id="table-configuration">
+<h3>Table configuration<a class="headerlink" href="#table-configuration" title="Permalink to this heading">¶</a></h3>
+<p>Click on the add button from the toolbar to access the form for table
+configruation creation. Fro here, select the table named <em>wsX2022points</em>
+located in the <em>sample</em> schema and set <em>WSXPOINTS</em> as the table
+name. Then, press the add button on the right of the table name you
+just set.</p>
+<a class="reference internal image-reference" href="_images/mmtablesac0.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac0.png" style="width: 25%;" /></a>
+<p>As shown below, the page should now show the table configuration you have created.</p>
+<a class="reference internal image-reference" href="_images/mmtablesac1.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac1.png" style="width: 100%;" /></a>
+<p>Using the first tab, you can define basic informations about your
+table: the <em>name</em> displayed in the administration interface, the
+<em>description</em> that will be displayed in pages presenting your data
+online and the <em>table</em> you linked the configuration with.</p>
+<p>As presented bellow, the second tab give you basic informations about
+the current structure of the table you are configuring.</p>
+<a class="reference internal image-reference" href="_images/mmtablesac2.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac2.png" style="width: 60%;" /></a>
+<p>You can find below a description of all the displayed columns.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><em>Column</em></p></th>
+<th class="head"><p><em>Description</em></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>Position</em></p></td>
+<td><p>the column position (starting at 0)</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Name</em></p></td>
+<td><p>the column name</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Type</em></p></td>
+<td><p>the column type</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Key</em></p></td>
+<td><p>the kind of key (if any)</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Ref. Table</em></p></td>
+<td><p>the referenced table (if any)</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Ref. Field</em></p></td>
+<td><p>the referenced column (if any)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="view">
+<h3>View<a class="headerlink" href="#view" title="Permalink to this heading">¶</a></h3>
+<p>As presented below, the View tab makes you able to define how the
+table should be displayed, meaning which fields should be available in
+the listing when presenting your data online. For your <code class="docutils literal notranslate"><span class="pre">wsX2022points</span></code>
+table it looks resonable to show to the end-user the following
+collumns: <em>id</em>, <em>name</em>, <em>category</em> and <em>description</em>.</p>
+<a class="reference internal image-reference" href="_images/mmtablesac3.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac3.png" style="width: 80%;" /></a>
+<p>Hence, you will start by adding a new view to your table
+configuration. Below, you can find the description of all the
+parameters you can set for a view.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><em>Parameter</em></p></th>
+<th class="head"><p><em>Description</em></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>Title</em></p></td>
+<td><p>the title used for the view when accessing online or from the MapMint4ME application</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Icon</em></p></td>
+<td><p>the icon (specific use)</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Clause</em></p></td>
+<td><p>the SQL condition template used for filtering data access (true if no condition should be applied)</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Map Clause</em></p></td>
+<td><p>the SQL condition template for filtering map (empty for no use)</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Visible</em></p></td>
+<td><p>define if the view should be accessible</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Order</em></p></td>
+<td><p>the position in the menu</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Groups</em></p></td>
+<td><p>the MapMint groups allowed to access the view</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Theme</em></p></td>
+<td><p>the Theme in which the view should be accessed</p></td>
+</tr>
+</tbody>
+</table>
+<p>In the section <em>Table configuration</em>, you can define for every column
+the following parameters.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><em>Parameter</em></p></th>
+<th class="head"><p><em>Description</em></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>O.</em></p></td>
+<td><p>checked in case you want to use this column to order tuples</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>D.</em></p></td>
+<td><p>checked in case you want the column to be shown</p></td>
+</tr>
+<tr class="row-even"><td><p><em>S.</em></p></td>
+<td><p>checked in case you want to use the column to search</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Name</em></p></td>
+<td><p>the column alias</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Label</em></p></td>
+<td><p>the name displayed on the top row where value for this column will be displayed</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Value</em></p></td>
+<td><p>the value displayed for this column</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Width</em></p></td>
+<td><p>the width of the column in the HTML table</p></td>
+</tr>
+</tbody>
+</table>
+<section id="your-settings">
+<h4>Your settings<a class="headerlink" href="#your-settings" title="Permalink to this heading">¶</a></h4>
+<p>Now, you will entitle your view as “WSXPOINT”, set map-marker as the icon,
+define the clause as true, check the visible parameter, set 0 for
+order, allow <em>admin</em> and <em>wsedition</em> groups to access the view and
+affect it to the <em>Menu</em> theme.</p>
+<p>Remove all uneeded columns from the view by clicking on the trash icon
+near by the <em>photo</em> and <em>wkb_geometry</em> column names. Now, only the 4
+columns you have decided to keep should remain listed.</p>
+<p>You will keep ordering your data using the <em>id</em> column but you will
+choose <em>desc</em> to get the latest element available the firs int the
+list.</p>
+<p>You will also edit the <em>category</em> value and set the following:</p>
+<p><code class="docutils literal notranslate"><span class="pre">(SELECT</span> <span class="pre">name</span> <span class="pre">from</span> <span class="pre">sample.categories</span> <span class="pre">where</span> <span class="pre">sample.categories.id=category)</span></code></p>
+<p>Once you have made all these configurations, you have to click on the
+save button at the bottom left, right after the table showing column
+settings.</p>
+<p>At this step, your table view should already be available from the
+Table client module, you can verify by accessing the following URL:
+<a class="reference external" href="http://demo.mapmint.com/ui/public/tables/">http://demo.mapmint.com/ui/public/tables/</a>. On top of the page, in
+the menu, you should see the name of you view. If you click on the
+item from the menu, you should then get access to a page similar to
+the screenshot below.</p>
+<a class="reference internal image-reference" href="_images/mmtablesv0.png"><img alt="MapMint Table client module" class="align-center" src="_images/mmtablesv0.png" style="width: 80%;" /></a>
+</section>
+</section>
+<section id="edit">
+<h3>Edit<a class="headerlink" href="#edit" title="Permalink to this heading">¶</a></h3>
+<p>You can click on the Edit tab to access the settings of your form, the
+page should like the following screenshot.</p>
+<a class="reference internal image-reference" href="_images/mmtablese0.png"><img alt="MapMint Table client module" class="align-center" src="_images/mmtablese0.png" style="width: 80%;" /></a>
+<p>You can find below the list of all parameters.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><em>Parameter</em></p></th>
+<th class="head"><p><em>Description</em></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>Title</em></p></td>
+<td><p>the title used to entitle the tab</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Step</em></p></td>
+<td><p>the edition form can contain multiple steps (special values: -1 search, -2 delete, -10 history)</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Groups</em></p></td>
+<td><p>the MapMint groups allowed to access the edition form</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Description</em></p></td>
+<td><p>the description displayed on top of the online edition form</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Theme</em></p></td>
+<td><p>the Theme in which the edition form should be accessed from (optional)</p></td>
+</tr>
+</tbody>
+</table>
+<p>In the section Table configuration, you can define for every column
+the following parameters.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p><em>Parameter</em></p></th>
+<th class="head"><p><em>Description</em></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><em>E.</em></p></td>
+<td><p>checked in case you want the user to see this field in the form</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Name</em></p></td>
+<td><p>the column alias</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Type</em></p></td>
+<td><p>the type of the field (see below for a list of available MapMint types),</p></td>
+</tr>
+<tr class="row-odd"><td><p><em>Label</em></p></td>
+<td><p>the name displayed in the edition form</p></td>
+</tr>
+<tr class="row-even"><td><p><em>Value</em></p></td>
+<td><p>the default value or a SQL query to fill a select list for instance</p></td>
+</tr>
+</tbody>
+</table>
+<section id="column-types">
+<h4>Column types<a class="headerlink" href="#column-types" title="Permalink to this heading">¶</a></h4>
+<section id="basic-column-types">
+<h5>Basic column types<a class="headerlink" href="#basic-column-types" title="Permalink to this heading">¶</a></h5>
+<p>We call the basic column types, the types that does not require any
+specific settings. You can find below the list of available basic
+column types.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Binary</span> <span class="pre">file</span></code>: Photo / image</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Boolean</span></code> : boolean value  (true or false)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Character</span> <span class="pre">varying</span> <span class="pre">(255)</span></code> : string of maximum 255 characters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Character</span> <span class="pre">varying</span> <span class="pre">(50)</span></code> : string of maximum 50 characters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Character</span> <span class="pre">varying</span> <span class="pre">(25)</span></code> : string of maximum 25 characters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Date</span></code> : date</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">and</span> <span class="pre">time</span></code> : date and time</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Geometry</span></code> : geographic object</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HTML</span> <span class="pre">Text</span></code> : HTML content</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Password</span></code> : password</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Text</span></code> : string without limitation in number of characters</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="complex-column-types">
+<h5>Complex column types<a class="headerlink" href="#complex-column-types" title="Permalink to this heading">¶</a></h5>
+<section id="reference">
+<h6>Reference<a class="headerlink" href="#reference" title="Permalink to this heading">¶</a></h6>
+<p>This type is used in case you want to display a selection list to the
+user to set the value of the column. It is commonly used in case you
+want to let the user set the value of a column which is a foreign key,
+so a value refering to another table column.</p>
+<p>For this type, the value parameter contains only a SQL query which
+should return a set of two columns. The first one will be used to set
+the value for this column when the second one will be shown to the
+user in the selection list.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<blockquote>
+<div><p>This type can be used even if there is no table referenced, the
+only requirement is that your SQL query should return a set of
+elements with 2 columns. So, for instance, the following query
+would be valid:
+::
+– Select list: “North”, “South”, “Est”, “West”
+SELECT * from (</p>
+<blockquote>
+<div><p>SELECT ‘N’ as id, ‘North’ as name
+UNION
+SELECT ‘E’ as id, ‘Est’ as name
+UNION
+SELECT ‘W’ as id,’West’ as name
+UNION
+SELECT ‘S’ as id,’South’ as name</p>
+</div></blockquote>
+</div></blockquote>
+<p>) as f</p>
+<blockquote>
+<div><p>In this case, the value <code class="docutils literal notranslate"><span class="pre">N</span></code>, <code class="docutils literal notranslate"><span class="pre">E</span></code>, <code class="docutils literal notranslate"><span class="pre">W</span></code> or
+<code class="docutils literal notranslate"><span class="pre">S</span></code>  will be inserted in the table and in the selection list,
+user will see the following values: <code class="docutils literal notranslate"><span class="pre">North</span></code>, <code class="docutils literal notranslate"><span class="pre">Est</span></code>, <code class="docutils literal notranslate"><span class="pre">West</span></code>,
+and <code class="docutils literal notranslate"><span class="pre">South</span></code>.</p>
+</div></blockquote>
+</div>
+<p>With this <em>reference</em> type you are allowed to define dependencies with
+other field in the current edition form. For defining such a
+relationship between edition fields, you should use the text area in
+the <strong>Type</strong> column just below the type definition. A typical use case
+for this relationship is the case when you should first select a
+country, then a region in this country and so on.</p>
+<p>The syntaxe to use for defining a relationship with another edition
+field is the following:</p>
+<p><code class="docutils literal notranslate"><span class="pre">[{&quot;XX&quot;:{&quot;tfield&quot;:&quot;YY&quot;,&quot;init&quot;:&quot;true&quot;,&quot;display&quot;:</span> <span class="pre">&quot;always&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;options&quot;:[]}}]</span></code></p>
+<dl class="simple">
+<dt>Where:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">XX</span></code> is the name of the dependent field available in the current
+edition form</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">YY</span></code> the column name of the table used in the <code class="docutils literal notranslate"><span class="pre">XX</span></code> value
+definition</p></li>
+</ul>
+</dd>
+</dl>
+<p>In case you want to make the edition field a final selection list, so
+for instance the city in the example used before with admintrative
+boundaries but, you do not want to store every columns (country,
+region…) in your table. then you can set <code class="docutils literal notranslate"><span class="pre">XX</span></code> as <em>myself</em> and use a
+slightly different syntaxe. Below is an example we used fo selecting
+species in a form by first selecting a familly, then a kind to finally
+select the species.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>[{
+  &quot;myself&quot;:
+  [
+   {
+    &quot;fid&quot;:
+    {
+      &quot;tfield&quot;:&quot;fkey&quot;,
+      &quot;init&quot;:&quot;true&quot;,
+      &quot;display&quot;: &quot;always&quot;,
+      &quot;operator&quot;:&quot;=&quot;,
+      &quot;options&quot;:[],
+      &quot;label&quot;: &quot;Famille&quot;,
+      &quot;sql_query&quot;: &quot;SELECT id, famille from public.familles&quot;,
+      &quot;dependents&quot;: [
+        {
+          &quot;gid&quot;:
+            {
+              &quot;tfield&quot;:&quot;fkey&quot;,
+              &quot;tfieldf&quot;:&quot;gid&quot;,
+              &quot;init&quot;:&quot;true&quot;,
+              &quot;display&quot;: &quot;always&quot;,
+              &quot;operator&quot;:&quot;=&quot;,
+              &quot;options&quot;:[],
+              &quot;label&quot;: &quot;Genre&quot;,
+              &quot;sql_query&quot;: &quot;SELECT id, genre from public.genres&quot;
+            }
+        }
+      ]
+    }
+   }
+  ]
+}]
+</pre></div>
+</div>
+<p>Accessorily, you can use this type to show or hide a simple
+field. For instance, suppose you have a selection list in which the
+value <em>other</em> is available (corresponding to the <em>69</em> value) and you get
+an edition field named  <em>other_text</em>. Then you may decide to show the
+second field only when the <em>other</em> has been selected. In such case the
+dependencies will be displayed like in the following.</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>[{
+  &quot;other_text&quot;:
+  {
+    &quot;tfield&quot;:&quot;none&quot;,
+    &quot;init&quot;:&quot;true&quot;,
+    &quot;display&quot;:&quot;always&quot;,
+    &quot;operator&quot;:&quot;=&quot;,
+    &quot;options&quot;:[69]
+  }
+}]
+</pre></div>
+</div>
+</section>
+<section id="linked-table">
+<h6>Linked table<a class="headerlink" href="#linked-table" title="Permalink to this heading">¶</a></h6>
+<p>The linked table type is used when you want to give the privilege to
+editors to edit elements from another table that will be linked to the
+current edited table. A typical use case is when you are creating
+polygons representing parcels, then you allocate every building in it.</p>
+<dl class="simple">
+<dt>The sytaxe is the following: <code class="docutils literal notranslate"><span class="pre">XX;TBL</span></code> where:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">XX</span></code> is the name of the colum used to store the foreign key (corresponding to the current table primary key) in thre target table</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TBL</span></code> is the table name you want to use to view and edit the elements.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>It is important at this step that the <code class="docutils literal notranslate"><span class="pre">TBL</span></code> table get a view and
+edition forms already defined.</p>
+</div>
+</section>
+<section id="table-link">
+<h6>Table link<a class="headerlink" href="#table-link" title="Permalink to this heading">¶</a></h6>
+<p>The table link type is used when you want to give the capability to
+the editor to edit a field that can take multiple values which can be
+found in another table. Usually, these links are stored in a different
+table from the one you are configuring, and the table get at least two
+columns, one refereing to the current table and the other one
+refering the table where the value to be linked can be found.</p>
+<dl class="simple">
+<dt>The syntaxe for this type is the following: <code class="docutils literal notranslate"><span class="pre">XX;YY;TBL;SQL</span></code> where:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">XX</span></code> is the column name to store the reference to the current table</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">YY</span></code> is the column name to store the selected vakyes,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TBL</span></code> is the name of the table to store the informations,</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SQL</span></code> is the SQL query returning elements that can be linked to the current table</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+<section id="id1">
+<h4>Your settings<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h4>
+<p>Now you know every basic and complexe column types that can be defined
+from the edition form settings pannel, it is time to go back on the
+form you are targetting which has been presented in introduction.</p>
+<p>You will remove the <em>id</em> column, as it is a serial (meaning an
+autoincremented integer value) it will be set by the database
+itself. You will keep the <em>name</em> column and define its type as
+<em>Character varying (50)</em>.  For the <em>category</em> column you define it as
+<em>Reference</em> and set the value to the following SQL query:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>select id, name from sample.categories order by name
+</pre></div>
+</div>
+<p>Then, you will set the type for photo and description column as
+<em>Binary file</em> and <em>Geometry</em> respectively. To save your settings, you
+should click on the save button below the table configuration.</p>
+<p>Once you click on the save button for the very first time, you should
+know that the MapMint Table module creates a history table in the
+mm_ghosts scheme which will be used to store the full history of every
+modification that will be  applied to the elements in your table. This
+way, in case you removed an elements by mistake for instance, you will
+be able to find it back from the history table. It also permits to
+have a detailled view of when and what has been updated and by whom.</p>
+<p>Now that you have created a step 0 for your table, if you go back on
+the MapMint table client module, you shoud see a tab appearing and in
+its pannel, the form you have just created. The result you should get
+is presented in the screeshot below.</p>
+<a class="reference internal image-reference" href="_images/mmtablesce1.png"><img alt="MapMint Table client module" class="align-center" src="_images/mmtablesce1.png" style="width: 70%;" /></a>
+</section>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">¶</a></h2>
+<p>At this step, you have configured everything on the server side for
+being able to connect from the MapMint4ME Android application to
+prepare your data collection mission.</p>
+<p>In the next step, you will see how to setup MapMint4ME application on
+your Android phone or tablet, then you will configure it to get it
+ready for data collection on the field.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Table modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview-of-the-adminstrative-interface">Overview of the adminstrative interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-your-first-form">Create your first form</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#table-configuration">Table configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#view">View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit">Edit</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mm4me.html">The MapMint4ME data collector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dmap.html">Applications with recorded data</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="mm4me.html" title="The MapMint4ME data collector"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="Introduction"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Table modules</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    </div>
+  </body>
+</html>

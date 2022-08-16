@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>The Table modules &#8212; MapMint data collection - MapMint4ME</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -13,6 +13,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     
     <link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -44,9 +45,9 @@
           <div class="body" role="main">
             
   <section id="the-table-modules">
-<span id="tables"></span><h1>The Table modules<a class="headerlink" href="#the-table-modules" title="Permalink to this headline">¶</a></h1>
+<span id="tables"></span><h1>The Table modules<a class="headerlink" href="#the-table-modules" title="Permalink to this heading">¶</a></h1>
 <section id="overview-of-the-adminstrative-interface">
-<h2>Overview of the adminstrative interface<a class="headerlink" href="#overview-of-the-adminstrative-interface" title="Permalink to this headline">¶</a></h2>
+<h2>Overview of the adminstrative interface<a class="headerlink" href="#overview-of-the-adminstrative-interface" title="Permalink to this heading">¶</a></h2>
 <p>For being able to access to the Table administrative module from your
 MapMint installation, you need to edit the <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> configuration
 file of the ZOO-Kernel used by your MapMnit instance for setting the
@@ -64,13 +65,13 @@ in MapMint. We will detail all these configuration parameters.</p>
 <a class="reference internal image-reference" href="_images/mmtablea1.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablea1.png" style="width: 100%;" /></a>
 </section>
 <section id="create-your-first-form">
-<h2>Create your first form<a class="headerlink" href="#create-your-first-form" title="Permalink to this headline">¶</a></h2>
+<h2>Create your first form<a class="headerlink" href="#create-your-first-form" title="Permalink to this heading">¶</a></h2>
 <p>In this section you will be introduced to the table configuration
 parameters. We have tried to be exhaustive in defining supported types
 and options you can use with every types. Nevertheless, you will use
 only a simple subset of all the options available in the module.</p>
 <section id="table-configuration">
-<h3>Table configuration<a class="headerlink" href="#table-configuration" title="Permalink to this headline">¶</a></h3>
+<h3>Table configuration<a class="headerlink" href="#table-configuration" title="Permalink to this heading">¶</a></h3>
 <p>Click on the add button from the toolbar to access the form for table
 configruation creation. Fro here, select the table named <em>wsxpoints</em>
 located in the <em>sample</em> schema and set <em>WSXPOINTS</em> as the table
@@ -88,10 +89,6 @@ the current structure of the table you are configuring.</p>
 <a class="reference internal image-reference" href="_images/mmtablesac2.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac2.png" style="width: 60%;" /></a>
 <p>You can find below a description of all the displayed columns.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 73%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><em>Column</em></p></th>
 <th class="head"><p><em>Description</em></p></th>
@@ -120,7 +117,7 @@ the current structure of the table you are configuring.</p>
 </table>
 </section>
 <section id="view">
-<h3>View<a class="headerlink" href="#view" title="Permalink to this headline">¶</a></h3>
+<h3>View<a class="headerlink" href="#view" title="Permalink to this heading">¶</a></h3>
 <p>As presented below, the View tab makes you able to define how the
 table should be displayed, meaning which fields should be available in
 the listing when presenting your data online. For your <cite>wsxpoints</cite>
@@ -131,10 +128,6 @@ collumns: <em>id</em>, <em>name</em>, <em>category</em> and <em>description</em>
 configuration. Below, you can find the description of all the
 parameters you can set for a view.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 13%" />
-<col style="width: 87%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><em>Parameter</em></p></th>
 <th class="head"><p><em>Description</em></p></th>
@@ -167,10 +160,6 @@ parameters you can set for a view.</p>
 <p>In the section <em>Table configuration</em>, you can define for every column
 the following parameters.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 86%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><em>Parameter</em></p></th>
 <th class="head"><p><em>Description</em></p></th>
@@ -224,16 +213,12 @@ the screenshot below.</p>
 <a class="reference internal image-reference" href="_images/mmtablesv0.png"><img alt="MapMint Table client module" class="align-center" src="_images/mmtablesv0.png" style="width: 80%;" /></a>
 </section>
 <section id="edit">
-<h3>Edit<a class="headerlink" href="#edit" title="Permalink to this headline">¶</a></h3>
+<h3>Edit<a class="headerlink" href="#edit" title="Permalink to this heading">¶</a></h3>
 <p>You can click on the Edit tab to access the settings of your form, the
 page should like the following screenshot.</p>
 <a class="reference internal image-reference" href="_images/mmtablese0.png"><img alt="MapMint Table client module" class="align-center" src="_images/mmtablese0.png" style="width: 80%;" /></a>
 <p>You can find below the list of all parameters.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 88%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><em>Parameter</em></p></th>
 <th class="head"><p><em>Description</em></p></th>
@@ -260,10 +245,6 @@ page should like the following screenshot.</p>
 <p>In the section Table configuration, you can define for every column
 the following parameters.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 86%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p><em>Parameter</em></p></th>
 <th class="head"><p><em>Description</em></p></th>
@@ -288,9 +269,9 @@ the following parameters.</p>
 </tbody>
 </table>
 <section id="column-types">
-<h4>Column types<a class="headerlink" href="#column-types" title="Permalink to this headline">¶</a></h4>
+<h4>Column types<a class="headerlink" href="#column-types" title="Permalink to this heading">¶</a></h4>
 <section id="basic-column-types">
-<h5>Basic column types<a class="headerlink" href="#basic-column-types" title="Permalink to this headline">¶</a></h5>
+<h5>Basic column types<a class="headerlink" href="#basic-column-types" title="Permalink to this heading">¶</a></h5>
 <p>We call the basic column types, the types that does not require any
 specific settings. You can find below the list of available basic
 column types.</p>
@@ -311,9 +292,9 @@ column types.</p>
 </div></blockquote>
 </section>
 <section id="complex-column-types">
-<h5>Complex column types<a class="headerlink" href="#complex-column-types" title="Permalink to this headline">¶</a></h5>
+<h5>Complex column types<a class="headerlink" href="#complex-column-types" title="Permalink to this heading">¶</a></h5>
 <section id="reference">
-<h6>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h6>
+<h6>Reference<a class="headerlink" href="#reference" title="Permalink to this heading">¶</a></h6>
 <p>This type is used in case you want to display a selection list to the
 user to set the value of the column. It is commonly used in case you
 want to let the user set the value of a column which is a foreign key,
@@ -429,7 +410,7 @@ dependencies will be displayed like in the following.</p>
 </div>
 </section>
 <section id="linked-table">
-<h6>Linked table<a class="headerlink" href="#linked-table" title="Permalink to this headline">¶</a></h6>
+<h6>Linked table<a class="headerlink" href="#linked-table" title="Permalink to this heading">¶</a></h6>
 <p>The linked table type is used when you want to give the privilege to
 editors to edit elements from another table that will be linked to the
 current edited table. A typical use case is when you are creating
@@ -448,7 +429,7 @@ edition forms already defined.</p>
 </div>
 </section>
 <section id="table-link">
-<h6>Table link<a class="headerlink" href="#table-link" title="Permalink to this headline">¶</a></h6>
+<h6>Table link<a class="headerlink" href="#table-link" title="Permalink to this heading">¶</a></h6>
 <p>The table link type is used when you want to give the capability to
 the editor to edit a field that can take multiple values which can be
 found in another table. Usually, these links are stored in a different
@@ -468,7 +449,7 @@ refering the table where the value to be linked can be found.</p>
 </section>
 </section>
 <section id="your-settings">
-<h4>Your settings<a class="headerlink" href="#your-settings" title="Permalink to this headline">¶</a></h4>
+<h4>Your settings<a class="headerlink" href="#your-settings" title="Permalink to this heading">¶</a></h4>
 <p>Now you know every basic and complexe column types that can be defined
 from the edition form settings pannel, it is time to go back on the
 form you are targetting which has been presented in introduction.</p>
@@ -499,7 +480,7 @@ is presented in the screeshot below.</p>
 </section>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">¶</a></h2>
 <p>At this step, you have configured everything on the server side for
 being able to connect from the MapMint4ME Android application to
 prepare your data collection mission.</p>

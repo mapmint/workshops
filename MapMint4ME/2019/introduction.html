@@ -4,7 +4,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Introduction &#8212; MapMint data collection - MapMint4ME</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -13,6 +13,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     
     <link rel="shortcut icon" href="_static/favicon.ico"/>
@@ -44,11 +45,11 @@
           <div class="body" role="main">
             
   <section id="introduction">
-<span id="userguidegeneral"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<span id="userguidegeneral"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h1>
 <section id="a-brief-overview">
-<h2>A brief overview<a class="headerlink" href="#a-brief-overview" title="Permalink to this headline">¶</a></h2>
+<h2>A brief overview<a class="headerlink" href="#a-brief-overview" title="Permalink to this heading">¶</a></h2>
 <section id="general-presentation">
-<h3>General presentation<a class="headerlink" href="#general-presentation" title="Permalink to this headline">¶</a></h3>
+<h3>General presentation<a class="headerlink" href="#general-presentation" title="Permalink to this heading">¶</a></h3>
 <p>MapMint4ME means MapMint 4 (for) Measure and Evaluation,
 It is an Android application that collects and edits geospatial data
 in online or offline mode.</p>
@@ -69,16 +70,12 @@ next sections.</p>
 <p><a class="reference internal" href="_images/mm4me_schema.svg"><img alt="MM4ME Schema" height="600" src="_images/mm4me_schema.svg" width="50%" /></a></p>
 </section>
 <section id="mapmint-table-module">
-<h3>MapMint Table module<a class="headerlink" href="#mapmint-table-module" title="Permalink to this headline">¶</a></h3>
+<h3>MapMint Table module<a class="headerlink" href="#mapmint-table-module" title="Permalink to this heading">¶</a></h3>
 <p>MapMint Table module is composed of an administration interface that
 allows for the configuration of some PostgreSQL tables as editable online and a
 client interface where users can login to view, edit and
 produce a report about their data.</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 42%" />
-<col style="width: 58%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><em>MapMint Table Admin</em></p></td>
 <td><p><em>MapMint Table Client</em></p></td>
@@ -93,9 +90,9 @@ produce a report about their data.</p>
 </table>
 </section>
 <section id="mapmint4me-android-application">
-<h3>MapMint4ME Android application<a class="headerlink" href="#mapmint4me-android-application" title="Permalink to this headline">¶</a></h3>
+<h3>MapMint4ME Android application<a class="headerlink" href="#mapmint4me-android-application" title="Permalink to this heading">¶</a></h3>
 <section id="importing">
-<h4>1. Importing<a class="headerlink" href="#importing" title="Permalink to this headline">¶</a></h4>
+<h4>1. Importing<a class="headerlink" href="#importing" title="Permalink to this heading">¶</a></h4>
 <p>As outlined in the introduction, MapMint4ME relies on a MapMint
 server. The MapMint Server is responsible for #########NOT CLEAR, CHECK GF####This last has the responsibility to provide the data to be
 recorded on the field with or without internet connectivity.</p>
@@ -113,7 +110,7 @@ to access a set of Tiles corresponding to the extent of your recording
 session.</p>
 </section>
 <section id="recording">
-<h4>2. Recording<a class="headerlink" href="#recording" title="Permalink to this headline">¶</a></h4>
+<h4>2. Recording<a class="headerlink" href="#recording" title="Permalink to this heading">¶</a></h4>
 <p>You can record and visualize data in the field by using the Edit, View
 and Map modules. The Edit module gives you the capability to edit all
 tables configured as editable by a group of users. The View module
@@ -124,7 +121,7 @@ recorded data on a basic map presenting recorded points, lines and
 polygons.</p>
 </section>
 <section id="exporting">
-<h4>3. Exporting<a class="headerlink" href="#exporting" title="Permalink to this headline">¶</a></h4>
+<h4>3. Exporting<a class="headerlink" href="#exporting" title="Permalink to this heading">¶</a></h4>
 <p>Once the field data collection is complete, and you have WiFi connectivity (or sufficiently strong 4G signal), you can use the MapMint4ME Export Module to upload your data back to the MapMint server.</p>
 <p>At this point, the MapMint server will extract and convert the field data from
 the SQLite database to PostgreSQL. As outlined previously, only the recorded data will be
@@ -136,9 +133,9 @@ the server.</p>
 </section>
 </section>
 <section id="the-workshop-content">
-<h2>The workshop content<a class="headerlink" href="#the-workshop-content" title="Permalink to this headline">¶</a></h2>
+<h2>The workshop content<a class="headerlink" href="#the-workshop-content" title="Permalink to this heading">¶</a></h2>
 <section id="schedule">
-<h3>Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">¶</a></h3>
+<h3>Schedule<a class="headerlink" href="#schedule" title="Permalink to this heading">¶</a></h3>
 <p>During this workshop, you will be introduced to the basic
 configuration required for activating the Table module from MapMint to
 build forms so that data can be edited online and from MapMint4ME. Then, you will
@@ -169,10 +166,6 @@ points, lines, and polygons with the following attributes
 respectively.</p>
 <p><strong>wsxpoints</strong>:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 22%" />
-<col style="width: 78%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Column</p></th>
 <th class="head"><p>Type</p></th>
@@ -198,10 +191,6 @@ respectively.</p>
 </table>
 <p><strong>wsxlines</strong>:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 22%" />
-<col style="width: 78%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Column</p></th>
 <th class="head"><p>Type</p></th>
@@ -224,10 +213,6 @@ respectively.</p>
 </table>
 <p><strong>wsxpolygons</strong>:</p>
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 22%" />
-<col style="width: 78%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Column</p></th>
 <th class="head"><p>Type</p></th>
@@ -250,7 +235,7 @@ respectively.</p>
 </table>
 </section>
 <section id="pre-requisites">
-<h3>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h3>
+<h3>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this heading">¶</a></h3>
 <p>You will need to create the tables to store the data you want to allow
 your users to edit in the field. To do so, you are requested to load the
 Distiller module and click on the <em>mmdb</em> DataStore to view the list of
@@ -258,34 +243,34 @@ available DataSources.</p>
 <p>From any of the layer listed, you can use the <a class="reference external" href="/ZOOProject.pdf"><img alt="MapMint OGRO2GR" class="align-bottom" src="_images/process.png" style="width: 20px;" /></a> button to access
 the tool for converting vector. From this tool, select <em>mmdb</em> as
 DataStore then, copy and paste the following SQL queries:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">--</span> <span class="n">Create</span> <span class="n">table</span> <span class="n">wsXpoints</span>
-<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">sample</span><span class="o">.</span><span class="n">wsXpoints</span> <span class="p">(</span>
-  <span class="n">id</span> <span class="n">serial</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
-  <span class="n">name</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
-  <span class="n">category</span> <span class="n">int4</span> <span class="n">references</span> <span class="n">sample</span><span class="o">.</span><span class="n">categories</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
-  <span class="n">description</span> <span class="n">text</span><span class="p">,</span>
-  <span class="n">photo</span> <span class="n">bytea</span>
-<span class="p">);</span>
-<span class="n">SELECT</span> <span class="n">AddGeometryColumn</span>
-  <span class="p">(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span><span class="s1">&#39;wsxpoints&#39;</span><span class="p">,</span><span class="s1">&#39;wkb_geometry&#39;</span><span class="p">,</span><span class="mi">4326</span><span class="p">,</span><span class="s1">&#39;POINT&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
-<span class="o">--</span> <span class="n">Create</span> <span class="n">table</span> <span class="n">wsXlines</span>
-<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">sample</span><span class="o">.</span><span class="n">wsXlines</span> <span class="p">(</span>
-  <span class="n">id</span> <span class="n">serial</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
-  <span class="n">name</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
-  <span class="n">category</span> <span class="n">int4</span> <span class="n">references</span> <span class="n">sample</span><span class="o">.</span><span class="n">categories</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
-  <span class="n">description</span> <span class="n">text</span>
-<span class="p">);</span>
-<span class="n">SELECT</span> <span class="n">AddGeometryColumn</span>
-  <span class="p">(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span><span class="s1">&#39;wsxlines&#39;</span><span class="p">,</span><span class="s1">&#39;wkb_geometry&#39;</span><span class="p">,</span><span class="mi">4326</span><span class="p">,</span><span class="s1">&#39;LINESTRING&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
-<span class="o">--</span> <span class="n">Create</span> <span class="n">table</span> <span class="n">wsXpolygons</span>
-<span class="n">CREATE</span> <span class="n">TABLE</span> <span class="n">sample</span><span class="o">.</span><span class="n">wsXpolygons</span> <span class="p">(</span>
-  <span class="n">id</span> <span class="n">serial</span> <span class="n">PRIMARY</span> <span class="n">KEY</span><span class="p">,</span>
-  <span class="n">name</span> <span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span>
-  <span class="n">category</span> <span class="n">int4</span> <span class="n">references</span> <span class="n">sample</span><span class="o">.</span><span class="n">categories</span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
-  <span class="n">description</span> <span class="n">text</span>
-<span class="p">);</span>
-<span class="n">SELECT</span> <span class="n">AddGeometryColumn</span>
-  <span class="p">(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span><span class="s1">&#39;wsxpolygons&#39;</span><span class="p">,</span><span class="s1">&#39;wkb_geometry&#39;</span><span class="p">,</span><span class="mi">4326</span><span class="p">,</span><span class="s1">&#39;POLYGON&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="n">wsXpoints</span><span class="w"></span>
+<span class="n">CREATE</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="n">wsXpoints</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="n">serial</span><span class="w"> </span><span class="n">PRIMARY</span><span class="w"> </span><span class="n">KEY</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="n">category</span><span class="w"> </span><span class="n">int4</span><span class="w"> </span><span class="n">references</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="n">categories</span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="n">description</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">photo</span><span class="w"> </span><span class="n">bytea</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+<span class="n">SELECT</span><span class="w"> </span><span class="n">AddGeometryColumn</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span><span class="s1">&#39;wsxpoints&#39;</span><span class="p">,</span><span class="s1">&#39;wkb_geometry&#39;</span><span class="p">,</span><span class="mi">4326</span><span class="p">,</span><span class="s1">&#39;POINT&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="o">--</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="n">wsXlines</span><span class="w"></span>
+<span class="n">CREATE</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="n">wsXlines</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="n">serial</span><span class="w"> </span><span class="n">PRIMARY</span><span class="w"> </span><span class="n">KEY</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="n">category</span><span class="w"> </span><span class="n">int4</span><span class="w"> </span><span class="n">references</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="n">categories</span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="n">description</span><span class="w"> </span><span class="n">text</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+<span class="n">SELECT</span><span class="w"> </span><span class="n">AddGeometryColumn</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span><span class="s1">&#39;wsxlines&#39;</span><span class="p">,</span><span class="s1">&#39;wkb_geometry&#39;</span><span class="p">,</span><span class="mi">4326</span><span class="p">,</span><span class="s1">&#39;LINESTRING&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="o">--</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="n">wsXpolygons</span><span class="w"></span>
+<span class="n">CREATE</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="n">wsXpolygons</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="n">serial</span><span class="w"> </span><span class="n">PRIMARY</span><span class="w"> </span><span class="n">KEY</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="n">category</span><span class="w"> </span><span class="n">int4</span><span class="w"> </span><span class="n">references</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="n">categories</span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="n">description</span><span class="w"> </span><span class="n">text</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+<span class="n">SELECT</span><span class="w"> </span><span class="n">AddGeometryColumn</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span><span class="s1">&#39;wsxpolygons&#39;</span><span class="p">,</span><span class="s1">&#39;wkb_geometry&#39;</span><span class="p">,</span><span class="mi">4326</span><span class="p">,</span><span class="s1">&#39;POLYGON&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

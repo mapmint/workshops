@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>The Manager Module &#8212; Building Standards Compliant Geospatial Web Applications - The Quick and Easy MapMint Way.</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Publisher Module" href="publisher.html" />
+    <link rel="prev" title="The Distiller module" href="distiller.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="publisher.html" title="The Publisher Module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="distiller.html" title="The Distiller module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Manager Module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="the-manager-module">
+<span id="manager"></span><h1>The Manager Module<a class="headerlink" href="#the-manager-module" title="Permalink to this heading">¶</a></h1>
+<p>The Manager module is presented in this section and it looks like the
+following, when opened for the first time after following the <a class="reference external" href="./distiller.html#open-a-data-source-in-the-manager">instructions</a>.</p>
+<a class="reference internal image-reference" href="_images/manager.png"><img alt="Manager UI" class="align-center" src="_images/manager.png" style="width: 50%;" /></a>
+<section id="the-data-layers-panel">
+<h2>The <em>Data Layers</em> panel<a class="headerlink" href="#the-data-layers-panel" title="Permalink to this heading">¶</a></h2>
+<dl class="simple">
+<dt>The <em>Data Layers</em> panel is the left-side panel and contains two elements:</dt><dd><ul class="simple">
+<li><p>A map gesture toolbar</p></li>
+<li><p>A tree presenting your layers list</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For each MapMint map there is a configuration file which is a
+MapServer mapfile</p>
+</div>
+<section id="open-a-map">
+<h3>Open a Map<a class="headerlink" href="#open-a-map" title="Permalink to this heading">¶</a></h3>
+<p>To open an existing map, simply click on the button presented below
+and the <em>Open Map</em> window presented below to let you choose one
+amongst the listed ones.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Icon</strong></p></td>
+<td><p><strong>Action</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/open-map.png"><img alt="open map window" src="_images/open-map.png" style="width: 24px;" /></a></p></td>
+<td><p>Open an existing map</p></td>
+</tr>
+</tbody>
+</table>
+<p>From this window, if you click on the <em>Open</em> button, your Manager will
+be reloaded using the choosen map.</p>
+<p><a class="reference internal" href="_images/open-map-window.png"><img alt="Open map window" src="_images/open-map-window.png" style="width: 20%;" /></a></p>
+</section>
+<section id="save-a-map">
+<h3>Save a map<a class="headerlink" href="#save-a-map" title="Permalink to this heading">¶</a></h3>
+<p>To save your current map, you should click on the <em>Save</em> button in the toolbar.
+You can use the text field to save your map using a different name.</p>
+<p><a class="reference internal" href="_images/saveasmap-window.png"><img alt="Open map window" src="_images/saveasmap-window.png" style="width: 20%;" /></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The map name should not contain any space, accent or any special character.</p>
+</div>
+<p>You are now invited to name your map <em>Sample1</em>, then save it. Your
+Manager module will be reloaded and it will display the map name as set by you.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Each time you open a map using the <em>Open in Manager</em> button as
+you did previously, the first step is to save your map with a
+correct name. The <em>Untitled_0</em> is the default temporary name given
+each time an adminstrator is opening a layer in the Manager from
+the Distiller module.</p>
+</div>
+</section>
+<section id="layers-tree">
+<h3>Layers tree<a class="headerlink" href="#layers-tree" title="Permalink to this heading">¶</a></h3>
+<p>Just on top of your layers tree, you have access to the specific
+layers toolbar which gives you access to the following options.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Icon</strong></p></td>
+<td><p><strong>Action</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/add-layer-m.png"><img alt="Add layer icon" src="_images/add-layer-m.png" style="width: 24px;" /></a></p></td>
+<td><p>Add a Layer to the tree</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/toggle_grid.png"><img alt="Add graticule icon" src="_images/toggle_grid.png" style="width: 24px;" /></a></p></td>
+<td><p>Add a GRID layer to the map</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/move.png"><img alt="Set layer order icon" src="_images/move.png" style="width: 24px;" /></a></p></td>
+<td><p>Set layer order</p></td>
+</tr>
+</tbody>
+</table>
+<p>If you right click on a layer, then you will get access to the
+following tools:</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Icône</strong></p></td>
+<td><p><strong>Action</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/zoomtolayer.png"><img alt="Zoom to extent icon" src="_images/zoomtolayer.png" style="width: 24px;" /></a></p></td>
+<td><p>Zoom to the data source extent</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/table.png"><img alt="View table icon" src="_images/table.png" style="width: 24px;" /></a></p></td>
+<td><p>Open the attributes tables</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/properties.png"><img alt="View properties icon" src="_images/properties.png" style="width: 24px;" /></a></p></td>
+<td><p>Open the Properties window</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/delete-user.png"><img alt="Set template icon" src="_images/delete-user.png" style="width: 24px;" /></a></p></td>
+<td><p>Open the window for deleting the layer from the current map</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="map-viewer">
+<h2>Map viewer<a class="headerlink" href="#map-viewer" title="Permalink to this heading">¶</a></h2>
+<p>The Map viewer is the right panel where the map and potential layer (if any is activated) is displayed. You can choose which base layers you want
+to use by using the toolbar on the right side on top of the map.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Icon</strong></p></td>
+<td><p><strong>Action</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/color-bl.png"><img alt="Color baselayer icon" src="_images/color-bl.png" style="width: 24px;" /></a></p></td>
+<td><p>Use a unique color as base layer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/mapquest-str.png"><img alt="MapQuest street baselayer icon" src="_images/mapquest-str.png" style="width: 24px;" /></a></p></td>
+<td><p>Use MapQuest Street as base layer (no more available)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/mapquest-sat.png"><img alt="MapQuest satellite baselayer icon" src="_images/mapquest-sat.png" style="width: 24px;" /></a></p></td>
+<td><p>Use MapQuest Satellite as base layer (no more available)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="_images/osm.png"><img alt="OpenStreetMap baselayer icon" src="_images/osm.png" style="width: 24px;" /></a></p></td>
+<td><p>Use OpenStreetMap as base layer</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="add-layers">
+<h2>Add Layers<a class="headerlink" href="#add-layers" title="Permalink to this heading">¶</a></h2>
+<p>By pressing the button <em>Add Layer</em>, you have then a window like the
+one presented below which lets you choose the data store first, then
+the list of layers available in it and finally, the place in the tree
+where you want your layer to be added.</p>
+<a class="reference internal image-reference" href="_images/addlayer-window.png"><img alt="Manager Add Layer UI part" class="align-center" src="_images/addlayer-window.png" style="width: 780px; height: 384px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a layer is added directly at the root level, so as a child of
+the root node (<em>Layers</em>), then it won’t be available in the layer
+switcher in the corresponding published web application.</p>
+</div>
+<p>Your objective is to add the <em>elevation</em> data source you used to
+create <em>elevation_shaded</em>. So, you will first select the <em>NC_Raster</em>,
+then the data sources listed will be refreshed and then you can select
+the <em>elevation</em> data source to add it as a new layer to your current
+map.</p>
+<p>Now, you are invited to do the same procedure to add the following
+layers from the <em>NC_Shapes</em> data store:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>lakes</p></li>
+<li><p>roadsmajor</p></li>
+<li><p>new_poi_wake</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use <em>Ctrl</em> + click to select multiple data sources to
+add them as individual layers to your current map.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you keep the default value for the Group where your layer will
+be located, it will signify that this layer won’t be available in the
+layer switcher in the published application.</p>
+</div>
+</section>
+<section id="defining-layer-styles">
+<h2>Defining Layer Styles<a class="headerlink" href="#defining-layer-styles" title="Permalink to this heading">¶</a></h2>
+<p>In this section, you will learn how to define the style used to display
+your data in the final application.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All modifications made to the layer style is automatically saved in
+the map configuration file, so there is no need for pressing the
+<em>Save</em> button in the <em>Data Layers</em> toolbar.</p>
+</div>
+<section id="basic-raster-style">
+<h3>Basic raster style<a class="headerlink" href="#basic-raster-style" title="Permalink to this heading">¶</a></h3>
+<p>You are invited to right click on the <em>elevation_hillshade</em> layer and after that on the <em>Style</em> item to have a window giving you access to the
+basic settings for raster data:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>Resampling method</em></p></li>
+<li><p><em>Opacity</em></p></li>
+<li><p><em>Legend Type</em></p></li>
+</ul>
+</div></blockquote>
+<p>You should set resampling method to <em>AVERAGE</em>, opacity to 75% and keep
+the default value for <em>Legend Type</em> (<em>GreyScale</em>), then press the
+<em>Apply</em> button at the bottom of the form.</p>
+<a class="reference internal image-reference" href="_images/bsv.png"><img alt="Manager Raster Style UI" class="align-center" src="_images/bsv.png" style="width: 780px; height: 384px;" /></a>
+</section>
+<section id="classify-raster-layer">
+<h3>Classify raster layer<a class="headerlink" href="#classify-raster-layer" title="Permalink to this heading">¶</a></h3>
+<p>You are now invited to edit the style of the <em>elevation</em> layer of your
+map. Do as you did <a class="reference external" href="#basic-raster-style">before</a>, but set opacity
+to 50%.</p>
+<p>Once you pressed the <em>Apply</em> button, you can now set the <em>Legend
+Type</em> value to <em>Graduated Symbol</em>, you will automatically see the form
+updated consequently as presented in the screenshot below.</p>
+<a class="reference internal image-reference" href="_images/rasc.png"><img alt="Manager Raster Style Classes UI" class="align-center" src="_images/rasc.png" style="width: 780px; height: 384px;" /></a>
+<p>From this form, you can set minimum and maximum value to classify,
+define min and max color used to generate colors, the band used to
+classify and finally the number of classes.</p>
+<p>By now, let’s start by choosing a minimum and maximum color, set
+number of classes to 25, then press <em>Classify</em>, you should have
+similar result as the one above.</p>
+</section>
+<section id="basic-vector-style">
+<h3>Basic vector style<a class="headerlink" href="#basic-vector-style" title="Permalink to this heading">¶</a></h3>
+<p>You will start by editing the style of the <em>lakes</em> layer. First of all, you should check the <em>Pattern</em> panel and set its value to <em>4.0 3.0</em>, then
+press the <em>Apply</em> button. Now, check also the <em>Hatch fill</em> panel and
+set the following values:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>Angle</em>: 45.0</p></li>
+<li><p><em>Size</em>: 6.0</p></li>
+<li><p><em>Dash Width</em>: 4.0</p></li>
+</ul>
+</div></blockquote>
+<p>Click on the <em>Apply</em> button and you should have the same result as
+displayed below.</p>
+<a class="reference internal image-reference" href="_images/emap0.png"><img alt="Manager Vector Style Unique Symbol UI" class="align-center" src="_images/emap0.png" style="width: 780px;" /></a>
+</section>
+<section id="classify-a-vector-layer">
+<h3>Classify a vector layer<a class="headerlink" href="#classify-a-vector-layer" title="Permalink to this heading">¶</a></h3>
+<p>In this section you will create classes based on
+classification. Classifications presented in this section are using
+<em>R</em>, you will use the <em>poi_name_wake</em> layer to test this style
+definition.</p>
+<p>Set the <em>Legend Type</em> to <em>Graduated Symbol</em>, choose min and max
+colors, choose the <em>elev_m</em> field to classify your data, set number of
+generated classes to 30 and set the discretisation method to
+<em>quantile</em>, then press the <em>Classify</em> button to have similar result as
+presented below.</p>
+<a class="reference internal image-reference" href="_images/emap1.png"><img alt="Manager Vector Style Graduated Symbol UI" class="align-center" src="_images/emap1.png" style="width: 780px;" /></a>
+<p>Before closing this section about Styling, you are invited to apply a
+style to  your <em>roadsmajor</em> layer.</p>
+<a class="reference internal image-reference" href="_images/emap2.png"><img alt="Manager Vector Style UI" class="align-center" src="_images/emap2.png" style="width: 780px;" /></a>
+</section>
+</section>
+<section id="layers-properties">
+<h2>Layers properties<a class="headerlink" href="#layers-properties" title="Permalink to this heading">¶</a></h2>
+<section id="metadata">
+<h3>Metadata<a class="headerlink" href="#metadata" title="Permalink to this heading">¶</a></h3>
+<p>For each layer in your map, you are invited to define metadata, for
+now, you will concentrate on giving a <em>title</em> to your layer, then press
+the <em>Save</em> button.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Titles will be displayed in the layer tree of the published
+application only.</p>
+</div>
+<p>You can also define basic OWS Metadata informations for your layers,
+such as <em>abstract</em>, <em>keywords</em> and <em>fees</em>. other options will be
+presented in the next sections.</p>
+<p>The metadata can be accessed through a simple WMS <em>GetCapabilities</em>
+request sent to the MapServer engine, like the following:</p>
+<p><code class="docutils literal notranslate"><span class="pre">http://localhost/cgi-bin/mapserv.cgi?map=/usr/com/zoo-project/maps/project_Sample1.map&amp;service=WMS&amp;version=1.0.0&amp;request=GetCapabilities</span></code></p>
+</section>
+<section id="queryable-layers">
+<h3>Queryable layers<a class="headerlink" href="#queryable-layers" title="Permalink to this heading">¶</a></h3>
+<p>You would like to make the final application available to user with an ability to display
+information in a popup when they move their mouse on top of a feature.
+To achieve this goal, you first have to declare in the layer’
+properties window that you want your <em>poi_names_wake</em> queryable by
+checking the <em>Query</em> option. Then you should also create a template to
+display attributes in the popup, as explained in the next step.</p>
+<p>You are also invited to check the <em>Search</em> option and select the
+<em>featurename</em> field as field to run the research. This way you can
+activate more tools at the next step.</p>
+<p>Every time you make a modification to the <em>Layer Properties</em> window
+you should press the <em>Save</em> button for your modification to take effect.</p>
+<p>You are also willing to publish a web application with a tool to draw
+line and extract the corresponding elevation profile based on a
+specific raster. To do that, you should activate the <em>Query</em> option to
+the <em>elevation</em> layer.</p>
+<a class="reference internal image-reference" href="_images/vecprop.png"><img alt="Manager Layer General Properties UI" class="align-center" src="_images/vecprop.png" style="width: 780px;" /></a>
+</section>
+<section id="configure-popup-window">
+<h3>Configure popup window<a class="headerlink" href="#configure-popup-window" title="Permalink to this heading">¶</a></h3>
+<p>You are now invited to use the template editor for the
+<em>new_poi_names_wake</em> layer of your map. You can select fields you want
+to diaplay by selecting value in the <em>Available fields</em>, you can
+easily control the way it will be displayed by using WYSIWYG
+editor. Click on the <em>Save</em> button to save your template.</p>
+<a class="reference internal image-reference" href="_images/cprop.png"><img alt="Manager Vector Template Edition UI" class="align-center" src="_images/cprop.png" style="width: 780px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need to, you can always edit pure HTML code by clicking
+on the <em>Source</em> button of the editor.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="distiller.html">The Distiller module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The Manager Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-data-layers-panel">The <em>Data Layers</em> panel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#open-a-map">Open a Map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-a-map">Save a map</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#layers-tree">Layers tree</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#map-viewer">Map viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-layers">Add Layers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-layer-styles">Defining Layer Styles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#basic-raster-style">Basic raster style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#classify-raster-layer">Classify raster layer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#basic-vector-style">Basic vector style</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#classify-a-vector-layer">Classify a vector layer</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#layers-properties">Layers properties</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#metadata">Metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#queryable-layers">Queryable layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-popup-window">Configure popup window</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="publisher.html">The Publisher Module</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="publisher.html" title="The Publisher Module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="distiller.html" title="The Distiller module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">The Manager Module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    </div>
+  </body>
+</html>

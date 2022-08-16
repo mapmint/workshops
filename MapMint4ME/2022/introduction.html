@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Introduction &#8212; MapMint data collection - MapMint4ME</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="The Table modules" href="tables.html" />
+    <link rel="prev" title="MapMint data collection - MapMint4ME" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="tables.html" title="The Table modules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="MapMint data collection - MapMint4ME"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Introduction</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="introduction">
+<span id="userguidegeneral"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h1>
+<section id="a-brief-overview">
+<h2>A brief overview<a class="headerlink" href="#a-brief-overview" title="Permalink to this heading">¶</a></h2>
+<section id="general-presentation">
+<h3>General presentation<a class="headerlink" href="#general-presentation" title="Permalink to this heading">¶</a></h3>
+<p>MapMint4ME means MapMint 4 (for) Measure and Evaluation,
+It is an Android application that collects and edits geospatial data
+in online or offline mode.</p>
+<p>MapMint4ME requires a connection to a MapMint GIS Server with editable tables. These tables allow for the collection of field data using the MapMint4ME Android App, but also allow users to view, edit and produce reports using the MapMint Server.</p>
+<dl class="simple">
+<dt>Using MapMint4ME to record data in the field from your Android phone or tablet is straightforward:</dt><dd><ol class="arabic simple">
+<li><p><strong>import</strong>: connect to MapMint Server and download a local copy of the field data collection forms.</p></li>
+<li><p><strong>edit</strong>/<strong>view</strong>: record your data, then (re-)view recorded attribute.</p></li>
+<li><p><strong>export</strong>: Once field data collection is complete, upload the recorded data back to the MapMint Server.</p></li>
+</ol>
+</dd>
+</dl>
+<p>In case you would like to get access to “basemaps” during your offline
+data recording, then tiles need to be pre-generated using the MapMint tools.
+manually.</p>
+<p>The schema below summarizes the MapMint4ME mechanisms detailed in the
+next sections.</p>
+<a class="reference internal image-reference" href="_images/mm4me_schema.svg"><img alt="MM4ME Schema" class="align-center" height="600" src="_images/mm4me_schema.svg" width="50%" /></a>
+</section>
+<section id="mapmint-table-module">
+<h3>MapMint Table module<a class="headerlink" href="#mapmint-table-module" title="Permalink to this heading">¶</a></h3>
+<p>MapMint Table module is composed of an administration interface that
+allows for the configuration of some PostgreSQL tables as editable online and a
+client interface where users can login to view, edit and
+produce a report about their data.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><em>MapMint Table Admin</em></p></td>
+<td><p><em>MapMint Table Client</em></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="_images/mmtablea.png"><img alt="MM admin" src="_images/mmtablea.png" style="width: 100%;" /></a></p></td>
+<td><p><a class="reference internal" href="_images/mmtablec.png"><img alt="MM client" src="_images/mmtablec.png" style="width: 100%;" /></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="http://demo.mapmint.com/ui/Tables_bs">http://demo.mapmint.com/ui/Tables_bs</a></p></td>
+<td><p><a class="reference external" href="http://demo.mapmint.com/ui/public/tables/">http://demo.mapmint.com/ui/public/tables/</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mapmint4me-android-application">
+<h3>MapMint4ME Android application<a class="headerlink" href="#mapmint4me-android-application" title="Permalink to this heading">¶</a></h3>
+<section id="importing">
+<h4>1. Importing<a class="headerlink" href="#importing" title="Permalink to this heading">¶</a></h4>
+<p>The MapMint Server uses a PostgreSQL database for data storage, whilst
+a SQLite database format is used on the MapMint4ME Android
+app. Consequently, the MapMint server provides a WPS Service to
+convert the PostgreSQL database into SQLite one.</p>
+<p>If on the server side there is only one PostgreSQL database to store
+all tables in a centralized manner, the conversion process generates
+two databases: one to store the data and another one for the forms
+configuration and dependency tables, used for storing data displayed
+in the selection list. We have split the database for lowering the
+size of the database to upload back to the MapMint server.</p>
+<p>The MapMint4ME Android application can download another database used
+to access a set of Tiles corresponding to the extent of your recording
+session.</p>
+</section>
+<section id="recording">
+<h4>2. Recording<a class="headerlink" href="#recording" title="Permalink to this heading">¶</a></h4>
+<p>You can record and visualize data in the field by using the Edit, View
+and Map modules. The Edit module gives you the capability to edit all
+tables configured as editable by a group of users. The View module
+gives you access to a similar display as you can get from the MapMint
+Table module online, meaning that you can view a list of available
+tuples in tables. The Map module visualizes your
+recorded data on a basic map presenting recorded points, lines and
+polygons.</p>
+</section>
+<section id="exporting">
+<h4>3. Exporting<a class="headerlink" href="#exporting" title="Permalink to this heading">¶</a></h4>
+<p>Once the field data collection is complete, and you have WiFi connectivity (or sufficiently strong 4G signal), you can use the MapMint4ME Export Module to upload your data back to the MapMint server.</p>
+<p>At this point, the MapMint server will extract and convert the field data from
+the SQLite database to PostgreSQL. As outlined previously, only the recorded data will be
+uploaded back and not the configuration or dependency tables. At usage, during the Senegalese project for which we have
+created this MapMint4ME Android application, we realized that
+sometimes the dependencies tables are too big to be uploaded back to
+the server.</p>
+</section>
+</section>
+</section>
+<section id="the-workshop-content">
+<h2>The workshop content<a class="headerlink" href="#the-workshop-content" title="Permalink to this heading">¶</a></h2>
+<section id="schedule">
+<h3>Schedule<a class="headerlink" href="#schedule" title="Permalink to this heading">¶</a></h3>
+<p>During this workshop, you will be introduced to the basic
+configuration required for activating the Table module from MapMint to
+build forms so that data can be edited online and from MapMint4ME. Then, you will
+install the MapMint4ME Android application on your phone or tablet and
+get it ready for data collection. Afterwards, you will go outside and
+map the area around the workshop building. After 30 minutes of data collection,
+you will come back to the workshop room and upload the data back to
+the MapMint server. Using this data, you will publish a new project to
+give access to your data.</p>
+<p>Throughout the workshop, you will use the Demo server, available at
+<a class="reference external" href="http://demo.mapmint.com/ui/Dashboard_bs">http://demo.mapmint.com/ui/Dashboard_bs</a>, rather than your own, using
+the following information: login: <strong>wsadmin</strong> / password:
+<strong>demows2022</strong>. It will ease the connection settings from MapMint4ME
+Android application, table creation and configuration of the edition
+forms. In addition, it will also permit to share the data recorded by
+every team on the same server.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please, at any time, do not hesitate to ask the presenters any
+question you have during the workshop.</p>
+</div>
+<p>Before going any further, you have to figure out what shall be the
+final forms that we are willing to use for going on the field for data
+collection. Below, you can see the definition of what the final form
+should be.</p>
+<p>You will create one form for the three different vector datatypes:
+points, lines, and polygons with the following attributes
+respectively.</p>
+<p><strong>wsxpoints</strong>:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>varchar(50)</p></td>
+</tr>
+<tr class="row-odd"><td><p>category</p></td>
+<td><p>integer (refering to a categories table)</p></td>
+</tr>
+<tr class="row-even"><td><p>description</p></td>
+<td><p>text (HTML content)</p></td>
+</tr>
+<tr class="row-odd"><td><p>photo</p></td>
+<td><p>bytea</p></td>
+</tr>
+<tr class="row-even"><td><p>geometry</p></td>
+<td><p>point</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>wsxlines</strong>:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>varchar(50)</p></td>
+</tr>
+<tr class="row-odd"><td><p>category</p></td>
+<td><p>integer (refering to a categories table)</p></td>
+</tr>
+<tr class="row-even"><td><p>description</p></td>
+<td><p>text (HTML content)</p></td>
+</tr>
+<tr class="row-odd"><td><p>geometry</p></td>
+<td><p>line</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>wsxpolygons</strong>:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>varchar(50)</p></td>
+</tr>
+<tr class="row-odd"><td><p>category</p></td>
+<td><p>integer (refering to a categories table)</p></td>
+</tr>
+<tr class="row-even"><td><p>description</p></td>
+<td><p>text (HTML content)</p></td>
+</tr>
+<tr class="row-odd"><td><p>geometry</p></td>
+<td><p>polygon</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pre-requisites">
+<h3>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this heading">¶</a></h3>
+<p>You will need to create the tables to store the data you want to allow
+your users to edit in the field. To do so, you are requested to load the
+Distiller module and click on the <em>mmdb</em> DataStore to view the list of
+available DataSources.</p>
+<p>From any of the layer listed, you can use the <a class="reference external" href="/ZOOProject.pdf"><img alt="MapMint OGRO2GR" class="align-bottom" src="_images/process.png" style="width: 20px;" /></a> button to access
+the tool for converting vector. From this tool, select <em>mmdb</em> as
+DataStore then, copy and paste the following SQL queries:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="n">wsX2022points</span><span class="w"></span>
+<span class="n">CREATE</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="n">wsX2022points</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="n">serial</span><span class="w"> </span><span class="n">PRIMARY</span><span class="w"> </span><span class="n">KEY</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="n">category</span><span class="w"> </span><span class="n">int4</span><span class="w"> </span><span class="n">references</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="n">categories</span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="n">description</span><span class="w"> </span><span class="n">text</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">photo</span><span class="w"> </span><span class="n">bytea</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+<span class="n">SELECT</span><span class="w"> </span><span class="n">AddGeometryColumn</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span><span class="s1">&#39;wsx2022points&#39;</span><span class="p">,</span><span class="s1">&#39;wkb_geometry&#39;</span><span class="p">,</span><span class="mi">4326</span><span class="p">,</span><span class="s1">&#39;POINT&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="o">--</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="n">wsX2022lines</span><span class="w"></span>
+<span class="n">CREATE</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="n">wsX2022lines</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="n">serial</span><span class="w"> </span><span class="n">PRIMARY</span><span class="w"> </span><span class="n">KEY</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="n">category</span><span class="w"> </span><span class="n">int4</span><span class="w"> </span><span class="n">references</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="n">categories</span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="n">description</span><span class="w"> </span><span class="n">text</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+<span class="n">SELECT</span><span class="w"> </span><span class="n">AddGeometryColumn</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span><span class="s1">&#39;wsx2022lines&#39;</span><span class="p">,</span><span class="s1">&#39;wkb_geometry&#39;</span><span class="p">,</span><span class="mi">4326</span><span class="p">,</span><span class="s1">&#39;MULTILINESTRING&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<span class="o">--</span><span class="w"> </span><span class="n">Create</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="n">wsXpolygons</span><span class="w"></span>
+<span class="n">CREATE</span><span class="w"> </span><span class="n">TABLE</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="n">wsX2022polygons</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="n">id</span><span class="w"> </span><span class="n">serial</span><span class="w"> </span><span class="n">PRIMARY</span><span class="w"> </span><span class="n">KEY</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">name</span><span class="w"> </span><span class="n">varchar</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="n">category</span><span class="w"> </span><span class="n">int4</span><span class="w"> </span><span class="n">references</span><span class="w"> </span><span class="n">sample</span><span class="o">.</span><span class="n">categories</span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="w"></span>
+<span class="w">  </span><span class="n">description</span><span class="w"> </span><span class="n">text</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+<span class="n">SELECT</span><span class="w"> </span><span class="n">AddGeometryColumn</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="s1">&#39;sample&#39;</span><span class="p">,</span><span class="s1">&#39;wsx2022polygons&#39;</span><span class="p">,</span><span class="s1">&#39;wkb_geometry&#39;</span><span class="p">,</span><span class="mi">4326</span><span class="p">,</span><span class="s1">&#39;MULTIPOLYGON&#39;</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#a-brief-overview">A brief overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#general-presentation">General presentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapmint-table-module">MapMint Table module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapmint4me-android-application">MapMint4ME Android application</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#the-workshop-content">The workshop content</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#schedule">Schedule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pre-requisites">Pre-requisites</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tables.html">The Table modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mm4me.html">The MapMint4ME data collector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dmap.html">Applications with recorded data</a></li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="tables.html" title="The Table modules"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="MapMint data collection - MapMint4ME"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Workshop</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Introduction</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    </div>
+  </body>
+</html>

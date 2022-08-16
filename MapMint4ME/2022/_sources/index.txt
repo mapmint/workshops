@@ -1,0 +1,25 @@
+.. _home:
+
+MapMint data collection - MapMint4ME
+=========================================================================================
+
+Welcome in the workshop introducing the `MapMint4ME <http://mapmint.com>`__ solution.
+
+.. image:: https://2022.foss4g.org/img/logo/foss4g2022_logo_marketing.png
+   :width: 250px
+   :alt: FOSS4G 2022
+   :target: https://2022.foss4g.org/
+   :align: center
+
+
+
+Workshop table of content
+===========================
+
+.. toctree::
+   :maxdepth: 3
+   
+   introduction
+   tables
+   mm4me   
+   dmap
