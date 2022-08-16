@@ -1,0 +1,363 @@
+.. _publisher:
+
+The Publisher Module
+====================================
+
+The Publisher is a module made to publish your web application. It comprises of two panels: on the left, the maps list and, on the right, the
+configuration tabs.
+
+
+.. image:: _static/images/publisher.png
+   :width: 50%
+   :alt: Publisher UI
+   :align: center
+
+
+Maps List
+**********
+
+If you click on a map name from the list, the Publisher module will
+reload using the map you have choosen and giving the capability to change
+the configuration and publish again.
+	
+Configuration tabs
+************************
+
+The Options which you can set in the Publisher interface are grouped by
+tabs, you should click on one of the following icons, to access the
+parameters.
+
+.. warning::
+	Every modification made to the any tabs requires to press
+	the *Publish* button to save your modifications.
+   
+.. |general| image:: _static/images/general.png
+   :height: 24
+   :width: 24
+   :alt: General configuration icon
+
+.. |layerss| image:: _static/images/layers-settings.png
+   :height: 24
+   :width: 24
+   :alt: Layers settings icon
+
+.. |mapssss| image:: _static/images/map-settings.png
+   :height: 24
+   :width: 24
+   :alt: Map settings icon
+   
+.. |ctrlsss| image:: _static/images/controls-settings.png
+   :height: 24
+   :width: 24
+   :alt: Control settings icon
+   
+============ ================ =============
+**Icon**     **Tab**          **Action**                  
+------------ ---------------- ------------- 
+|general|    General    	  General configuration
+|layerss|    Layers		     Layers configuration
+|mapssss|    Map			     Map Configuration
+|ctrlsss|    Control		     Tools Configuration
+============ ================ =============						
+
+
+General configuration
+---------------------
+    
+As Per default, in the activated tab, the settings you can made are
+listed below.
+
+============================ ===================================================
+**Parameter**                **Definition**                  
+---------------------------- --------------------------------------------------- 
+Project name                 The Project name (cannot be modified informative)
+Project Title                The title displayed in the published application
+Access privileges            Define access privileges
+Classify in theme				  You can group your layers per themes
+Project URL                  Display l'URL of the published application
+Langue                       Set the language of the published application
+Key-Words                    Metadata information for the published project
+Author                       Metadata information for the published project
+Copyright                    Metadata information for the published project
+Description                  Metadata information for the published project
+============================ ===================================================	
+	
+.. note::
+	The *Description* field is set using the `WISIWYG editor
+	<http://docs.cksource.com/Main_Page>`__ seen previously, its
+	value will be used to define the abstract metadata
+	information.
+
+
+Layout configuration
+---------------------
+
+By choosing the layout, you decide the way elements will be
+displayed in the final application. You are invited to first choose
+the *Fullscreen* option.
+
+.. image:: _static/images/choose-template.png
+   :width: 800
+   :alt: Publisher Layout Settings UI
+   :align: center
+
+
+Layers configuration
+---------------------------------
+
+Base layers
+.................................
+
+The base layers are optional, you can display only one proprietary base
+layer per project. Once you select one proprietary option (*Google*,
+*Bing* or *IGN*) you have access to the list of available base layers.
+
+By using the Default option, you can choose amongst the activated base
+layers the one to use as per default.
+
+Note that you can use your own published project as base
+layers. Indeed once a MapMint project is published, the setup of
+mapcache was automatically made with all the layers defined as
+activated by dafault in the project.
+
+
+.. image:: _static/images/configure-blayers.png
+   :width: 800
+   :alt: Publisher Base Layers Settings UI
+   :align: center
+
+.. note::
+	You can use *Ctrl*+Click to select multiple base layers from a
+	list.
+
+
+Overlays configuration
+................................
+
+You are invited to set all layers as *Raster* and as *Activated*.
+
+You are now invited to activate the window option for the
+*new_poi_names_wake* layer and set it as *Vector*.
+ 
+============================ ===================================================
+**Parameter**                **Definition**                  
+---------------------------- --------------------------------------------------- 
+Popup                        Activate the popup to be displayed when a user move his mouse on top of a feature 
+Window                       Activate the popup to be displayed when a user click on a feature  
+Vector                       Display the layer as vector (WFS)	           
+Raster                       Display the layer as raster (WMS)			 
+Activated                    Define if the layer is activated per default
+Min Zoom                     Define the minimum scale from which the layer should be displayed (same for labels)
+Max Zoom                     Define the maximum scale until which the layer should be displayed (same for labels) 
+Acess   					        Defines which User groups are allowed to view the layer
+============================ ===================================================
+
+Map Configuration
+--------------------------------------
+
+In the Map Configuration panel, selecting a layer in the list on the
+right of the table, automatically updates the extent on the
+corresponding row.
+
+
+============================ ===================================================
+**Parameter**                **Definition**                  
+---------------------------- --------------------------------------------------- 
+Display Project Système      Define the SRS used to display mouse position
+Render Method		           Define the OpenLayer renderer (*SVG* or *Canvas*)
+Unit of Measure		        Define the unit of measure used to display measure tools informations
+Default extent			        Define the extent used per default when loading the application
+Minimum extent			        Define the minimum extent for the application 
+Maximum extent			        Define the maximum extent for the application 
+Restricted extent		        You can check this option to strictly restrict the extent to the one defined as maximum extent 
+============================ ===================================================
+
+.. image:: _static/images/edit-map.png
+   :width: 800
+   :alt: Publisher Display Settings UI
+   :align: center
+
+
+Tools Configuration
+--------------------------
+
+In this section you can activate tools which will be available in
+the published application.
+
+.. image:: _static/images/edit-controls.png
+   :width: 800
+   :alt: Publisher Cotrols Settings UI
+   :align: center
+
+You are invited to select the following options:
+
+ * **Pan**
+ * **Zoom Box**
+ * **Zoom to max extent**
+ * **Profile tool**
+ * **Print**
+ * **Mouse position**
+ * **Search Box**
+ 
+Select *None* for Spatial Analysis Tools.
+
+.. note::
+	Use *Ctrl* + Click to add multiple tools at the same time. 
+
+
+Navigation toolbar
+...................
+
+.. |auth| image:: _static/images/login-icon.png
+   :width: 24
+   :alt: Login icon
+
+.. |perm| image:: _static/images/permalink-icon.png
+   :width: 24
+   :alt: Link icon
+   
+.. |twit| image:: _static/images/twitter-icon.png
+   :width: 24
+   :alt: Twitter icon  
+
+.. |face| image:: _static/images/facebook-icon.png
+   :width: 24
+   :alt: Facebook icon
+   
+.. |pann| image:: _static/images/pan-map-icon.png
+   :width: 24
+   :alt: Pan icon
+   
+.. |mpos| image:: _static/images/geolocate-icon.png
+   :width: 24
+   :alt: My position icon
+   
+.. |spos| image:: _static/images/position-icon.png
+   :width: 24
+   :alt: Follow my position icon
+   
+.. |zrec| image:: _static/images/zoom-in-icon.png
+   :width: 24
+   :alt: ZoomBox icon 
+   
+.. |zmax| image:: _static/images/zoom-to-maxextent-icon.png
+   :width: 24
+   :alt: ZoomToMaxExtent icon
+   
+.. |elev| image:: _static/images/profile-icon.png
+   :width: 24
+   :alt: Profile icon
+   
+.. |inte| image:: _static/images/information-icon.png
+   :width: 24
+   :alt: Query layer icon
+   
+.. |intc| image:: _static/images/information-c-icon.png
+   :width: 24
+   :alt: Query layer by circle icon
+
+.. |mdis| image:: _static/images/mesure-distance-icon.png
+   :width: 24
+   :alt: Mesure distance icon
+   
+.. |mare| image:: _static/images/mesure-area-icon.png
+   :width: 24
+   :alt: Mesure area icon
+   
+.. |prin| image:: _static/images/print-icon.png
+   :width: 24
+   :alt: Print map icon
+   
+============================ ======================================================== ===================================================
+**Icone**                    **Paramètre**                                            **Définition**                  
+---------------------------- -------------------------------------------------------- --------------------------------------------------- 
+|auth|                       Authenticate	                                      Provide tools to authenticate users
+|perm|                       Permalink						      Generate a permalink and the corresponding QRCode
+|twit|                       Twitter sharing					      Share the permalink through Twitter
+|face|                       Facebook sharing					      Share the permalink through Facebook
+none                         Scroll   						      Zoom in/out by using mouse scroll
+|pann|                       Pan      						      Move the map by dragging
+|mpos|                       My position                                              Access the browser localisation information and center the map on its location
+|spos|                       Track my position					      Track the browser location
+|zrec|                       Zoom Box 						      Zoom to extent defined by drawing a rectangle
+|zmax|                       Zoom to max extent					      Zoom to the maximum extent
+|elev|                       Profile tool					      Activate the profile tool 
+|inte|                       Identify						      Activate the simple selection tool (by rectangle)
+|intc|                       Identify Circle					      Activate the simple selection tool (by circle)
+|mdis|                       Mesure distance					      Activate the measurement tools
+|mare|                       Mesure area					      Activate the measurement tools
+|prin|                       Print  						      Print your map in a PDF document
+============================ ======================================================== ===================================================
+
+.. warning::
+   The Identify tool imply that you have at least one layer with the
+   *Query* option checked in the layer properties window of the
+   Manager module.
+	
+.. warning::
+   The Profile tool imply that you have at least one raster layer
+   with the *Query* option checked in the layer properties windows of
+   the Manager module.
+	
+Other tools
+.............
+
+============================ ===================================================
+**Parameter**                **Definition**                  
+---------------------------- --------------------------------------------------- 
+Overview Map                 Display an overview map
+Pan and Zoom		     Display a zoom slider
+Scalebar		     Display a scalebar
+Search Box		     Display a search engine
+Mouse position		     Display the geographical position corresponding to the mouse
+Add layer		     Give capbility to add layer from the *Overlays* map
+Add WMS layer		     Give capability to add layer from WMS setup in the Distiller
+============================ ===================================================
+
+.. warning::
+   Search Box should be activated only if one layer as been defined
+   with the *Search* and *Query* option checked in the layer properties window.
+
+
+Publish an application
+***********************************
+
+Publish and preview
+--------------------------
+
+Once you have made all the settings required, you can publish
+application by clicking on the *Publish* button on top of the right
+panel. Then, you can preview your project by clicking on the
+*Preview* button. 
+
+
+Access the map publicly
+----------------------------
+
+To access the map publicly, use the link *MapMint Client* on your
+Desktop or directly use the following link:
+http:localhost/mapmint/ui/public/Sample1.
+
+
+If you hover mouse on top of a green points, you should see the popup
+window you created in the previous section.
+
+.. image:: _static/images/vpop.png
+   :width: 780
+   :alt: Published App PopUp
+   :align: center
+
+To use the Profile tool, first click on the *Profile* button, then
+draw a line on the map, once your line is finished, double click on the
+end position and you will see the elevation profile displayed.
+
+.. image:: _static/images/rpop.png
+   :width: 780
+   :alt: Published App Raster Query
+   :align: center
+
+To use the search engine, type few letters in the text field and wait
+for the list of available featured displayed, then click on one in the
+list to zoom on it.
+
+
