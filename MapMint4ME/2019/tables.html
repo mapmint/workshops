@@ -1,29 +1,25 @@
-
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="./">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>The Table modules &#8212; MapMint data collection - MapMint4ME</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=1e09a8bb" />
     
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="_static/doctools.js?v=f8950b3e"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="The MapMint4ME data collector" href="mm4me.html" />
     <link rel="prev" title="Introduction" href="introduction.html" /> 
   </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -46,9 +42,9 @@
           <div class="body" role="main">
             
   <section id="the-table-modules">
-<span id="tables"></span><h1>The Table modules<a class="headerlink" href="#the-table-modules" title="Permalink to this heading">¶</a></h1>
+<span id="tables"></span><h1>The Table modules<a class="headerlink" href="#the-table-modules" title="Link to this heading">¶</a></h1>
 <section id="overview-of-the-adminstrative-interface">
-<h2>Overview of the adminstrative interface<a class="headerlink" href="#overview-of-the-adminstrative-interface" title="Permalink to this heading">¶</a></h2>
+<h2>Overview of the adminstrative interface<a class="headerlink" href="#overview-of-the-adminstrative-interface" title="Link to this heading">¶</a></h2>
 <p>For being able to access to the Table administrative module from your
 MapMint installation, you need to edit the <code class="docutils literal notranslate"><span class="pre">main.cfg</span></code> configuration
 file of the ZOO-Kernel used by your MapMnit instance for setting the
@@ -63,31 +59,35 @@ left part, you get a toolbar to start a new table configuration and,
 below, a list of configured tables. On the right part, the multiple
 tabs give access to the various forms required for configuring a table
 in MapMint. We will detail all these configuration parameters.</p>
-<a class="reference internal image-reference" href="_images/mmtablea1.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablea1.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/mmtablea1.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablea1.png" style="width: 100%;" />
+</a>
 </section>
 <section id="create-your-first-form">
-<h2>Create your first form<a class="headerlink" href="#create-your-first-form" title="Permalink to this heading">¶</a></h2>
+<h2>Create your first form<a class="headerlink" href="#create-your-first-form" title="Link to this heading">¶</a></h2>
 <p>In this section you will be introduced to the table configuration
 parameters. We have tried to be exhaustive in defining supported types
 and options you can use with every types. Nevertheless, you will use
 only a simple subset of all the options available in the module.</p>
 <section id="table-configuration">
-<h3>Table configuration<a class="headerlink" href="#table-configuration" title="Permalink to this heading">¶</a></h3>
+<h3>Table configuration<a class="headerlink" href="#table-configuration" title="Link to this heading">¶</a></h3>
 <p>Click on the add button from the toolbar to access the form for table
 configruation creation. Fro here, select the table named <em>wsxpoints</em>
 located in the <em>sample</em> schema and set <em>WSXPOINTS</em> as the table
 name. Then, press the add button on the right of the table name you
 just set.</p>
-<a class="reference internal image-reference" href="_images/mmtablesac0.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac0.png" style="width: 25%;" /></a>
+<a class="reference internal image-reference" href="_images/mmtablesac0.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac0.png" style="width: 25%;" />
+</a>
 <p>As shown below, the page should now show the table configuration you have created.</p>
-<a class="reference internal image-reference" href="_images/mmtablesac1.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac1.png" style="width: 100%;" /></a>
+<a class="reference internal image-reference" href="_images/mmtablesac1.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac1.png" style="width: 100%;" />
+</a>
 <p>Using the first tab, you can define basic informations about your
 table: the <em>name</em> displayed in the administration interface, the
 <em>description</em> that will be displayed in pages presenting your data
 online and the <em>table</em> you linked the configuration with.</p>
 <p>As presented bellow, the second tab give you basic informations about
 the current structure of the table you are configuring.</p>
-<a class="reference internal image-reference" href="_images/mmtablesac2.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac2.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="_images/mmtablesac2.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac2.png" style="width: 60%;" />
+</a>
 <p>You can find below a description of all the displayed columns.</p>
 <table class="docutils align-default">
 <thead>
@@ -118,13 +118,14 @@ the current structure of the table you are configuring.</p>
 </table>
 </section>
 <section id="view">
-<h3>View<a class="headerlink" href="#view" title="Permalink to this heading">¶</a></h3>
+<h3>View<a class="headerlink" href="#view" title="Link to this heading">¶</a></h3>
 <p>As presented below, the View tab makes you able to define how the
 table should be displayed, meaning which fields should be available in
 the listing when presenting your data online. For your <cite>wsxpoints</cite>
 table it looks resonable to show to the end-user the following
 collumns: <em>id</em>, <em>name</em>, <em>category</em> and <em>description</em>.</p>
-<a class="reference internal image-reference" href="_images/mmtablesac3.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac3.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/mmtablesac3.png"><img alt="MapMint Table module interface" class="align-center" src="_images/mmtablesac3.png" style="width: 80%;" />
+</a>
 <p>Hence, you will start by adding a new view to your table
 configuration. Below, you can find the description of all the
 parameters you can set for a view.</p>
@@ -211,13 +212,15 @@ Table client module, you can verify by accessing the following URL:
 the menu, you should see the name of you view. If you click on the
 item from the menu, you should then get access to a page similar to
 the screenshot below.</p>
-<a class="reference internal image-reference" href="_images/mmtablesv0.png"><img alt="MapMint Table client module" class="align-center" src="_images/mmtablesv0.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/mmtablesv0.png"><img alt="MapMint Table client module" class="align-center" src="_images/mmtablesv0.png" style="width: 80%;" />
+</a>
 </section>
 <section id="edit">
-<h3>Edit<a class="headerlink" href="#edit" title="Permalink to this heading">¶</a></h3>
+<h3>Edit<a class="headerlink" href="#edit" title="Link to this heading">¶</a></h3>
 <p>You can click on the Edit tab to access the settings of your form, the
 page should like the following screenshot.</p>
-<a class="reference internal image-reference" href="_images/mmtablese0.png"><img alt="MapMint Table client module" class="align-center" src="_images/mmtablese0.png" style="width: 80%;" /></a>
+<a class="reference internal image-reference" href="_images/mmtablese0.png"><img alt="MapMint Table client module" class="align-center" src="_images/mmtablese0.png" style="width: 80%;" />
+</a>
 <p>You can find below the list of all parameters.</p>
 <table class="docutils align-default">
 <thead>
@@ -270,9 +273,9 @@ the following parameters.</p>
 </tbody>
 </table>
 <section id="column-types">
-<h4>Column types<a class="headerlink" href="#column-types" title="Permalink to this heading">¶</a></h4>
+<h4>Column types<a class="headerlink" href="#column-types" title="Link to this heading">¶</a></h4>
 <section id="basic-column-types">
-<h5>Basic column types<a class="headerlink" href="#basic-column-types" title="Permalink to this heading">¶</a></h5>
+<h5>Basic column types<a class="headerlink" href="#basic-column-types" title="Link to this heading">¶</a></h5>
 <p>We call the basic column types, the types that does not require any
 specific settings. You can find below the list of available basic
 column types.</p>
@@ -293,9 +296,9 @@ column types.</p>
 </div></blockquote>
 </section>
 <section id="complex-column-types">
-<h5>Complex column types<a class="headerlink" href="#complex-column-types" title="Permalink to this heading">¶</a></h5>
+<h5>Complex column types<a class="headerlink" href="#complex-column-types" title="Link to this heading">¶</a></h5>
 <section id="reference">
-<h6>Reference<a class="headerlink" href="#reference" title="Permalink to this heading">¶</a></h6>
+<h6>Reference<a class="headerlink" href="#reference" title="Link to this heading">¶</a></h6>
 <p>This type is used in case you want to display a selection list to the
 user to set the value of the column. It is commonly used in case you
 want to let the user set the value of a column which is a foreign key,
@@ -411,7 +414,7 @@ dependencies will be displayed like in the following.</p>
 </div>
 </section>
 <section id="linked-table">
-<h6>Linked table<a class="headerlink" href="#linked-table" title="Permalink to this heading">¶</a></h6>
+<h6>Linked table<a class="headerlink" href="#linked-table" title="Link to this heading">¶</a></h6>
 <p>The linked table type is used when you want to give the privilege to
 editors to edit elements from another table that will be linked to the
 current edited table. A typical use case is when you are creating
@@ -430,7 +433,7 @@ edition forms already defined.</p>
 </div>
 </section>
 <section id="table-link">
-<h6>Table link<a class="headerlink" href="#table-link" title="Permalink to this heading">¶</a></h6>
+<h6>Table link<a class="headerlink" href="#table-link" title="Link to this heading">¶</a></h6>
 <p>The table link type is used when you want to give the capability to
 the editor to edit a field that can take multiple values which can be
 found in another table. Usually, these links are stored in a different
@@ -450,7 +453,7 @@ refering the table where the value to be linked can be found.</p>
 </section>
 </section>
 <section id="your-settings">
-<h4>Your settings<a class="headerlink" href="#your-settings" title="Permalink to this heading">¶</a></h4>
+<h4>Your settings<a class="headerlink" href="#your-settings" title="Link to this heading">¶</a></h4>
 <p>Now you know every basic and complexe column types that can be defined
 from the edition form settings pannel, it is time to go back on the
 form you are targetting which has been presented in introduction.</p>
@@ -476,12 +479,13 @@ have a detailled view of when and what has been updated and by whom.</p>
 the MapMint table client module, you shoud see a tab appearing and in
 its pannel, the form you have just created. The result you should get
 is presented in the screeshot below.</p>
-<a class="reference internal image-reference" href="_images/mmtablesce1.png"><img alt="MapMint Table client module" class="align-center" src="_images/mmtablesce1.png" style="width: 70%;" /></a>
+<a class="reference internal image-reference" href="_images/mmtablesce1.png"><img alt="MapMint Table client module" class="align-center" src="_images/mmtablesce1.png" style="width: 70%;" />
+</a>
 </section>
 </section>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">¶</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
 <p>At this step, you have configured everything on the server side for
 being able to connect from the MapMint4ME Android application to
 prepare your data collection mission.</p>
@@ -496,7 +500,7 @@ ready for data collection on the field.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
 <h3><a href="index.html">Table of Contents</a></h3>
 <ul class="current">
@@ -520,7 +524,7 @@ ready for data collection on the field.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
