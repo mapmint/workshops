@@ -194,7 +194,7 @@ You are invited to select the following options:
  * **Pan**
  * **Zoom Box**
  * **Zoom to max extent**
- * **Profile tool**
+ * **Elevation Profile**
  * **Print**
  * **Mouse position**
  * **Search Box**
@@ -281,7 +281,7 @@ none                         Scroll   						      Zoom in/out by using mouse scr
 |spos|                       Track my position					      Track the browser location
 |zrec|                       Zoom Box 						      Zoom to extent defined by drawing a rectangle
 |zmax|                       Zoom to max extent					      Zoom to the maximum extent
-|elev|                       Profile tool					      Activate the profile tool 
+|elev|                       Elevation Profile 					      Activate the elevation profile
 |inte|                       Identify						      Activate the simple selection tool (by rectangle)
 |intc|                       Identify Circle					      Activate the simple selection tool (by circle)
 |mdis|                       Mesure distance					      Activate the measurement tools
@@ -295,7 +295,7 @@ none                         Scroll   						      Zoom in/out by using mouse scr
    Manager module.
 	
 .. warning::
-   The Profile tool imply that you have at least one raster layer
+   The Elevation Profile imply that you have at least one raster layer
    with the *Query* option checked in the layer properties windows of
    the Manager module.
 	
@@ -347,7 +347,7 @@ window you created in the previous section.
    :alt: Published App PopUp
    :align: center
 
-To use the Profile tool, first click on the *Profile* button, then
+To use the Elevation Profile, first click on the *Profile* button, then
 draw a line on the map, once your line is finished, double click on the
 end position and you will see the elevation profile displayed.
 
